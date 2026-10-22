@@ -1,0 +1,114 @@
+{
+ "persistence": {
+  "code": "G1",
+  "domain": "General",
+  "name": "Object Persistence",
+  "question": "To what extent do objects maintain consistent appearance, shape, and existence throughout the video?",
+  "note": ""
+ },
+ "PTV": {
+  "code": "G2",
+  "domain": "General",
+  "name": "Temporal Coherence",
+  "question": "To what extent does the temporal sequence of physical events follow a physically plausible order?",
+  "note": "Evaluate whether event ordering is logically consistent (e.g., objects break before scattering, liquid is poured before it flows)."
+ },
+ "SA": {
+  "code": "G3",
+  "domain": "General",
+  "name": "Prompt Alignment",
+  "question": "To what extent does the video content align with the text prompt?",
+  "note": "Evaluate whether the depicted scene, objects, actions, and overall narrative correspond to the prompt description."
+ },
+ "gravity": {
+  "code": "A1",
+  "domain": "Solid-Body Mechanics",
+  "name": "Gravity",
+  "question": "To what extent do objects and liquids move in accordance with gravity?",
+  "note": "e.g., unsupported objects fall downward, projectiles follow curved trajectories, poured liquids descend."
+ },
+ "inertia": {
+  "code": "A2",
+  "domain": "Solid-Body Mechanics",
+  "name": "Inertia",
+  "question": "To what extent do objects maintain their state of motion — remaining stationary or continuing to move — in the absence of a plausible external force?",
+  "note": "Penalise significant spontaneous motion or unexplained stopping with no identifiable cause."
+ },
+ "momentum": {
+  "code": "A3",
+  "domain": "Solid-Body Mechanics",
+  "name": "Momentum",
+  "question": "To what extent are post-collision directions of motion physically plausible?",
+  "note": "Evaluate direction only; ignore speed magnitude."
+ },
+ "impenetrability": {
+  "code": "A4",
+  "domain": "Solid-Body Mechanics",
+  "name": "Impenetrability",
+  "question": "To what extent do solid objects maintain impenetrability, avoiding passage through one another?",
+  "note": ""
+ },
+ "collision": {
+  "code": "A5",
+  "domain": "Solid-Body Mechanics",
+  "name": "Collision Response",
+  "question": "To what extent do objects exhibit physically plausible responses to impact, proportional to the applied force?",
+  "note": "e.g., bouncing, shattering, deforming."
+ },
+ "material": {
+  "code": "A6",
+  "domain": "Solid-Body Mechanics",
+  "name": "Material Properties",
+  "question": "To what extent do objects respond in ways consistent with their apparent material properties?",
+  "note": "e.g., glass shatters, rubber bounces, metal dents, fabric drapes."
+ },
+ "buoyancy": {
+  "code": "B1",
+  "domain": "Fluid Dynamics",
+  "name": "Buoyancy",
+  "question": "To what extent do objects sink or float in a manner consistent with their apparent density?",
+  "note": ""
+ },
+ "displacement": {
+  "code": "B2",
+  "domain": "Fluid Dynamics",
+  "name": "Displacement",
+  "question": "When volume is added or an object is submerged, to what extent does the liquid level rise in a physically plausible manner?",
+  "note": "e.g., level rises proportionally; container overflows when full."
+ },
+ "flow_dynamics": {
+  "code": "B3",
+  "domain": "Fluid Dynamics",
+  "name": "Flow Dynamics",
+  "question": "To what extent does liquid flow along surfaces, spread, and drain in a physically plausible manner?",
+  "note": "Ignore brief splash details. Penalise unphysical acceleration, sudden stops, or unsupported uphill flow."
+ },
+ "boundary_interaction": {
+  "code": "B4",
+  "domain": "Fluid Dynamics",
+  "name": "Boundary Interaction",
+  "question": "To what extent does liquid splash, rebound, or split in a physically plausible manner when hitting a boundary?",
+  "note": "e.g., container walls, rock faces, floors."
+ },
+ "fluid_continuity": {
+  "code": "B5",
+  "domain": "Fluid Dynamics",
+  "name": "Fluid Continuity",
+  "question": "Does the liquid avoid disappearing or appearing out of nowhere?",
+  "note": "Small splashes that briefly break apart are okay."
+ },
+ "reflection": {
+  "code": "C1",
+  "domain": "Optical Physics",
+  "name": "Reflection",
+  "question": "To what extent do reflective surfaces display content that is physically plausible given the surrounding scene?",
+  "note": "Evaluate whether reflected objects and colours broadly correspond to the scene. Do not require precise geometric mirroring."
+ },
+ "shadow": {
+  "code": "C2",
+  "domain": "Optical Physics",
+  "name": "Shadow",
+  "question": "To what extent are shadows physically plausible in their direction, placement, and movement relative to light sources and objects?",
+  "note": ""
+ }
+}

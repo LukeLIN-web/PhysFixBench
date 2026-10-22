@@ -67,3 +67,34 @@ review_hf.html                    HF 在线版（视频走 HF resolve URL）
 视频文件（`videos/`，约 0.8 GB）托管在 Hugging Face dataset：[https://huggingface.co/datasets/HuggingFriends/PhysFixBench](https://huggingface.co/datasets/HuggingFriends/PhysFixBench)（私有，需在 HF 仓库 Settings → Collaborators 中邀请合作者）。
 - 在线审核（视频走 HF URL）：直接打开本仓库的 [`index.html`](./index.html)（需有 HF 访问权限并已登录），或启用 GitHub Pages 后访问。
 - 离线审核：clone HF 数据集，把仓库文件放到数据目录，用其中的 `index.html`（相对路径版）。
+
+---
+
+# PhysFixBench · PhyGround-91 + VideoPhy2-100（draft v1，待人工审核）
+
+另一批 191 条来自 PhyGround（91 条）和 VideoPhy2（100 条），格式与上面的 Physion-300 相同：jsonl / csv 的前 18 个字段同名、同顺序，修复指令拼法相同，后面附加各源的出处字段（生成 prompt、GPT-5.5 票数、英文证据、人工标签）。来源、质控、字段差异和分布见数据集卡 [`pipeline/hf_README.md`](./pipeline/hf_README.md)。
+
+```
+data/physfixbench_phyground.jsonl / .csv     PhyGround 91 条
+data/physfixbench_videophy2.jsonl / .csv     VideoPhy2 100 条
+review_phyground_videophy2_hf.html           在线审核页（视频走 HF resolve URL，需登录 HF 且有访问权限）
+review_phyground_videophy2.html              离线审核页（与 videos/ 放同一目录）
+pipeline/                                    筛选 → GPT-5.5 逐帧核实 → 三遍投票 → 导出
+```
+
+视频（约 255 MB）在 Hugging Face：[NU-World-Model-Embodied-AI/PhysFixBench-PhyGround-VideoPhy2](https://huggingface.co/datasets/NU-World-Model-Embodied-AI/PhysFixBench-PhyGround-VideoPhy2)（私有，需在 HF 仓库 Settings → Collaborators 中邀请合作者）。
+
+## pipeline/
+
+每个脚本开头写了用法，数据位置都用参数传入：
+
+| 脚本 | 作用 |
+|---|---|
+| `select_phyground.py` | 从 PhyGround 人工评测库选候选：SA 高、至少一条定律低、并非所有定律都低 |
+| `select_videophy2.py` | 从 VideoPhy2 test csv 选候选：SA 高、PC 低、至少一条违反规则，去掉 VideoCrafter |
+| `gpt_verify.py` | 4 fps 抽帧，交给 GPT-5.5（任一 OpenAI 兼容接口）逐条核实人工标签并写出修复标注；PhyGround 的定律定义在 `phyground_laws.json` |
+| `vote.py` | 合并三遍核实结果，按保留票数排名，输出 `out/<source>_top100.json/.csv` |
+| `export_physfixbench.py` | 名单 + 中文三段（`zh/<source>.json`）→ `data/` 下的 jsonl / csv、`videos/`、两个审核页 |
+| `hf_README.md` | HF 数据集卡 |
+
+`pipeline/out/` 下只有投票后的名单进 git；候选池、GPT-5.5 逐条记录和抽帧留在本地。

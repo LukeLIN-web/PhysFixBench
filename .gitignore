@@ -1,2 +1,6 @@
 videos/
 *.mp4
+pipeline/out/*
+!pipeline/out/*_top100.json
+!pipeline/out/*_top100.csv
+__pycache__/

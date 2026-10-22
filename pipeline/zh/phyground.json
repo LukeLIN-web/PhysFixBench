@@ -1,0 +1,1205 @@
+{
+ "ltx-2.3-22b-dev-1stage__0125_perspective-center_trimmed-mug-breaks": {
+  "problems": [
+   "松开的马克杯向上漂浮，后闪现到砖上且未摔碎"
+  ],
+  "expected": [
+   "马克杯应连续加速下落，撞砖后摔成陶瓷碎片"
+  ],
+  "keep": "固定镜头、白色投影幕、木地板、砖块位置、顶部夹具与光照保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "wan2.2-i2v-a14b__0188_perspective-center_trimmed-weight-on-ceramic": {
+  "problems": [
+   "陶瓷杯在壶铃下像软物一样压扁起皱后才碎"
+  ],
+  "expected": [
+   "杯子应保持刚性，超载后骤然碎成陶瓷碎片"
+  ],
+  "keep": "固定镜头、木桌、灰色背景、黑色壶铃、黄杯颜色与把手、持铃手与缓慢下压保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "deformation_state_change",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "material_state_change"
+ },
+ "wan2.2-ti2v-5b__0017_perspective-center_trimmed-ball-in-sand": {
+  "problems": [
+   "网球下落中消失又重现、无故上跳，沙面无凹陷"
+  ],
+  "expected": [
+   "网球应持续可见地下落，砸出沙坑后停在坑中"
+  ],
+  "keep": "固定镜头、木桌、灰墙背景、蓝色夹具、绿色动力沙堆、光照与构图保持不变",
+  "error_family": "persistence_identity",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "deformable_materials",
+  "review_error_category": "object_persistence"
+ },
+ "cosmos-predict2.5-2b__0191_perspective-center_trimmed-weight-on-paper": {
+  "problems": [
+   "被壶铃压扁的泡沫杯自行回弹成近乎完整的杯子"
+  ],
+  "expected": [
+   "泡沫杯应保持压扁起皱的永久变形"
+  ],
+  "keep": "固定镜头、木桌、灰色背景、黑色壶铃、侧放白杯、光照与壶铃位置时序保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "deformation_state_change",
+  "scenario_domain": "deformable_materials",
+  "review_error_category": "soft_body"
+ },
+ "veo-3.1__0002_perspective-center_trimmed-ball-and-block-fall": {
+  "problems": [
+   "球和木块落到软枕上反复高弹回夹具附近"
+  ],
+  "expected": [
+   "枕头受压缓冲，两物至多小幅弹跳后静止"
+  ],
+  "keep": "固定镜头、桌上两只白枕、蓝橙夹具、棕网球、橙木块、初始下落、枕头受压与落点保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "veo-3.1__0029_perspective-center_trimmed-ball-train": {
+  "problems": [
+   "灰球撞上后两球延迟不动，随后爆散并复制出多球"
+  ],
+  "expected": [
+   "碰撞时三球应立即沿桌面合理滚散且数量不变"
+  ],
+  "keep": "固定镜头、茶几、沙发背景、左侧黑管、三只网球外观与碰前灰球滚近保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "ltx-2.3-22b-dev-1stage__collision_92": {
+  "problems": [
+   "被球棒击中的玻璃瓶变形包裹并粘在棒上数秒"
+  ],
+  "expected": [
+   "玻璃瓶应立即碎成刚性碎片和液滴，向外飞散下落"
+  ],
+  "keep": "机位、暗色影棚、明亮背光、桌面、球棒轨迹、碰前瓶位与慢动作节奏保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "material_state_change"
+ },
+ "veo-3.1__Lt0TIkZdUs4_000003_000013": {
+  "problems": [
+   "铁饼落地扬尘后仍悬浮在落点上方不着地"
+  ],
+  "expected": [
+   "铁饼应触地后小幅弹跳或滑滚并停在草地上"
+  ],
+  "keep": "体育场、场地、镜头运动、运动员投掷动作、飞行过程与落点位置保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "throw_projectile",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "ltx-2-19b-dev-1stage__mechanics_97": {
+  "problems": [
+   "木碗无支撑地悬浮在桌面上方数帧"
+  ],
+  "expected": [
+   "木碗应贴着桌面在重力下翻滚并侧倒"
+  ],
+  "keep": "木碗、布面桌、暖色室内光、机位、背景与碗翻滚侧倒的整体动作保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "veo-3.1__mechanics_55": {
+  "problems": [
+   "标枪扎入泥地激起巨大泥冠后向上弹出"
+  ],
+  "expected": [
+   "枪尖应扎入泥中斜插静止，只溅起少量泥浆"
+  ],
+  "keep": "运动员、体育场、构图、光照、标枪外观、投掷准备与低平飞行保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "throw_projectile",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "cosmos-predict2.5-2b__0104_perspective-center_trimmed-marble-run-x": {
+  "problems": [
+   "弹珠无轨道支撑反复跳回上方绿色坡道"
+  ],
+  "expected": [
+   "弹珠应沿坡道逐级向下滚落直至底部"
+  ],
+  "keep": "白板场景、彩色磁力坡道及其位置、机位与光照保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "other_multistep",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "veo-3.1__collision_260": {
+  "problems": [
+   "纸箱堆受撞先僵住后爆炸四散，车头损伤随后消失"
+  ],
+  "expected": [
+   "箱子应一触即塌倒滑散，车头损伤应一直保留"
+  ],
+  "keep": "仓库场景、红标纸箱堆、灰色汽车、机位与运镜、光照及汽车冲入箱堆保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "wan2.2-i2v-a14b__collision_298": {
+  "problems": [
+   "棒球嵌入砖墙凿出深洞，自身却圆整无损"
+  ],
+  "expected": [
+   "棒球撞墙后弹开或掉落，墙上只留小擦痕或缺口"
+  ],
+  "keep": "棒球、砖墙、体育场式背景、光照、机位、碰前飞行轨迹与撞击位置保持不变",
+  "error_family": "geometry_structure",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "solidity_interpenetration"
+ },
+ "omniweaving__0152_perspective-center_trimmed-roll-in-box": {
+  "problems": [
+   "球撞上时布箱不动，数秒后无推力反向左滑"
+  ],
+  "expected": [
+   "接触瞬间球应减速，布箱沿来球方向被向右推"
+  ],
+  "keep": "木桌面、左侧黑管、橄榄绿布箱、棕网球、固定镜头、光照与球滚向箱子保持不变",
+  "error_family": "temporal_causal",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "wan2.2-i2v-a14b__fluid_426": {
+  "problems": [
+   "拧出的水突变成环绕人物的巨大圆形水幕"
+  ],
+  "expected": [
+   "水应从毛巾连续挤出成水滴水流，沿弧线下落"
+  ],
+  "keep": "室内场景、木柜背景、红帽深衣人物、白毛巾、机位、光照与拧毛巾动作保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "deformation_state_change",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "fluid"
+ },
+ "ltx-2-19b-dev-1stage__mechanics_146": {
+  "problems": [
+   "蹦床黑色垫面凭空喷涌出大量沙柱"
+  ],
+  "expected": [
+   "只在脚触沙处扬起少量散沙，垫面不出沙"
+  ],
+  "keep": "海滩、海平线、低角度阳光、蹦床位置与颜色、机位、人物服装与跳跃动作保持不变",
+  "error_family": "persistence_identity",
+  "interaction_primitive": "body_motion",
+  "scenario_domain": "human_animal_body_motion",
+  "review_error_category": "object_persistence"
+ },
+ "veo-3.1__mechanics_420": {
+  "problems": [
+   "铁饼撞靶后停住，碎木与撞痕约一秒后才出现"
+  ],
+  "expected": [
+   "首次接触即裂木留痕，铁饼连贯地弹开或落下"
+  ],
+  "keep": "户外场景、木靶、机位、光照、背景、铁饼外观、碰前轨迹与最终撞痕保持不变",
+  "error_family": "temporal_causal",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "cosmos-predict2.5-14b__mechanics_245": {
+  "problems": [
+   "空旷街道上瞬间凭空冒出横跨路面的巨大叶堆",
+   "叶堆像致密的整体竖直巨浪般向前推进"
+  ],
+  "expected": [
+   "落叶应来自已有叶堆或从画外沿街吹入",
+   "风应把松散落叶低低卷过路面并四散飘落"
+  ],
+  "keep": "城市街道、建筑、路边停车、秋树、光照、机位与大风沿街吹叶保持不变",
+  "error_family": "persistence_identity",
+  "interaction_primitive": "pour_flow",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "object_persistence"
+ },
+ "cosmos-predict2.5-14b__mechanics_294": {
+  "problems": [
+   "锤飞的石块悬停空中缓慢漂移数秒"
+  ],
+  "expected": [
+   "石块应沿短抛物线落下，弹滚后很快静止"
+  ],
+  "keep": "采石场、机位、光照、工人、安全帽与面罩、大锤、石堆、起始挥锤与扬尘保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "cosmos-predict2.5-2b__mechanics_245": {
+  "problems": [
+   "空旷街道凭空冒出叶堆与白烟，并像喷泉般爆涌"
+  ],
+  "expected": [
+   "已有落叶应被水平强风卷起，沿街打旋散落"
+  ],
+  "keep": "城市街道、秋树、路边停车、建筑、光照、机位与运镜、橙褐落叶随风飘保持不变",
+  "error_family": "persistence_identity",
+  "interaction_primitive": "pour_flow",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "object_persistence"
+ },
+ "ltx-2.3-22b-dev-1stage__mechanics_402": {
+  "problems": [
+   "木桩受锤击后像橡胶般平滑弯曲并保持弯折"
+  ],
+  "expected": [
+   "木桩应局部开裂碎裂，断板脱落下坠"
+  ],
+  "keep": "户外围栏、红帽厚衣人物、黄柄大锤、机位、光照与击中前的挥锤动作保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "material_state_change"
+ },
+ "wan2.2-i2v-a14b__mechanics_166": {
+  "problems": [
+   "球落地后半陷入草地，并溅起大片绿屑"
+  ],
+  "expected": [
+   "球应在草面短暂压缩后弹起或停在表面"
+  ],
+  "keep": "体育场背景、光照、机位、球的外观、落地前下落、草坪与慢动作风格保持不变",
+  "error_family": "geometry_structure",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "solidity_interpenetration"
+ },
+ "omniweaving__1jnsHJ1u3Pk_10_0to149": {
+  "problems": [
+   "碗未溢出，桌面却凭空出现并扩大绿色液洼"
+  ],
+  "expected": [
+   "绿液只应经液柱流入碗中，溢出后才在桌面漫开"
+  ],
+  "keep": "黑色纹理台面、透明花纹玻璃碗、固定机位、光照、绿色黏液、下倾液柱与碗中注液保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "pour_flow",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "fluid"
+ },
+ "omniweaving__collision_260": {
+  "problems": [
+   "纸箱堆受撞后整片弯折上卷，像弹性布盖住汽车"
+  ],
+  "expected": [
+   "受撞纸箱应各自分离、局部凹瘪并翻滚落下"
+  ],
+  "keep": "仓库场景、机位、灰色汽车、托盘货堆、红标纸箱与汽车冲入箱堆的时序保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "material_state_change"
+ },
+ "cosmos-predict2.5-2b__mechanics_152": {
+  "problems": [
+   "脚边凭空出现橙色轮子带人滑行，随后又消失"
+  ],
+  "expected": [
+   "滑冰者全程穿同一双冰鞋，冰刀贴冰滑行"
+  ],
+  "keep": "室内冰场、机位、红色头盔、黑色服装、滑行摔倒与起身过程、光照、围板与背景保持不变",
+  "error_family": "persistence_identity",
+  "interaction_primitive": "body_motion",
+  "scenario_domain": "human_animal_body_motion",
+  "review_error_category": "object_persistence"
+ },
+ "omniweaving__mechanics_407": {
+  "problems": [
+   "南瓜被斧击中后塌成光滑扁片，体积几乎消失"
+  ],
+  "expected": [
+   "南瓜应裂成保持体积的瓣块并自然落下"
+  ],
+  "keep": "人物、服装、深色背景、机位、击中前南瓜位置与挥斧击中时序保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "throw_projectile",
+  "scenario_domain": "deformable_materials",
+  "review_error_category": "material_state_change"
+ },
+ "ltx-2.3-22b-dev-1stage__0188_perspective-center_trimmed-weight-on-ceramic": {
+  "problems": [
+   "陶瓷杯被壶铃重压仍直立近乎完好，仅小裂口"
+  ],
+  "expected": [
+   "杯子应在重压下开裂碎塌，壶铃随之下沉"
+  ],
+  "keep": "固定镜头、木桌、灰墙背景、黑色壶铃、黄杯颜色与把手、构图、光照与初始下放保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "deformation_state_change",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "material_state_change"
+ },
+ "cosmos-predict2.5-14b__gravity_217": {
+  "problems": [
+   "漂浮残骸竖立出水，突然沉没又变形重现"
+  ],
+  "expected": [
+   "残骸应保持同一形状，在吃水线处随波漂动"
+  ],
+  "keep": "帆船船体、栏杆、红帆与帆杆、海平线、光照、运镜、平静水面与背景保持不变",
+  "error_family": "persistence_identity",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "object_persistence"
+ },
+ "wan2.2-ti2v-5b__mechanics_118": {
+  "problems": [
+   "首击时沙袋溅出水花状涟漪，双节棍拉成软带",
+   "再击时沙袋无回摆，棍身拉长并裂成带状"
+  ],
+  "expected": [
+   "沙袋应局部凹陷并轻微后摆，棍身保持坚硬",
+   "沙袋凹陷后应回摆，双节棍保持完整实心"
+  ],
+  "keep": "黑色武术服人物、左侧红色吊挂沙袋、灰色影棚背景、构图与挥击时序方向保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "deformable_materials",
+  "review_error_category": "material_state_change"
+ },
+ "wan2.2-i2v-a14b__0029_perspective-center_trimmed-ball-train": {
+  "problems": [
+   "灰球撞上后棕橙两球几乎不动，灰球反向左弹"
+  ],
+  "expected": [
+   "灰球应减速或偏转，棕橙两球被撞离接触点"
+  ],
+  "keep": "固定镜头、桌子、黑管、沙发背景、各球颜色外观、光照与碰前灰球滚近保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "ltx-2-19b-dev-1stage__collision_583": {
+  "problems": [
+   "红球分裂成两个，一个留在库边另一个滚走"
+  ],
+  "expected": [
+   "红球应保持唯一，从左下库边连续滚出"
+  ],
+  "keep": "俯拍台球桌、红色台呢、袋口、球杆、机位、光照、蓝球与黑球、红球路径保持不变",
+  "error_family": "persistence_identity",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "object_persistence"
+ },
+ "cosmos-predict2.5-14b__0197_perspective-center_trimmed-weight-protects-duck": {
+  "problems": [
+   "网球撞上鸭子却推不动，自身骤停在旁边",
+   "两物静止后无外力缓缓向左漂向壶铃"
+  ],
+  "expected": [
+   "鸭子应被沿桌面推向右方，网球减速或轻弹",
+   "两物停稳后应保持静止不再移动"
+  ],
+  "keep": "固定镜头、茶几、沙发背景、左侧黑管、黑色壶铃、黄色橡皮鸭、灰网球、光照与网球初始滚近保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "omniweaving__mechanics_218": {
+  "problems": [
+   "飞斧撞柱时斧柄消失，只剩斧头嵌在木中"
+  ],
+  "expected": [
+   "斧刃嵌入木柱，木柄保持相连并向右伸出"
+  ],
+  "keep": "木围栏柱特写、户外背景、构图、光照、撞击位置与木屑飞溅嵌入过程保持不变",
+  "error_family": "persistence_identity",
+  "interaction_primitive": "throw_projectile",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "object_persistence"
+ },
+ "veo-3.1__b91QyJ0TRAI_000000_000010": {
+  "problems": [
+   "落地时沙坑延迟巨爆，人深陷，沙像流体般翻涌"
+  ],
+  "expected": [
+   "落地应压出局部沙坑，只溅起少量沙粒"
+  ],
+  "keep": "田径场、运镜、运动员外观与助跑、腾空轨迹、沙坑边界、背景建筑、草地与最终坐姿保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "body_motion",
+  "scenario_domain": "human_animal_body_motion",
+  "review_error_category": "material_state_change"
+ },
+ "ltx-2.3-22b-dev-1stage__mechanics_286": {
+  "problems": [
+   "锤落的大块混凝土水平伸出墙面并悬在空中"
+  ],
+  "expected": [
+   "混凝土应碎成重块与粉尘，从断口脱落下坠"
+  ],
+  "keep": "涂鸦混凝土墙、深色连帽衫人物、大锤、机位、光照、墙上标识与拆墙动作保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "ltx-2-19b-dev-1stage__0137_perspective-center_trimmed-paper-in-water": {
+  "problems": [
+   "纸团漂在液面时突然消失，又复制出一团下沉"
+  ],
+  "expected": [
+   "纸团应始终为一个，漂浮或吸水后整体下沉"
+  ],
+  "keep": "固定镜头、高玻璃杯、蓝液与绿色液位带、桌面、背景、光照与构图保持不变",
+  "error_family": "persistence_identity",
+  "interaction_primitive": "pick_place_transfer",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "object_persistence"
+ },
+ "cosmos-predict2.5-2b__mechanics_286": {
+  "problems": [
+   "锤落的混凝土块脱离墙面后悬停原处不下落"
+  ],
+  "expected": [
+   "脱落的混凝土碎块应在重力下坠落、弹跳翻滚"
+  ],
+  "keep": "机位、涂鸦混凝土墙、深色连帽衫人物、大锤挥动、墙面纹理、未脱落墙体与拆墙动作保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "ltx-2-19b-dev-1stage__HaWe0Af_0hg_6_0to222": {
+  "problems": [
+   "液柱流入烧杯近两秒未积液，随后突然出现液池"
+  ],
+  "expected": [
+   "液柱一入杯就应积起小液池，并匀速上升"
+  ],
+  "keep": "实验台、玻璃分液漏斗、黄色液体、蓝钮阀门、玻璃烧杯、构图、竖直液柱与后续注液保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "pour_flow",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "fluid"
+ },
+ "cosmos-predict2.5-14b__HaWe0Af_0hg_6_0to222": {
+  "problems": [
+   "烧杯持续注液，漏斗内液位与分层却不下降",
+   "下落液柱无故变成向侧弯曲的粗液柱"
+  ],
+  "expected": [
+   "烧杯注满的同时漏斗液位应同步下降",
+   "液流应从阀门竖直平滑落入烧杯"
+  ],
+  "keep": "实验场景、机位、玻璃分液漏斗、蓝钮阀门、黄琥珀分层液体、烧杯位置与持续注液保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "pour_flow",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "fluid"
+ },
+ "wan2.2-i2v-a14b__mechanics_193": {
+  "problems": [
+   "空中的锤子完全消失一秒多，后在画面顶部突现"
+  ],
+  "expected": [
+   "锤子应全程可见，连续飞行、弹跳一次后落定"
+  ],
+  "keep": "昏暗影棚、固定镜头、灰色背景、纹理地面、光影、锤子外观与最终静止姿态保持不变",
+  "error_family": "persistence_identity",
+  "interaction_primitive": "throw_projectile",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "object_persistence"
+ },
+ "omniweaving__mechanics_294": {
+  "problems": [
+   "一锤击中石堆后爆炸式喷发，巨石被抛高飞远"
+  ],
+  "expected": [
+   "只有接触点附近石块碎裂移位，近距散落伴少量尘"
+  ],
+  "keep": "采石场、机位、光照、戴盔与面罩的工人、挥锤动作、石堆、周围土丘与击打时序保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "veo-3.1__0047_perspective-center_trimmed-domino-in-juice": {
+  "problems": [
+   "白色骨牌落入液体后突然变成橙色骨牌"
+  ],
+  "expected": [
+   "骨牌应始终是同一块白骨牌，最多被液体浸湿变暗"
+  ],
+  "keep": "木面上的蓝杯、固定镜头、夹具动作、深色液体、松开时机、水花波纹与骨牌位置运动保持不变",
+  "error_family": "persistence_identity",
+  "interaction_primitive": "pick_place_transfer",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "object_persistence"
+ },
+ "veo-3.1__mechanics_72": {
+  "problems": [
+   "落地时垫子像液体般泛起涟漪，双脚陷进垫中"
+  ],
+  "expected": [
+   "双脚应落在垫面上，垫子仅轻微压缩起皱"
+  ],
+  "keep": "体操馆、红墙、单杠器械、蓝色垫子、固定机位、运动员外观与松杠前的摆动保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "body_motion",
+  "scenario_domain": "human_animal_body_motion",
+  "review_error_category": "material_state_change"
+ },
+ "cosmos-predict2.5-2b__collision_264": {
+  "problems": [
+   "金属管在南瓜上钻出光滑圆洞，南瓜几乎完好"
+  ],
+  "expected": [
+   "南瓜应在接触点碎裂开口，瓤和籽不规则溢出"
+  ],
+  "keep": "桌面场景、机位、光照、南瓜、从右侧伸入的金属管与其进退时序保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "deformable_materials",
+  "review_error_category": "material_state_change"
+ },
+ "ltx-2-19b-dev-1stage__mechanics_438": {
+  "problems": [
+   "两人冰鞋和腿相互穿透，红衣者被突然甩平"
+  ],
+  "expected": [
+   "冰鞋应实体碰撞勾绊，两人都有相应的失衡反应"
+  ],
+  "keep": "冰场、机位、红蓝两名滑冰者、服装、滑行方向与冰鞋勾绊后分开的过程保持不变",
+  "error_family": "geometry_structure",
+  "interaction_primitive": "body_motion",
+  "scenario_domain": "human_animal_body_motion",
+  "review_error_category": "solidity_interpenetration"
+ },
+ "ltx-2.3-22b-dev-1stage__HaWe0Af_0hg_6_0to222": {
+  "problems": [
+   "分液漏斗的刚性阀门弯曲变形，像熔化的侧管"
+  ],
+  "expected": [
+   "阀门应保持刚性完整，仅蓝钮旋转打开放液"
+  ],
+  "keep": "实验场景、构图、烧杯上方的分液漏斗、黄色液体、竖直液柱与烧杯逐渐注满保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "pour_flow",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "material_state_change"
+ },
+ "veo-3.1__AupVdYKP3bo_5_0to165": {
+  "problems": [
+   "红色液体注入已满的玻璃杯，液面不升也不溢出"
+  ],
+  "expected": [
+   "杯满后继续注入的液体应溢出杯沿并溅到黑垫上"
+  ],
+  "keep": "厨房台面、黑色垫子、玻璃壶、两只小杯、背景饮料瓶、机位、手部位置与前段倾倒动作保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "pour_flow",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "fluid"
+ },
+ "veo-3.1__mechanics_547": {
+  "problems": [
+   "小树倒地激起爆炸般高耸并久留的碎屑烟柱"
+  ],
+  "expected": [
+   "树枝受压弯曲，触地处仅扬起少量木屑落叶并迅速下落"
+  ],
+  "keep": "郊区草坪、树桩、电锯与操作者位置、机位、触地前的锯切动作与小树向左倒下保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "tool_machine_operation",
+  "review_error_category": "force_motion_causality"
+ },
+ "ltx-2-19b-dev-1stage__0104_perspective-center_trimmed-marble-run-x": {
+  "problems": [
+   "黄色弹珠在绿色点状轨道上消失约半秒后重现"
+  ],
+  "expected": [
+   "弹珠应始终可见，沿绿色轨道从左向右平滑滚动"
+  ],
+  "keep": "固定镜头、白板与黑框、轨道布局与颜色、光照反光、消失前后的弹珠滚动保持不变",
+  "error_family": "persistence_identity",
+  "interaction_primitive": "other_multistep",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "object_persistence"
+ },
+ "omniweaving__mechanics_240": {
+  "problems": [
+   "链球与假肢手臂穿入运动员的头颈和肩部",
+   "金属假肢变成与躯干融合的白色袖状物"
+  ],
+  "expected": [
+   "假肢与链球应从头肩前方或后方经过并正确遮挡",
+   "假肢应保持金属外观，手与链球持续连贯可见"
+  ],
+  "keep": "户外跑道、暖色夕阳光、机位构图、运动员身份与服装、初始假肢外观与挥链球动作保持不变",
+  "error_family": "geometry_structure",
+  "interaction_primitive": "throw_projectile",
+  "scenario_domain": "human_animal_body_motion",
+  "review_error_category": "solidity_interpenetration"
+ },
+ "cosmos-predict2.5-2b__collision_542": {
+  "problems": [
+   "金属板上无碰撞却凭空出现红色碎屑斑点"
+  ],
+  "expected": [
+   "无可见运动时，接触点旁红点与板面应保持原样"
+  ],
+  "keep": "金属物体、金属板、机位、光照、反光、阴影与静止场景保持不变",
+  "error_family": "persistence_identity",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "object_persistence"
+ },
+ "cosmos-predict2.5-14b__0029_perspective-center_trimmed-ball-train": {
+  "problems": [
+   "灰球撞上棕、橙两球后三球一起停住不散开",
+   "黑色管子无外力在桌面上向右平移"
+  ],
+  "expected": [
+   "被撞两球应滚开散落，灰球减速或偏转",
+   "放出球后黑色管子应在桌上保持静止"
+  ],
+  "keep": "浅色茶几、沙发背景、黑管外观、三只网球及颜色、固定镜头、光照与灰球撞前滚动保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "cosmos-predict2.5-2b__57UqPDirHoU_15_24to135": {
+  "problems": [
+   "浓缩咖啡呈宽厚光亮的帘状液膜贴着机器垂入杯中"
+  ],
+  "expected": [
+   "咖啡应从金属出口细流落下，在杯中激起涟漪并升高液面"
+  ],
+  "keep": "咖啡机、橙色墙、绿色咖啡袋、磨豆机、玻璃杯位置、机位、光照反光与持续出液保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "pour_flow",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "fluid"
+ },
+ "wan2.2-i2v-a14b__0017_perspective-center_trimmed-ball-in-sand": {
+  "problems": [
+   "网球未被夹住却悬停在沙堆上方，随后突然落在沙上",
+   "网球落到动力沙上，沙堆没有凹陷或位移"
+  ],
+  "expected": [
+   "夹具应夹住网球，松开后网球受重力平滑下落",
+   "网球落沙应砸出明显凹坑并挤起少量沙边"
+  ],
+  "keep": "固定镜头、木桌、灰色背景、蓝色夹取器、蓝色网球、绿色动力沙堆、光照与构图保持不变",
+  "error_family": "contact_interaction",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "deformable_materials",
+  "review_error_category": "contact_support"
+ },
+ "cosmos-predict2.5-2b__mechanics_182": {
+  "problems": [
+   "玩具锤头穿入并融进蓝色蛋壳，还出现多余红色碎块"
+  ],
+  "expected": [
+   "锤子应击打蛋壳外侧使其裂开外散，红帽始终连在锤上"
+  ],
+  "keep": "玩具特写场景、蓝色塑料蛋、左侧孩子的手和头、黄柄灰锤与红帽、机位、光照与砸蛋动作保持不变",
+  "error_family": "geometry_structure",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "tool_machine_operation",
+  "review_error_category": "solidity_interpenetration"
+ },
+ "ltx-2.3-22b-dev-1stage__FNIitZt3pyc_59_78to215": {
+  "problems": [
+   "行走者小腿和脚变得纤细透明，肢体碎片凭空出现或融合"
+  ],
+  "expected": [
+   "人物应始终有两条完整、不透明的腿和脚"
+  ],
+  "keep": "岩石沙漠、暖色阳光、机位构图、人物向前行走、上半身姿态与地面长影保持不变",
+  "error_family": "persistence_identity",
+  "interaction_primitive": "body_motion",
+  "scenario_domain": "human_animal_body_motion",
+  "review_error_category": "object_persistence"
+ },
+ "veo-3.1__collision_468": {
+  "problems": [
+   "足球穿过实心灯柱继续飞向左侧"
+  ],
+  "expected": [
+   "足球应撞到灯柱右侧表面后按合理角度反弹"
+  ],
+  "keep": "足球场、灯柱、建筑、阳光眩光、机位、球员外观与踢球动作保持不变",
+  "error_family": "geometry_structure",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "solidity_interpenetration"
+ },
+ "veo-3.1__mechanics_245": {
+  "problems": [
+   "落叶堆聚成整团，升成实心叶墙和中央叶柱"
+  ],
+  "expected": [
+   "落叶应被阵风吹散，单片翻飞旋转并四散"
+  ],
+  "keep": "城市街道、建筑、停放车辆、秋树、机位、光照与阵风卷叶的整体事件保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "pour_flow",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "fluid"
+ },
+ "cosmos-predict2.5-14b__mechanics_286": {
+  "problems": [
+   "断裂的混凝土大块无支撑地悬挂在墙面上，久不掉落"
+  ],
+  "expected": [
+   "未断开的块应连着墙体，脱落的块应立即受重力坠落"
+  ],
+  "keep": "涂鸦混凝土墙、戴兜帽的人、锤击动作、机位、光照与正常下落的尘土碎屑保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "tool_machine_operation",
+  "review_error_category": "force_motion_causality"
+ },
+ "ltx-2-19b-dev-1stage__mechanics_476": {
+  "problems": [
+   "斧头一击未砍出深口，小树却立即整棵倒下"
+  ],
+  "expected": [
+   "斧头应只砍入或弹开，留下小缺口，树保持直立"
+  ],
+  "keep": "森林场景、光照、机位、红帽男子、挥斧动作与其余身体动作保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "tool_machine_operation",
+  "review_error_category": "material_state_change"
+ },
+ "wan2.2-ti2v-5b__mechanics_85": {
+  "problems": [
+   "大幅倾斜的滑板车无外力自行回正直立"
+  ],
+  "expected": [
+   "倾斜后应靠轮胎或脚撑停稳，或继续倒地侧躺"
+  ],
+  "keep": "街道与大门场景、右侧两个垃圾桶、机位、滑板车外观与落地停车过程保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "ltx-2-19b-dev-1stage__hardness_288": {
+  "problems": [
+   "折断的枝梢在断口旁悬停空中不下落"
+  ],
+  "expected": [
+   "断下的枝段应受重力加速下落并轻微旋转"
+  ],
+  "keep": "剪影树枝、树叶、背景、机位构图与前段弯折断裂过程保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "deformation_state_change",
+  "scenario_domain": "deformable_materials",
+  "review_error_category": "force_motion_causality"
+ },
+ "omniweaving__0008_perspective-center_trimmed-ball-hits-duck": {
+  "problems": [
+   "网球先滚入管中，又无外力反向滚出",
+   "网球穿入鸭子后像撞重物般反弹，轻鸭几乎不动",
+   "网球滚回管中后又无故反向滚出"
+  ],
+  "expected": [
+   "网球应只从左侧管口向右滚出一次",
+   "网球应接触鸭子而不重叠，推得鸭子晃动或滑移",
+   "网球滚回管内后应停在管中不再出来"
+  ],
+  "keep": "固定镜头、米色茶几、左侧黑管、右侧黄色橡皮鸭、沙发背景、光照与球的往返路线保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "cosmos-predict2.5-2b__collision_403": {
+  "problems": [
+   "冰球碰到冰刀后既不弹开也不改变方向"
+  ],
+  "expected": [
+   "冰球触及冰刀应明显偏转弹开，可在冰面轻跳"
+  ],
+  "keep": "冰场、围板、机位与运镜、滑冰者外观与滑行路线、冰球接触前的滑行保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "cosmos-predict2.5-2b__0035_perspective-center_trimmed-block-domino": {
+  "problems": [
+   "倒下的积木与下一块重叠滑入，粉红积木仍直立",
+   "绿色积木被撞后变形扭曲，又重新直立"
+  ],
+  "expected": [
+   "每块积木应接触并撞倒下一块，依次连锁倒下",
+   "绿色积木应保持刚性形状，被撞后持续倒下"
+  ],
+  "keep": "固定镜头、木桌、黑色转台、木棍、彩色长方积木的位置颜色与木棍起始撞击保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "wan2.2-ti2v-5b__mechanics_216": {
+  "problems": [
+   "雪橇翻车时靠极小的边缘近乎直立滑行数秒"
+  ],
+  "expected": [
+   "雪橇应迅速侧翻倒地，侧身滑行扬雪后停下"
+  ],
+  "keep": "夜间雪橇赛道、雪面、场馆灯光、机位与运镜、红色雪橇、乘员与整体翻车轨迹保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "ltx-2.3-22b-dev-1stage__mechanics_268": {
+  "problems": [
+   "保龄球凭空突然出现在球道上"
+  ],
+  "expected": [
+   "保龄球应始终可见，沿球道平滑滚入该位置"
+  ],
+  "keep": "保龄球馆、抛光木球道、球瓶、机位、光照反光与球随后滚向球瓶保持不变",
+  "error_family": "persistence_identity",
+  "interaction_primitive": "throw_projectile",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "object_persistence"
+ },
+ "omniweaving__Sl3C5JMaCTo_22_0to159": {
+  "problems": [
+   "锅中食物持续倒入白碗，碗内液面却不上升"
+  ],
+  "expected": [
+   "倒入的液体应落在碗内积聚，液面逐渐升高"
+  ],
+  "keep": "厨房场景、女子与围裙、台面物品、机位构图、搅拌动作、锅的倾斜与整体节奏保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "pour_flow",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "fluid"
+ },
+ "omniweaving__mechanics_476": {
+  "problems": [
+   "斧头未有力砍中树干，小树却开始倒下"
+  ],
+  "expected": [
+   "斧头应先砍入树干，树从切口断裂后向左倒下"
+  ],
+  "keep": "森林场景、光照、机位、红帽深色夹克的人、斧头外观与树向左倒下保持不变",
+  "error_family": "temporal_causal",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "tool_machine_operation",
+  "review_error_category": "force_motion_causality"
+ },
+ "wan2.2-i2v-a14b__mechanics_293": {
+  "problems": [
+   "篮球进框时穿过篮圈或侧网，从篮筐左侧落出"
+  ],
+  "expected": [
+   "篮球应从篮圈中央穿下，压下球网后从网底落出"
+  ],
+  "keep": "球场、机位、球员外观与投篮动作、出手与飞向篮筐的弧线保持不变",
+  "error_family": "geometry_structure",
+  "interaction_primitive": "throw_projectile",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "solidity_interpenetration"
+ },
+ "veo-3.1__collision_542": {
+  "problems": [
+   "钢珠撞板时火花碎屑爆发，留下熔融状凹坑"
+  ],
+  "expected": [
+   "金属板应塑性变形出局部圆形凹痕，几乎无火花"
+  ],
+  "keep": "金属板特写、亮面钢珠、机位、光照、钢珠来路、反弹滚离动作与凹痕位置保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "material_state_change"
+ },
+ "veo-3.1__LReETYVrmo0_7_70to284": {
+  "problems": [
+   "摩托车行驶时轮胎长时间悬空离开沙面"
+  ],
+  "expected": [
+   "两轮应持续贴沙滚动，悬挂随颠簸起伏，尘土从后轮扬起"
+  ],
+  "keep": "沙漠景观、骑手姿态装备、摩托车外观、侧向跟拍运镜、前进运动、光照方向与长影保持不变",
+  "error_family": "contact_interaction",
+  "interaction_primitive": "other_multistep",
+  "scenario_domain": "tool_machine_operation",
+  "review_error_category": "contact_support"
+ },
+ "wan2.2-i2v-a14b__0035_perspective-center_trimmed-block-domino": {
+  "problems": [
+   "木棍撞到最右积木后，整排积木直立着向左滑动"
+  ],
+  "expected": [
+   "被撞积木应倒向相邻积木，向左依次连锁倒下"
+  ],
+  "keep": "固定镜头、木桌、纯色背景、黑色转台、木棍、彩色积木与初始排列、转台顺时针旋转保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "ltx-2-19b-dev-1stage__mechanics_187": {
+  "problems": [
+   "运动员落沙后仍直立前冲，沙坑不陷，倒地扬沙滞后"
+  ],
+  "expected": [
+   "首次触沙即应砸出沙坑并扬沙，人随即减速滑倒"
+  ],
+  "keep": "体育场、跑道、沙坑、镜头平移、运动员外观、助跑起跳与落地前的动作保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "body_motion",
+  "scenario_domain": "human_animal_body_motion",
+  "review_error_category": "force_motion_causality"
+ },
+ "ltx-2-19b-dev-1stage__mechanics_81": {
+  "problems": [
+   "撞雪堆时人与自行车碎裂融成一团，自行车消失"
+  ],
+  "expected": [
+   "人车应保持完整，前轮压入雪堆后车停住或翻倒"
+  ],
+  "keep": "雪山小路、跟拍视角、骑手服装、自行车外观与撞雪堆前的连续骑行保持不变",
+  "error_family": "persistence_identity",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "human_animal_body_motion",
+  "review_error_category": "object_persistence"
+ },
+ "wan2.2-ti2v-5b__7_O1YdVAWSU_14_0to102": {
+  "problems": [
+   "白色稠液倒入玻璃杯后凭空消失，杯中液面不升"
+  ],
+  "expected": [
+   "稠液应在杯中积聚，液面随注入平稳升高"
+  ],
+  "keep": "酒吧场景、光头男子、搅拌机、机位、倒液时机与方向、光照及其余动作保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "pour_flow",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "fluid"
+ },
+ "ltx-2.3-22b-dev-1stage__collision_431": {
+  "problems": [
+   "撞人时两名球员身体相互穿插，融成一团"
+  ],
+  "expected": [
+   "红衣球员应实体撞击对手，使其倒地摊在冰上"
+  ],
+  "keep": "室内冰场、围板与玻璃、观众背景、球衣、低机位跟拍、冰屑飞溅与撞人动作节奏保持不变",
+  "error_family": "geometry_structure",
+  "interaction_primitive": "body_motion",
+  "scenario_domain": "human_animal_body_motion",
+  "review_error_category": "solidity_interpenetration"
+ },
+ "cosmos-predict2.5-14b__Nq94DTV2MiY_12_116to243": {
+  "problems": [
+   "勺中黄液持续流出却不见减少，入碗处几乎无涟漪"
+  ],
+  "expected": [
+   "勺中液体应逐渐变少，液流入碗处产生凹陷和涟漪"
+  ],
+  "keep": "白木桌上两只玻璃碗、右侧红液碗、手的位置与举勺动作、机位、光照与颜色保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "pour_flow",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "fluid"
+ },
+ "ltx-2-19b-dev-1stage__UsL5HzxP68A_2_76to287": {
+  "problems": [
+   "草莓沉入粉色液体下半部，始终不浮起"
+  ],
+  "expected": [
+   "草莓应减速后因浮力上浮，部分浮在液面"
+  ],
+  "keep": "玻璃杯、粉色泡沫饮料、草莓外观、机位构图、光照、背景与草莓落入饮料保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "force_motion_causality"
+ },
+ "ltx-2.3-22b-dev-1stage__0020_perspective-center_trimmed-ball-ramp": {
+  "problems": [
+   "网球在斜坡上长时间停住，又无外力重新滚动"
+  ],
+  "expected": [
+   "网球应上坡减速，在最高点瞬间停顿后立即滚下"
+  ],
+  "keep": "固定镜头、木桌、黑管、纸板斜坡、蓝色垫块、光照与球上坡及后续下坡路径保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "other_multistep",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "omniweaving__collision_399": {
+  "problems": [
+   "弹珠在金属侧栏旁静止近两秒，后无故突然弹开"
+  ],
+  "expected": [
+   "弹珠应连续运动撞向左侧栏，触碰后立即弹回右侧"
+  ],
+  "keep": "弹球机场景、亮面台面、左侧金属栏、彩色街机灯光、机位、反光与弹珠回弹后向右运动保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "wan2.2-i2v-a14b__0134_perspective-center_trimmed-paper-fall-water": {
+  "problems": [
+   "松开后纸团沉入碗中低处停留，不浮在水面"
+  ],
+  "expected": [
+   "纸团应落在水面激起小涟漪，并部分露出水面漂浮"
+  ],
+  "keep": "固定镜头、木桌、透明碗、夹取器、纸团外观与松开动作保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "fluid"
+ },
+ "wan2.2-ti2v-5b__Nq94DTV2MiY_12_116to243": {
+  "problems": [
+   "勺子倒出远超一勺容量的粗长液流，像在凭空生成"
+  ],
+  "expected": [
+   "液体应限于一勺量，短暂倒出后迅速变细并停止"
+  ],
+  "keep": "两只玻璃碗、黄红液体、白木桌、手、勺子、机位、光照与举勺放勺动作保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "pour_flow",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "fluid"
+ },
+ "veo-3.1__collision_570": {
+  "problems": [
+   "撞瘪的车头几帧后自行恢复平整完好"
+  ],
+  "expected": [
+   "引擎盖、格栅、保险杠和车灯应持续保持撞瘪变形"
+  ],
+  "keep": "夜间小巷、砖墙、黑色轿车、机位、驶近与撞击时机、墙体碎屑、尘土火花与车停墙边保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "material_state_change"
+ },
+ "wan2.2-i2v-a14b__collision_387": {
+  "problems": [
+   "倒钩射门时足球穿入并融进球员的球鞋"
+  ],
+  "expected": [
+   "足球应只接触鞋面外侧，随后向上弹起飞出"
+  ],
+  "keep": "体育场、机位、球员外观与球衣、身体动作序列、草地、天空与球的来路和上射轨迹保持不变",
+  "error_family": "geometry_structure",
+  "interaction_primitive": "throw_projectile",
+  "scenario_domain": "human_animal_body_motion",
+  "review_error_category": "solidity_interpenetration"
+ },
+ "cosmos-predict2.5-14b__collision_264": {
+  "problems": [
+   "金属管钻穿南瓜，南瓜几乎不动、只在局部裂开"
+  ],
+  "expected": [
+   "南瓜受击应压缩开裂、略向右移，碎块果肉向外散落"
+  ],
+  "keep": "木桌面、深色背景、光照、机位构图、橙色南瓜、金属管从左侧来袭与砸开后的果肉碎壳保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "tool_machine_operation",
+  "review_error_category": "force_motion_causality"
+ },
+ "omniweaving__mechanics_52": {
+  "problems": [
+   "金属马蹄铁落地时像橡胶条一样弯曲卷起"
+  ],
+  "expected": [
+   "马蹄铁应保持刚性C形，可弹跳、旋转、滑动后停稳"
+  ],
+  "keep": "户外泥地特写、左侧竖直金属桩、银白马蹄铁、暖色光照、尘土与小草、落地过程与构图保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "throw_projectile",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "material_state_change"
+ },
+ "wan2.2-i2v-a14b__7_O1YdVAWSU_14_0to102": {
+  "problems": [
+   "杯满时白色稠液在杯沿上方形成持久的尖刺状凸起"
+  ],
+  "expected": [
+   "液面应平滑或带细泡沫，小飞溅应立即塌落"
+  ],
+  "keep": "酒吧场景、男子、搅拌机、玻璃杯、机位、光照与整体倒液动作保持不变",
+  "error_family": "material_state",
+  "interaction_primitive": "pour_flow",
+  "scenario_domain": "fluid_thermal_optical_phenomena",
+  "review_error_category": "fluid"
+ },
+ "cosmos-predict2.5-14b__0125_perspective-center_trimmed-mug-breaks": {
+  "problems": [
+   "夹具松开后黄色马克杯悬停空中不下落"
+  ],
+  "expected": [
+   "松开后马克杯应立即受重力朝砖块下落"
+  ],
+  "keep": "固定镜头、白色投影幕、木地板、砖块位置、黄色马克杯与夹具外观、先前的夹持姿态保持不变",
+  "error_family": "motion_force",
+  "interaction_primitive": "collision_impact",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "force_motion_causality"
+ },
+ "wan2.2-i2v-a14b__collision_581": {
+  "problems": [
+   "高尔夫球停滞悬浮、消失后又跳到果岭另一处"
+  ],
+  "expected": [
+   "击球后球应沿连续平滑路径滚向球洞"
+  ],
+  "keep": "左侧球手、高尔夫球场、旗杆、球洞区、机位、光照与之后滚向旗杆的过程保持不变",
+  "error_family": "persistence_identity",
+  "interaction_primitive": "throw_projectile",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "object_persistence"
+ },
+ "cosmos-predict2.5-2b__mechanics_293": {
+  "problems": [
+   "篮球入框后一直卡在网中不落下"
+  ],
+  "expected": [
+   "篮球应短暂撑开球网，再从网底穿出落下"
+  ],
+  "keep": "球场、机位、球员外观与姿态、篮筐与篮板、入框前的投篮弧线保持不变",
+  "error_family": "contact_interaction",
+  "interaction_primitive": "throw_projectile",
+  "scenario_domain": "rigid_object_dynamics",
+  "review_error_category": "contact_support"
+ }
+}
