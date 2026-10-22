@@ -22,7 +22,7 @@ configs:
 - **VideoPhy2（100 条）**：VideoPhy2 test 集中 SA ≥ 4、物理常识 PC ≤ 3、标注者至少写了一条违反的物理规则的视频；去掉分辨率低的 VideoCrafter。同一 prompt 只留排名最高的一条；与 PhyGround 名单 prompt 重复的，排在同票数的其他视频之后。
 - **GPT-5.5 逐帧核实**：每条候选按 4 fps 抽帧并标时间戳，连同生成 prompt 和人工标签交给 GPT-5.5。人工标签（PhyGround 的低分定律；VideoPhy2 的违反规则原句）逐条当作待核实的说法，判 supported / not_supported（VideoPhy2 另有 not_in_video，用来识别讲的东西视频里根本没有的标注噪声），并写出缺陷时间段、描述、修复指令和需保持的内容；或者给出拒收理由：无物理错误、只有语义问题、原标注误报、整体崩坏、画质差、不可修。
 - **三遍投票**：单次调用不稳定，每条跑三遍，按保留票数排序，同票数再按平均严重度、平均置信度排序。三遍都保留的记为 confident，否则记为 borderline。至少一票保留才进名单。票数不代表判对，所以每一条都需要人工审。
-- **中文修复标注**：「问题 / 正确表现 / 保持不变」三段由 LLM 根据 GPT-5.5 的英文错误描述、修复指令和保持内容改写，**改写时没有重新看视频**。每条问题的时间段直接沿用 GPT-5.5 给的（4 fps 精度，所以有 0.25s 级的值）。英文原文保存在 `error_description_en` / `correction_instruction_en` / `protected_content_en` 中。
+- **中文修复标注**：「问题 / 正确表现 / 保持不变」三段和四个分类标签（`error_family` / `interaction_primitive` / `scenario_domain` / `review_error_category`）由 Claude 根据 GPT-5.5 的英文错误描述、修复指令、保持内容和生成 prompt 改写、归类，**Claude 没有看视频**，准确度以 GPT-5.5 的英文为上限。每条问题的时间段直接沿用 GPT-5.5 给的（4 fps 精度，所以有 0.25s 级的值）。英文原文保存在 `error_description_en` / `correction_instruction_en` / `protected_content_en` 中。
 
 ## 文件
 
@@ -46,14 +46,14 @@ review_phyground_videophy2_hf.html        HF 在线版（视频走 HF resolve UR
 | `record_id` | PhyGround：`phyground::<模型>::<视频名>`；VideoPhy2：`videophy2::test::vp2_<csv 行号>_<模型>` |
 | `slot` | 在本源名单中的排名（1 = 票数与严重度最高） |
 | `generator` | 生成模型（原始 id 在 `generator_id`） |
-| `error_family` / `interaction_primitive` / `scenario_domain` / `review_error_category` | 与 Physion-300 同一套取值，由 LLM 根据英文描述和 prompt 归类 |
-| `glitch_category_official` | 源数据集自带的物理标签：PhyGround 为人工判低分的定律名；VideoPhy2 为违反规则所对应的物理定律（VideoPhy2 数据集自带标签） |
+| `error_family` / `interaction_primitive` / `scenario_domain` / `review_error_category` | 与 Physion-300 同一套取值，由 Claude 根据 GPT-5.5 的英文描述和生成 prompt 归类（未看视频） |
+| `glitch_category_official` | 源数据集自带的物理标签：PhyGround 为人工判低分的定律名；VideoPhy2 为违反规则所对应的物理定律（VideoPhy2 数据集自带标签，由 Gemini-Flash 标注） |
 | `obviousness` | GPT-5.5 保留票的平均严重度（1–5，「错误对观众有多明显」）≥ 4 记为 `obvious`，否则 `subtle` |
 | `confidence` | GPT-5.5 保留票的平均置信度 |
 | `needs_human_frame_step_confirmation` | 三遍结论不一致（borderline）时为 `true` |
 | `all_claimed_errors_visible` | 被采用的那一遍里，每条人工标注都被判为 supported |
 | `annotation` | VideoPhy2：标注者给出的违反规则原句（字符串数组，逐字）。PhyGround 没有文字标注，这里是各维度和各定律人工均分的一行英文摘要，附标注者备注原文 |
-| `fix_problems` | 「第X.Xs–Y.Ys：问题」逐条 |
+| `fix_problems` | 「第X.Xs–Y.Ys：问题」逐条；时间段来自 GPT-5.5，问题文字由 Claude 写 |
 | `fix_expected` | 正确表现，与 problems 逐条一一对应 |
 | `fix_keep` | 修复时需保持不变的内容 |
 | `fixing_prompt_zh` | 由上述三段拼成的完整修复指令（拼法与 Physion-300 完全相同） |
@@ -67,7 +67,7 @@ review_phyground_videophy2_hf.html        HF 在线版（视频走 HF resolve UR
 | `prompt` | 生成该视频用的文本 prompt |
 | `gpt_keep_votes` / `gpt_tier` / `gpt_severity` | 三遍中保留的票数、confident / borderline、保留票的平均严重度 |
 | `error_evidence` | 每条错误的起止时间和关键时间戳（与 `fix_problems` 一一对应） |
-| `error_description_en` / `correction_instruction_en` / `protected_content_en` | GPT-5.5 的英文原文（中文三段的来源） |
+| `error_description_en` / `correction_instruction_en` / `protected_content_en` | GPT-5.5 看抽帧写的英文原文（中文三段的来源） |
 | `error_category_en` / `violated_laws_en` | GPT-5.5 给的错误类别和违反的定律 |
 | `human_labels` | 源数据集人工标签原样：PhyGround 为 SA / PTV / persistence 和各定律均分、低分定律、备注；VideoPhy2 为 SA / PC、违反规则原句（V = 从规则表勾选，W = 标注者自写）及其定律标签 |
 | `claim_checks` | GPT-5.5 对每条人工标注的逐帧核实（verdict、证据、时间戳） |
