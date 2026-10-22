@@ -8,7 +8,7 @@ correction instruction and protected content; the time span of every problem is 
 prefixed here rather than in the Chinese text. Every source record keeps the Physion-300 fields first, in their order,
 then its own provenance fields (prompt, GPT votes, English evidence, human labels).
 
-    python3 pipeline/export_physfixbench.py --hf-repo NU-World-Model-Embodied-AI/PhysFixBench-PhyGround-VideoPhy2
+    python3 pipeline/export_physfixbench.py --hf-repo juyil/PhysFixBench-PhyGround-VideoPhy2
 """
 
 import argparse

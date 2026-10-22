@@ -77,12 +77,12 @@ review_hf.html                    HF 在线版（视频走 HF resolve URL）
 ```
 data/physfixbench_phyground.jsonl / .csv     PhyGround 91 条
 data/physfixbench_videophy2.jsonl / .csv     VideoPhy2 100 条
-review_phyground_videophy2_hf.html           在线审核页（视频走 HF resolve URL，需登录 HF 且有访问权限）
+review_phyground_videophy2_hf.html           在线审核页（视频走 HF resolve URL）
 review_phyground_videophy2.html              离线审核页（与 videos/ 放同一目录）
 pipeline/                                    筛选 → GPT-5.5 逐帧核实 → 三遍投票 → 导出
 ```
 
-视频（约 255 MB）在 Hugging Face：[NU-World-Model-Embodied-AI/PhysFixBench-PhyGround-VideoPhy2](https://huggingface.co/datasets/NU-World-Model-Embodied-AI/PhysFixBench-PhyGround-VideoPhy2)（私有，需在 HF 仓库 Settings → Collaborators 中邀请合作者）。
+视频（约 255 MB）在 Hugging Face：[juyil/PhysFixBench-PhyGround-VideoPhy2](https://huggingface.co/datasets/juyil/PhysFixBench-PhyGround-VideoPhy2)（公开）。
 
 ## pipeline/
 

@@ -85,7 +85,7 @@ review_phyground_videophy2_hf.html        HF 在线版（视频走 HF resolve UR
 
 ## 人工审核方式
 
-1. 打开 `review_phyground_videophy2.html`（与 `videos/` 放在同一目录），或直接使用 HF 在线版 `review_phyground_videophy2_hf.html`（需登录且有本仓库访问权限）。
+1. 打开 `review_phyground_videophy2.html`（与 `videos/` 放在同一目录），或直接使用 HF 在线版 `review_phyground_videophy2_hf.html`。
 2. 播放视频，对照 ❶问题 / ❷正确表现 / ❸保持不变 三块；可直接在框中修改文字。展开「英文核实证据」可看 GPT-5.5 对每条人工标注的裁决和三遍投票。
 3. 每条选择 **通过 / 需修改 / 驳回**，可填备注；结果自动暂存在浏览器。可按数据源、问题类别、视频内容、生成模型、难度筛选。
 4. 点右上角「导出审核结果 JSON」，回收 `physfixbench_phyground_videophy2_review_export.json`。
