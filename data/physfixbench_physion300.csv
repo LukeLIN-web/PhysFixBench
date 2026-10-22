@@ -1,0 +1,545 @@
+﻿slot,record_id,video_file,generator,error_family,interaction_primitive,scenario_domain,obviousness,confidence,needs_human,问题(problems),正确表现(expected),保持不变(keep),审核结论(pass/edit/reject),修改后内容,备注
+1,physion_eval::full::T1_01334,T1_01334.mp4,Hailuo 2.3,material_state,pick_place_transfer,fluid_thermal_optical_phenomena,unknown,0.62,True,第1.0s–3.5s：融水增加时冰块体积反而增大,融化时冰块逐渐缩小，水量与体积变化守恒,紫色半透明冰块、混凝土地面与绿植、固定镜头、水洼色彩与倒影保持不变,,,
+5,physion_eval::full::T1_09116,T1_09116.mp4,Veo 3.1 Fast,temporal_causal,pick_place_transfer,human_animal_body_motion,unknown,0.92,False,第6.1s–6.2s：搅拌碗突然消失并变成塑料布,搅拌碗应持续留在台面原位,棕面团形变、手臂、石台、排插、木勺杯、消毒器、蓝电器、透明塑料布保持不变,,,
+16,physion_eval::full::T1_01502,T1_01502.mp4,Sora 2,persistence_identity,pour_flow,fluid_thermal_optical_phenomena,unknown,0.92,False,第3.7s–4.0s：冰块在原地瞬间融成透明水,冰块应仅缓慢融化并保持主体,盘中花纹、镜头构图、原有水洼、盘沿保持不变,,,
+17,physion_eval::full::T1_04499,T1_04499.mp4,Wan 2.2,motion_force,other_multistep,deformable_materials,unknown,0.85,False,第0.8s–4.0s：太阳近乎水平移动后反向下沉,太阳应沿平滑上升弧线移动,城市天际线、教堂尖顶、云层纹理、镜头构图、黎明色调保持不变,,,
+19,physion_eval::full::T1_05893,T1_05893.mp4,Kling 2.5,motion_force,pour_flow,fluid_thermal_optical_phenomena,unknown,0.8,False,第1.0s–4.7s：雾气向左飘动而树木完全静止,树枝随雾流方向产生轻微错相摆动,固定镜头、阴雾色调、山谷地形与林线、雾气密度与层次保持不变,,,
+20,physion_eval::full::T1_09247,T1_09247.mp4,Sora 2,motion_force,pour_flow,fluid_thermal_optical_phenomena,unknown,0.72,True,第1.0s–6.8s：鸟以固定僵硬姿态匀滑飞行,鸟体关节自然，滑翔间伴随合理振翅,晚霞云层、太阳与水面倒影、整体色调、固定镜头、岬角轮廓保持不变,,,
+21,physion_eval::full::T1_09986,T1_09986.mp4,Veo 3.1 Fast,motion_force,pour_flow,fluid_thermal_optical_phenomena,unknown,0.9,False,"第3.4s–3.8s：黄油块无外力悬空上升
+第4.8s–5.0s：黄油碎块脱落而主体体积未减","黄油块应留在锅中继续塌软融化
+碎块脱落时主体应同步出现缺损",煎锅灶台、融化黄油及气泡、镜头焦点、暖色调保持不变,,,
+23,physion_eval::full::T1_05111,T1_05111.mp4,Veo 3.1 Fast,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,unknown,0.78,False,第5.2s–7.7s：干燥空锅持续冒出蒸汽,空干锅中不应出现蒸汽,燃气灶与不锈钢台面、蓝色火焰、锅和锅柄、操作手、构图保持不变,,,
+25,physion_eval::full::T1_08673,T1_08673.mp4,Sora 2,temporal_causal,articulation_open_close,tool_machine_operation,unknown,0.85,True,"第6.1s–6.6s：手未接触时抽屉自行关闭
+第5.6s–6.1s：手中单片刀刃突然分成两片","抽屉应保持开启或由手推动关闭
+刀具应始终保持一片刀刃",左手与罐头、腿脚、抽屉内工具、灰色瓷砖墙、第一视角保持不变,,,
+26,physion_eval::full::7c60a04e-a3f8-5e5b-b741-d1bb5065e162,7c60a04e-a3f8-5e5b-b741-d1bb5065e162.mp4,Wan 2.2,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,unknown,0.8,True,第2.8s–4.8s：手拧旋钮时旋钮不转，火焰却变化并熄灭,旋钮随手转动，火焰强度与旋钮角度同步,后炉黑锅、红盖锅及台面物品、炉体炉架、双手、第一视角手持画面保持不变,,,
+27,physion_eval::full::T1_02962,T1_02962.mp4,Kling 2.5,contact_interaction,pour_flow,fluid_thermal_optical_phenomena,unknown,0.6,True,第3.3s–4.7s：浮标在静水中无动力逆绳向右上拖行,浮标相对水面静止，绳索自然松弛漂浮,虹彩浅水与水草、红黑浮标、青绳与绳结、手持俯拍画面保持不变,,,
+29,physion_eval::full::T1_04807,T1_04807.mp4,Kling 2.5,temporal_causal,articulation_open_close,fluid_thermal_optical_phenomena,unknown,0.8,False,"第0.0s–0.8s：爆竹未沿引线燃烧便提前喷火
+第0.8s–4.7s：爆竹持续喷出定向焰流而未爆裂","引线应先燃烧再引发爆竹爆炸
+爆竹应依次径向爆裂并产生烟屑",林间草地与松树、草上红色爆竹串、日光构图、烟雾保持不变,,,
+30,physion_eval::full::T1_00063,T1_00063.mp4,Veo 3.1 Fast,geometry_structure,body_motion,human_animal_body_motion,unknown,0.85,False,第0.9s–1.0s：漏勺内饺子突然变成长面条,食物应在抖动过程中保持原有形态,双手及抖动、漏勺白盘与锅、台面厨具、蒸汽和俯拍构图保持不变,,,
+38,physion_eval::full::T1_02625,T1_02625.mp4,Hailuo 2.3,material_state,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.9,False,第0.0s–5.5s：火柴持续燃烧但火柴头未被消耗,火柴头应燃烧变黑并逐渐缩小,黑色背景、火柴初始形态和入画角度、镜头构图保持不变,,,
+39,physion_eval::full::T1_05521,T1_05521.mp4,Hailuo 2.3,temporal_causal,articulation_open_close,rigid_object_dynamics,subtle,0.8,False,第3.6s–5.6s：撞毁车体无外力持续收缩成小团,撞毁车体应保持固定体积并停止移动,草地山坡、巨型彩色蜡笔及碎片、撞击轨迹与过程、固定构图保持不变,,,
+45,physion_eval::full::T1_01001,T1_01001.mp4,Kling 2.5,material_state,pour_flow,fluid_thermal_optical_phenomena,obvious,0.85,False,第0.1s–0.2s：透明冰块骤变成不透明白块,冰块保持透明并缓慢融化成水,湿木板、水洼与潮湿边界、物体上方霜点保持不变,,,
+48,physion_eval::full::T1_01411,T1_01411.mp4,Hailuo 2.3,persistence_identity,pour_flow,fluid_thermal_optical_phenomena,subtle,0.85,False,"第1.2s–1.7s：红色列车在轨道上凭空出现
+第1.8s–4.0s：红色列车再次反复闪现","列车应从画面边缘连续驶入
+列车应沿轨道连续行驶直至离开",风暴云雨幕、远山、草地、铁路路堤信号杆、栅栏桩保持不变,,,
+51,physion_eval::full::bb0a42bb-29e6-558d-ba40-7d774e6e315d,bb0a42bb-29e6-558d-ba40-7d774e6e315d.mp4,Hailuo 2.3,motion_force,articulation_open_close,deformable_materials,obvious,0.82,False,第0.6s–0.7s：饭盒盖贴纸与边缘卡扣凭空消失,贴纸与卡扣随盒盖翻转持续存在,花纹地砖、红色食盒、橙色沥水架、办公椅、双手前臂、蓝色饭盒盖保持不变,,,
+52,physion_eval::full::T1_06912,T1_06912.mp4,Wan 2.2,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.88,False,"第0.6s左右：射出的子弹在空中突然消失
+第1.7s–2.0s：两枚子弹从火光中凭空出现","子弹从枪口射出后沿连续轨迹离开画面
+两枚子弹应从枪口连续射出",视频其余内容保持不变,,,
+53,physion_eval::full::T1_01803,T1_01803.mp4,Sora 2,persistence_identity,collision_impact,rigid_object_dynamics,obvious,0.87,False,"第1.7s–2.0s：右侧下落砖块体积突然缩小
+第2.0s–2.3s：右侧下落砖块扭曲并融入墙体
+第5.2s–5.3s：画面下方砖块凭空出现
+第5.1s–5.3s：画面上方砖块凭空出现","下落砖块应保持体积不变
+砖块应保持形状并与墙体正常碰撞
+下方砖块应沿连续轨迹进入画面
+上方砖块应沿连续轨迹进入画面",视频其余内容保持不变,,,
+55,physion_eval::full::T1_06093,T1_06093.mp4,Sora 2,contact_interaction,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.85,False,第5.2s–7.6s：面包被车轮碾压后恢复原状,面包卸载后应保持压扁和褶皱状态,视频其余内容保持不变,,,
+58,physion_eval::full::T1_09422,T1_09422.mp4,Veo 3.1 Fast,motion_force,pour_flow,fluid_thermal_optical_phenomena,obvious,0.85,False,第2.0s–2.3s：相触的小球合并并少了一个,各小球应保持独立并按碰撞轨迹运动,视频其余内容保持不变,,,
+59,physion_eval::full::3ec9711a-29b2-5a9e-8b15-85b45209adbf,3ec9711a-29b2-5a9e-8b15-85b45209adbf.mp4,Hailuo 2.3,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,subtle,0.68,True,"第0.0s–1.1s：水龙头未开启却自行出水
+第0.0s–5.5s：容器液位上升远快于注水量","关闭状态的水龙头不应出水
+容器液位应与实际流入水量匹配",视频其余内容保持不变,,,
+62,physion_eval::full::T1_08825,T1_08825.mp4,Sora 2,temporal_causal,deformation_state_change,deformable_materials,obvious,0.9,False,第3.0s–5.7s：压板尚未接触，秤便自行解体,秤在压板接触施力前保持完整,视频其余内容保持不变,,,
+65,physion_eval::full::T1_09664,T1_09664.mp4,Kling 2.5,geometry_structure,pour_flow,fluid_thermal_optical_phenomena,subtle,0.85,False,第4.3s–4.7s：晶体针穿过培养皿玻璃壁,晶体针应在玻璃内壁处停止生长,视频其余内容保持不变,,,
+67,physion_eval::full::T1_00580,T1_00580.mp4,Veo 3.1 Fast,geometry_structure,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.88,False,"第1.7s–3.7s：篮球无外力持续升至篮板上方
+第2.5s–3.2s：篮球影子与球的轨迹不一致","篮球应升至正常反弹顶点后下落
+篮球影子应随球的位置和高度变化",视频其余内容保持不变,,,
+68,physion_eval::full::T1_07626,T1_07626.mp4,Hailuo 2.3,geometry_structure,articulation_open_close,rigid_object_dynamics,obvious,0.85,False,"第0.5s–1.0s：玩具车穿入实体轨道墙
+第3.7s–4.0s：玩具车沉入轨道并融入背景","玩具车应沿弯道行驶或与墙体碰撞
+玩具车应留在轨道表面连续行驶",视频其余内容保持不变,,,
+70,physion_eval::full::T1_09608,T1_09608.mp4,Sora 2,geometry_structure,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.85,False,"第0.2s左右：银色方块上突然长出细杆
+第3.5s–6.0s：黑色圆片穿过手指并变成圆环","手中工具从首帧起保持形态一致
+圆片夹具保持附着且不穿透手指",视频其余内容保持不变,,,
+73,physion_eval::full::T1_09649,T1_09649.mp4,Hailuo 2.3,other,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.7,True,第0.5s–5.4s：文具堆中多数物体没有投影,所有不透明文具应按同一光源投影,视频其余内容保持不变,,,
+75,physion_eval::full::80ef217d-200f-5da7-89d4-c669824884a6,80ef217d-200f-5da7-89d4-c669824884a6.mp4,Hailuo 2.3,temporal_causal,deformation_state_change,human_animal_body_motion,obvious,0.9,False,"第2.0s–2.7s：一个蛋壳内出现横跨两半的双瓣蛋黄
+第2.7s–3.3s：破裂蛋壳突然复原成完整鸡蛋","破壳后应仅有一份蛋黄流入锅中
+蛋壳应保持破裂且蛋黄进入锅中",视频其余内容保持不变,,,
+77,physion_eval::full::T1_09465,T1_09465.mp4,Sora 2,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,subtle,0.72,True,第0.0s–7.8s：左侧烟雾始终悬停不动,左侧烟雾持续上升、扩散并自然扰动,视频其余内容保持不变,,,
+84,physion_eval::full::T1_01666,T1_01666.mp4,Hailuo 2.3,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.8,False,第0.0s–0.2s：盘中半透明凸起物无故消失,盘面始终无该物体或保持其连续存在,视频其余内容保持不变,,,
+85,physion_eval::full::T1_02251,T1_02251.mp4,Kling 2.5,temporal_causal,other_multistep,fluid_thermal_optical_phenomena,obvious,0.85,False,"第3.9s–4.2s：窗台右侧黑色方盒变成白色方盒
+第3.9s–4.2s：桌下白色散热器变成暗色储物柜
+第3.9s–4.2s：床毯花纹和颜色无故变化
+第3.9s–4.2s：床端双层弧形框变成单层","方盒外形和黑色外壳前后保持一致
+桌下始终保留原有白色散热器
+床毯花纹和颜色前后保持一致
+床端始终保留原有双层弧形框",视频其余内容保持不变,,,
+86,physion_eval::full::T1_07738,T1_07738.mp4,Sora 2,material_state,pour_flow,fluid_thermal_optical_phenomena,subtle,0.72,True,第0.0s–7.7s：水流多段呈静止网状并形成悬挂硬块,水流纹理持续下落并自然飞溅破碎,视频其余内容保持不变,,,
+88,physion_eval::full::T1_05966,T1_05966.mp4,Wan 2.2,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.78,True,第0.8s–5.0s：黄色玩偶嘴部消失且未恢复,玩偶恢复形状后嘴部完整可见,视频其余内容保持不变,,,
+90,physion_eval::full::T1_02134,T1_02134.mp4,Wan 2.2,motion_force,articulation_open_close,human_animal_body_motion,subtle,0.8,True,"第0.0s–1.9s：画布颜料在无人接触时自行扩张
+第2.9s–4.8s：画布颜料在无人接触时自行收缩","颜料边界保持稳定，不发生无因扩张
+颜料覆盖范围保持稳定，不自行回缩",视频其余内容保持不变,,,
+95,physion_eval::full::a98bcfda-8ef4-587f-9498-32255b4ac883,a98bcfda-8ef4-587f-9498-32255b4ac883.mp4,Hailuo 2.3,temporal_causal,deformation_state_change,human_animal_body_motion,obvious,0.8,False,第1.0s–5.6s：一次下刀后大量黄瓜丝持续凭空出现,每次切割只产生与切削量相符的黄瓜丝,视频其余内容保持不变,,,
+97,physion_eval::full::T1_06733,T1_06733.mp4,Wan 2.2,contact_interaction,articulation_open_close,rigid_object_dynamics,obvious,0.75,False,第0.8s–4.8s：爆炸包裹玩偶后，玩偶仍原位无损,玩偶受冲击产生位移或倾倒并沾染尘土,视频其余内容保持不变,,,
+98,physion_eval::full::T1_09426,T1_09426.mp4,Sora 2,temporal_causal,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.88,False,第1.2s–1.4s：压板尚未接触，手榴弹便自行爆炸,手榴弹在压板接触施压前保持完整,视频其余内容保持不变,,,
+101,physion_eval::full::T1_07560,T1_07560.mp4,Kling 2.5,geometry_structure,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.88,False,第3.9s左右：夹爪中的绿色方块瞬间变红,夹爪中的同一方块始终保持绿色,传送带与滚轮、机械臂夹爪、黄色软挡片、其余方块运动、桌面相机及背景设备保持不变,,,
+105,physion_eval::full::c902394b-76bb-5d12-8492-258a018fa0d2,c902394b-76bb-5d12-8492-258a018fa0d2.mp4,Hailuo 2.3,contact_interaction,articulation_open_close,human_animal_body_motion,obvious,0.72,False,第4.7s–5.5s：菜刀两次压切后洋葱仍完整无变化,刀刃接触后洋葱被切开并形成分离切面,砧板洋葱、菜刀与手臂、黑台面、蔬菜碗、调料、微波炉冰箱及黑衣人保持不变,,,
+106,physion_eval::full::T1_02487,T1_02487.mp4,Sora 2,geometry_structure,pour_flow,fluid_thermal_optical_phenomena,subtle,0.72,False,第3.4s–5.5s：水流从瓶身穿出而非从瓶口流出,水流仅从倾斜瓶口连续流出,透明水瓶、双手、托盘内白色圆顶物、白桌及白衣围裙人物保持不变,,,
+107,physion_eval::full::T1_05758,T1_05758.mp4,Veo 3.1 Fast,contact_interaction,pick_place_transfer,fluid_thermal_optical_phenomena,subtle,0.7,False,第2.8s–7.0s：鼓槌始终悬空，未接触鼓面与镲片,鼓槌接触鼓面或镲片后回弹并带动振动,白衫卡其裤鼓手、红鼓、镀铬镲片与支架、右侧红铃鼓、霓虹墙、鼓凳保持不变,,,
+109,physion_eval::full::T1_07945,T1_07945.mp4,Hailuo 2.3,other,other_multistep,fluid_thermal_optical_phenomena,subtle,0.55,True,第0.7s–1.2s：右侧楼体外墙凭空出现烟花形光斑,无玻璃外墙仅呈漫射光和零星窗光,夜景天际线、烟花烟雾、持手机人群、广场屏幕及远处高塔保持不变,,,
+110,physion_eval::full::T1_00133,T1_00133.mp4,Hailuo 2.3,material_state,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.8,False,第0.5s–4.8s：锅内凭空涌出大量乳白液体,锅内只保留三枚鸡蛋及少量蛋清或油膜,不锈钢煎锅、三枚生鸡蛋、玻璃灶台、金属锅柄、透明蛋清保持不变,,,
+111,physion_eval::full::c8f87b09-bafd-5e22-b07c-45bdef830df9,c8f87b09-bafd-5e22-b07c-45bdef830df9.mp4,Hailuo 2.3,temporal_causal,body_motion,fluid_thermal_optical_phenomena,subtle,0.82,False,"第1.8s–2.5s：右锅无人接触时瞬间移位转向
+第4.0s左右：右锅主把手突然消失","右锅在无人接触时保持位置和朝向
+右锅主把手持续存在且形状稳定",左锅蔬菜与锅柄、木勺双手、右锅肉块、灶台旋钮灯、肉盘及厨房背景保持不变,,,
+112,physion_eval::full::T1_01799,T1_01799.mp4,Veo 3.1 Fast,persistence_identity,pick_place_transfer,fluid_thermal_optical_phenomena,subtle,0.72,False,第0.1s–0.3s：中央蝴蝶结、花环和花彩凭空显现,中央装饰从首帧起完整可见,中央及其他圣诞装饰、商铺建筑、车辆光轨、湿雪道路与路灯、圣诞树、行人保持不变,,,
+114,physion_eval::full::T1_08374,T1_08374.mp4,Veo 3.1 Fast,temporal_causal,articulation_open_close,human_animal_body_motion,obvious,0.85,False,"第4.0s–4.1s：手中餐叉突然变成小刀
+第6.2s–6.3s：两把手持小刀融合成一把","餐叉保持原有形态，不变成刀具
+两把小刀持续独立存在并各随其手移动",双手躯干、炉灶锅具、酱杯酱汁、锡纸餐垫、厨房陈设、其余时段刀具保持不变,,,
+115,physion_eval::full::e708379b-c002-59f8-8fed-f7c6ddeecadc,e708379b-c002-59f8-8fed-f7c6ddeecadc.mp4,Wan 2.2,temporal_causal,pick_place_transfer,human_animal_body_motion,obvious,0.85,False,"第0.2s–1.0s：裸手与黄色手套反复互变并融合
+第4.1s–4.2s：锅铲无放置过程便消失
+第4.3s左右：玻璃锅盖从无到有突然出现","裸手与手套保持独立，手套始终正确佩戴
+锅铲随锅移动并持续可见
+锅保持无盖，锅盖不凭空出现",水槽台面墙、左侧餐锅、托盘杂物、窗台地面、修复外煎锅手臂手套、镜头保持不变,,,
+116,physion_eval::full::T1_00222,T1_00222.mp4,Veo 3.1 Fast,material_state,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.82,False,"第3.0s–3.8s：气泡越过导线且膜面与导线断连
+第5.3s–7.7s：气泡向中心收紧成团后炸成大量小泡","气泡膜始终受导线约束并保持连接
+皂膜受力后直接破成水迹或少量小泡",海滩背景、两根泡泡杆与导线、三角皂膜、前段气泡膨胀及镜头曝光保持不变,,,
+117,physion_eval::full::T1_08108,T1_08108.mp4,Kling 2.5,material_state,pour_flow,fluid_thermal_optical_phenomena,subtle,0.82,False,第0.0s–4.7s：持续注水时下方咖啡壶液面不变,咖啡持续滴落，壶内液面逐渐升高,俯拍厨房、温控壶座、滤杯滤纸咖啡粉、玻璃壶秤、咖啡师与工具保持不变,,,
+118,physion_eval::full::T1_00741,T1_00741.mp4,Kling 2.5,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.8,False,第1.1s–1.7s：手中黄色保龄球突然变黑,同一球在持握、挥动和投出时颜色一致,昏暗球馆与球道、球瓶、球手和旁人、球架物件、镜头上仰及黄光保持不变,,,
+122,physion_eval::full::T1_03677,T1_03677.mp4,Sora 2,material_state,pour_flow,fluid_thermal_optical_phenomena,obvious,0.85,False,第1.1s–7.8s：静水无外力生成并维持弯曲涡柱,无驱动力时水面保持平静，不形成涡柱,装水透明桶与绿色台面白墙、固定黑杆与底座、桶沿装置、右侧白色排水格保持不变,,,
+131,physion_eval::full::T1_02392,T1_02392.mp4,Hailuo 2.3,temporal_causal,articulation_open_close,rigid_object_dynamics,obvious,0.85,False,第2.3s–5.5s：玩偶无诱因原地解体并引发地面爆炸,玩偶保持完整，地面不发生无因爆炸,草地枯树蓝天静态镜头、方块玩偶、警示牌土堆、左下TNT保持不变,,,
+132,physion_eval::full::T1_07464,T1_07464.mp4,Veo 3.1 Fast,temporal_causal,articulation_open_close,deformable_materials,obvious,0.9,False,第3.9s–4.5s：剪刀停在半途时纸张自行裂成两半,剪刀继续向上剪开纸张,视频其余内容保持不变,,,
+133,physion_eval::full::T1_00483,T1_00483.mp4,Wan 2.2,contact_interaction,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.7,True,第0.0s–4.8s：衣物持续接触火焰却毫无烧灼变化,受火衣物逐渐焦黑收缩并烧损,俯拍土灰地、衣物堆与原破口、右下黑物及烟、无人画面保持不变,,,
+134,physion_eval::full::T1_06075,T1_06075.mp4,Sora 2,temporal_causal,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.82,True,第7.1s左右：静止圆形光学件边缘突然出现白色亮光,光照未变时光学件边缘保持原有暗态,固定镜头与实验室、磨砂屏光斑、光学导轨台架和圆形元件、无人画面保持不变,,,
+136,physion_eval::full::T1_01591,T1_01591.mp4,Kling 2.5,contact_interaction,pour_flow,fluid_thermal_optical_phenomena,obvious,0.78,False,第0.0s–4.7s：水雾持续喷入火焰但火势不减反增,水雾接触火焰后使其逐渐缩小或熄灭,燃料托盘、黄管喷枪与持枪人、深色墙面及固定镜头保持不变,,,
+143,physion_eval::full::T1_02633,T1_02633.mp4,Veo 3.1 Fast,contact_interaction,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.9,False,第2.2s–5.3s：粉尘爆炸后南瓜消失又完整重现,南瓜被爆炸破坏后不再完整重新出现,南瓜与黑色平台桶、粉色烟尘、草地林木蓝天及固定日景镜头保持不变,,,
+145,physion_eval::full::T1_08098,T1_08098.mp4,Hailuo 2.3,material_state,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.55,True,第4.3s–5.5s：巧克力壳受压后像液体流动并自行复原,巧克力壳受压后正常开裂成碎片,融化冰淇淋与泡沫液滩、左下手指、俯拍静态镜头保持不变,,,
+147,physion_eval::full::T1_01361,T1_01361.mp4,Veo 3.1 Fast,persistence_identity,articulation_open_close,rigid_object_dynamics,obvious,0.95,False,"第0.8s–1.2s：母鸡消失后在轨道接点重新出现
+第0.9s–1.5s：蓝轨上凭空多出黄球和绿球
+第2.5s–3.0s：蓝轨中段凭空出现并变红的球
+第3.1s左右：蓝轨上的一个黄球突然消失","母鸡沿受力后的连续轨迹运动且不瞬移
+始终只保留原有的一黄一绿两个球
+不新增球，现有球颜色保持稳定
+黄球持续存在并沿轨道正常滚动",木制坡道与蓝轨鸟巢、棕色母鸡和红黄绿球各一、手指单次推动及跟拍保持不变,,,
+149,physion_eval::full::T1_09661,T1_09661.mp4,Veo 3.1 Fast,temporal_causal,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.85,False,"第5.3s–6.3s：飞行中的鸟群在画面内逐渐消失
+第5.7s–6.2s：整片层云瞬间变成大片积云","鸟群继续飞行或自然离开画面
+环境云层形态连续，仅爆炸烟柱增长",绿色山景、左飞鸟群、稳定云层、山顶爆炸烟柱、下倾无切镜头保持不变,,,
+152,physion_eval::full::T1_09567,T1_09567.mp4,Kling 2.5,material_state,pour_flow,fluid_thermal_optical_phenomena,obvious,0.85,False,"第0.0s–4.7s：葡萄持续受压却全程保持完整
+第2.2s–3.5s：葡萄未压碎却从压机侧面涌出果汁
+第4.0s–4.7s：压榨结束后机内葡萄仍完整无损","葡萄随活塞下压逐渐破裂塌缩
+葡萄受压破裂后果汁再正常流出
+压榨后的葡萄破裂并失去原有体积",固定液压压机与工业背景、下腔绿葡萄、下降活塞及果汁飞溅保持不变,,,
+153,physion_eval::full::T1_07712,T1_07712.mp4,Kling 2.5,persistence_identity,deformation_state_change,human_animal_body_motion,subtle,0.72,False,第3.5s–3.8s：远离刀口处凭空出现黄瓜圆片,黄瓜片仅在刀口切割后产生并留在合理位置,俯拍厨房台面杂物、双手与菜刀、整体切片动作、光线布局及固定机位保持不变,,,
+156,physion_eval::full::T1_00178,T1_00178.mp4,Kling 2.5,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,obvious,0.8,False,"第1.8s–2.2s：手中单个白色刷头突变为叉勺两件
+第4.2s–4.5s：右手白色刷子突然变成金属勺","白色刷头保持原有物体身份
+右手刷子全程保持原有形态",俯拍水槽黑锅与电路板、灰衣双手动作、原有厨具、周边器物光照保持不变,,,
+157,physion_eval::full::T1_08756,T1_08756.mp4,Sora 2,material_state,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.8,False,"第2.5s–3.0s：高尔夫球破裂后突变为均质粉色椭圆体
+第3.5s–4.0s：粉色球芯爆开后变成纸状薄片","球壳正常破裂并露出分层弹性球芯
+球芯保持弹性块状变形或撕裂",压机砧台工作台、压头下压、车间背景、初始球体、正常碎片轨迹保持不变,,,
+164,physion_eval::full::T1_10090,T1_10090.mp4,Sora 2,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.78,True,第1.1s–6.7s：晶球碎片脱离后长时间悬停空中,碎片保持连接，若脱落则受重力下坠,灰色棚景白桌与柔光、透明支架、晶球旋转和内部切面、整体构图时长保持不变,,,
+166,physion_eval::full::T1_09659,T1_09659.mp4,Hailuo 2.3,temporal_causal,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.8,True,第3.5s左右：森林坡地无诱因突然出现火球,出现明确点火源后火焰再逐步发展,阴天鸟群、下摇山谷、森林坡岭、其余构图时序、有因火灾烟柱保持不变,,,
+167,physion_eval::full::T1_06389,T1_06389.mp4,Veo 3.1 Fast,temporal_causal,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.9,False,"第0.0s–3.2s：足球持续受压时压力表指针静止
+第5.3s–7.2s：压板抬起后足球不回弹却延迟爆裂
+第5.3s–7.7s：卸压并爆裂后压力表仍维持高值","指针随足球受压同步上升
+足球卸压后回弹，不在脱离压板后爆裂
+指针随卸压和破裂回落至零位",液压缸蓝罩、警示压板、条纹底座红桌、压力表、混凝土墙、足球纹样位置保持不变,,,
+169,physion_eval::full::T1_07091,T1_07091.mp4,Sora 2,temporal_causal,deformation_state_change,human_animal_body_motion,subtle,0.62,True,第5.7s–6.2s：胡萝卜块未被切下便自行分成两块,刀刃明显下压切入后胡萝卜才分离,俯拍圆桌砧板与菜碗、双手菜刀、其余胡萝卜块、光线抖动及画质保持不变,,,
+170,physion_eval::full::T1_05106,T1_05106.mp4,Wan 2.2,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,obvious,0.9,False,"第0.0s–2.0s：六支蜡笔在无热源时自行融化滴落
+第4.0s–4.7s：左端红蜡笔融平后又自行长回尖头","无热源时六支蜡笔保持完整
+红蜡笔保持融平状态不再生尖头",静态黑背景暖光、六支蜡笔颜色位置与绿笔小孔、其余平口、其余构图时序保持不变,,,
+174,physion_eval::full::T1_06974,T1_06974.mp4,Veo 3.1 Fast,geometry_structure,other_multistep,fluid_thermal_optical_phenomena,subtle,0.85,True,第4.5s–7.7s：碎屑和果泥穿过完整杯壁并滴到杯外,碎屑和果泥始终被杯壁阻挡并留在杯内,固定机位与灰背景柔光、高脚杯、手与捣棒、方块压碎及其余时序保持不变,,,
+177,physion_eval::full::T1_06114,T1_06114.mp4,Sora 2,geometry_structure,pour_flow,fluid_thermal_optical_phenomena,subtle,0.62,True,第1.6s–7.7s：针状晶体穿过培养皿玻璃壁伸到皿外,晶体到达内壁后停止，不穿透玻璃或伸出皿外,培养皿结构、透明液体与划痕、成核晶体网络、俯视背景及生长运动保持不变,,,
+179,physion_eval::full::T1_05406,T1_05406.mp4,Wan 2.2,geometry_structure,pour_flow,fluid_thermal_optical_phenomena,subtle,0.6,True,第0.9s–4.0s：密封压缩腔内汁液果肉喷到腔外,汁液和果肉应始终留在密封压缩腔内,平视机位与工作台、车间背景、液压机、压缩腔、葡萄及光照焦点画质保持不变,,,
+181,physion_eval::full::27144b64-6cb6-5357-a956-495ab770b57f,27144b64-6cb6-5357-a956-495ab770b57f.mp4,Hailuo 2.3,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,subtle,0.72,True,"第0.0s–2.2s：持续注水时锅内水位没有升高
+第2.2s–2.8s：浅水锅中涌出远超水量的大量水花
+第2.1s–3.2s：小猫入锅后身体尺寸明显缩小","无排水时锅内水位应随注水逐渐升高
+水花量应与锅内水量和小猫排水体积相符
+小猫跃入和坐下时应保持一致身体尺度",俯视水槽环境、锅具、流水与双手道具、猫的花纹动作、其余时序保持不变,,,
+183,physion_eval::full::T1_01283,T1_01283.mp4,Sora 2,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,subtle,0.8,True,"第5.3s左右：整层云无故突然反向移动
+第0.0s–7.7s：右侧小屋立面和窗户持续变形闪烁","云层应保持连续平滑且方向一致的移动
+静止小屋的立面纹理和窗户位置应稳定",日落云层、森林岸线与岩石、潮池倒影、小屋身份位置及固定机位保持不变,,,
+185,physion_eval::full::T1_02697,T1_02697.mp4,Wan 2.2,temporal_causal,body_motion,human_animal_body_motion,subtle,0.72,True,"第0.0s–4.7s：云群长时间悬停在固定画面位置
+第0.0s–4.7s：局部云团在原地向不同方向乱动变形","云群随稳定气流缓慢向同一方向移动
+云内纹理沿统一风向连续流动",静态镜头、山岭云、层叠荚状云、蓝天光照、左下植被建筑保持不变,,,
+188,physion_eval::full::T1_07448,T1_07448.mp4,Kling 2.5,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.82,True,第3.5s左右：水滴内彩色固体撞地时瞬间消失,彩色固体应持续存在并随水流落地或留在水洼,固定机位与黑背景、颗粒地面、水滴水花水洼、彩色物体外观及暖光保持不变,,,
+189,physion_eval::full::T1_09658,T1_09658.mp4,Wan 2.2,material_state,pick_place_transfer,fluid_thermal_optical_phenomena,subtle,0.82,True,"第1.2s–1.7s：飞鸟未离开画面或受遮挡便消失
+第3.3s–4.7s：爆炸烟雾呈水流状薄片贴坡流动","鸟群应连续飞行并自然离开画面或保持可见
+烟雾应自然上升扩散，不应像液体贴坡流动",山脊植被、阴天暮光、镜头下摇、爆炸火焰、主烟柱及地形构图保持不变,,,
+193,physion_eval::full::T1_02779,T1_02779.mp4,Hailuo 2.3,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.88,True,"第0.0s–5.5s：斧刃与木桩全程静止且没有击打动作
+第0.8s–5.5s：木屑无受力自行飞出并回到原处","产生飞屑前斧头应击打或切削木桩
+木屑未受击打时静止并正常受重力",斧头、红木桩、木屑堆、静态近景、暗背景暖光、木片材质保持不变,,,
+194,physion_eval::full::T1_00753,T1_00753.mp4,Wan 2.2,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.97,False,第0.6s左右：碗内白色块状物瞬间全部消失,白色块状物继续留在碗内,绿花碗与黑点碗沿、灰色台面、俯拍镜头光照、白色块状物外观保持不变,,,
+197,physion_eval::full::T1_09590,T1_09590.mp4,Sora 2,contact_interaction,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.78,True,"第1.2s左右：刀具仍接触金属时切屑突然消失
+第5.0s–7.7s：重切削后工件边缘形状毫无变化
+第5.6s–7.7s：刀具持续切削却无切屑和切痕","持续切削接触时应连续产生相应切屑
+重切削应逐步去除材料并改变接触处边缘
+持续切削应产生切屑并留下逐步形成的切痕",数控主轴刀具、叶轮工件结构、深色背景轮廓光及机位保持不变,,,
+198,physion_eval::full::T1_03750,T1_03750.mp4,Kling 2.5,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.7,True,第1.8s–4.7s：右侧融化糖块无受力自行向上隆起,糖块贴在托盘上并在重力下保持或铺展,右侧彩糖及位置、左侧融糖长棍、右侧短棍尖、金属托盘与光照保持不变,,,
+200,physion_eval::full::T1_04477,T1_04477.mp4,Veo 3.1 Fast,motion_force,pour_flow,fluid_thermal_optical_phenomena,subtle,0.6,True,第0.0s–4.2s：持续倒液时瓶内液量几乎不减少,瓶内液量应随流出量持续减少并形成液面变化,冰杯青柠、姜汁啤酒瓶、倾倒溢流与飞溅、黑色影棚桌面、固定机位及停倒状态保持不变,,,
+201,physion_eval::full::T1_03756,T1_03756.mp4,Hailuo 2.3,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,subtle,0.65,True,第0.8s–5.5s：搅拌杆未旋转时水体自行形成涡旋,搅拌杆先旋转并保持刚直，再带动水流,透明刻度桶与水位、搅拌杆红桨、上盖夹具、墙面台面排水口、静态镜头保持不变,,,
+203,physion_eval::full::T1_02932,T1_02932.mp4,Wan 2.2,contact_interaction,pour_flow,fluid_thermal_optical_phenomena,subtle,0.65,True,"第0.5s左右：流水覆盖水珠却不与其合并或带走
+第1.0s–4.7s：流水退去后原有水珠仍完全不变","流水接触水珠时应使其合并、变形或被冲走
+受流水影响的水珠应保留合理的位移或形变",花瓣纹理形状、水膜时序流道、微距机位露珠外观及光照色调保持不变,,,
+204,physion_eval::full::T1_08671,T1_08671.mp4,Sora 2,temporal_causal,throw_projectile,deformable_materials,subtle,0.6,True,第2.3s–2.6s：保鲜膜无接触时自行收缩并贴紧右手,左手再次接触前保鲜膜应保持自然松散状态,双手手臂与第一人称机位、厨房台面道具、区间外保鲜膜位置保持不变,,,
+205,physion_eval::full::T1_02951,T1_02951.mp4,Wan 2.2,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,subtle,0.72,True,第4.5s–4.8s：平静湖面无诱因再次起火爆炸,湖面保持平静，不发生无因二次爆炸,森林天际、左侧码头木桩绳索、静态镜头、前景芦苇倒影、首次爆炸余烟保持不变,,,
+208,physion_eval::full::T1_05599,T1_05599.mp4,Kling 2.5,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,subtle,0.72,True,第0.0s–1.2s：咖啡液滴接触前液面已向外爆溅,液滴接触前液面应平静，接触后再产生飞溅,咖啡液滴与液丝、杯中油脂液面冲击位与暗斑、暖色光照及浅景深保持不变,,,
+210,physion_eval::full::T1_05132,T1_05132.mp4,Hailuo 2.3,geometry_structure,pick_place_transfer,fluid_thermal_optical_phenomena,subtle,0.6,True,第1.0s–1.2s：悠悠球与左手手指相互穿透，绳线穿入手指,悠悠球与手指正确遮挡，绳线绕过手指,黑衣表演者、双手结构、绿绳环路、紫色悠悠球旋转、静态墙景、连续动作保持不变,,,
+215,physion_eval::full::T1_06665,T1_06665.mp4,Hailuo 2.3,material_state,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.62,True,"第1.2s左右：篝火旁草地未接触火焰便开始变白
+第1.2s–5.5s：白色区域脱离火焰范围持续向外扩散
+第1.2s–5.5s：草地未燃烧却由绿色直接变成灰白","未受火草地保持绿色
+仅实际燃烧区域逐步焦黑成灰
+草地先受火燃烧焦黑后再形成灰烬",篝火木柴余烬、烟柱、绿草落叶、背景树木枯草蓝天、静态日光镜头保持不变,,,
+221,physion_eval::full::T1_04738,T1_04738.mp4,Veo 3.1 Fast,material_state,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.6,True,第2.3s–7.7s：锅中水持续沸腾却没有产生蒸汽,沸水上方应出现与沸腾强度相符的上升蒸汽,铜色锅具、黑色电磁炉、木台面背景、固定高机位及现有沸腾动态保持不变,,,
+223,physion_eval::full::T1_08995,T1_08995.mp4,Kling 2.5,persistence_identity,pick_place_transfer,human_animal_body_motion,subtle,0.74,True,"第0.7s–1.0s：一次切割后无因多出一片香蕉
+第1.5s–1.8s：一片香蕉从无人的右侧凭空出现","一次切割只产生一片香蕉
+右侧不凭空出现额外香蕉片",粉袖双手、香蕉与正常切片、木砧板、两把刀、台面家电器具保持不变,,,
+224,physion_eval::full::T1_03911,T1_03911.mp4,Wan 2.2,material_state,pour_flow,fluid_thermal_optical_phenomena,subtle,0.6,True,"第1.0s–4.7s：液体中空腔停在锅底并变形成环
+第0.0s–4.7s：平静水中食材无外力自行移动变形分裂","气泡应上浮破裂，实心食材不应生成空洞
+无外力时水下食材应基本静止并保持稳定形状",固定俯视机位、锅灶台面、清澈水体水位、厨房光照及两块食材位置保持不变,,,
+225,physion_eval::full::T1_04510,T1_04510.mp4,Hailuo 2.3,persistence_identity,collision_impact,human_animal_body_motion,obvious,0.9,True,"第0.7s–3.4s：右侧围区内无来源弹珠持续增多
+第0.7s–1.0s：绿色轨道接块突然变成黑色方块
+第4.5s–4.8s：一颗粉红弹珠突然复制成两颗","仅保留由轨道连续送入的弹珠
+绿色接块保持原形且不出现黑色方块
+粉红弹珠数量与运动轨迹保持连续",彩色弹珠轨道、马戏纸偶、白桌面与右侧地面、左侧发射管、正常弹珠轨迹保持不变,,,
+228,physion_eval::full::T1_07038,T1_07038.mp4,Hailuo 2.3,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.6,True,第0.0s–5.5s：多块晶体无外力持续匀速向不同方向滑动,晶体应受表面阻力逐渐减速并停止,红色晶柱、V形晶体对、蓝紫晶片、左上晶体、偏振散景及固定灰尘保持不变,,,
+229,physion_eval::full::5f407759-a465-5375-972e-a0d6f95f0a9a,5f407759-a465-5375-972e-a0d6f95f0a9a.mp4,Wan 2.2,persistence_identity,deformation_state_change,human_animal_body_motion,subtle,0.72,True,第1.0s–3.0s：一次切割间案板凭空出现多块食物,每次切割只分离与刀口和原料体积相符的切片,双手握姿、刀具切菜动作、砧板周边道具、未切胡萝卜及俯视机位保持不变,,,
+232,physion_eval::full::T1_08770,T1_08770.mp4,Sora 2,contact_interaction,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.75,True,第2.3s–7.7s：气泡受强喷雾冲击后未破裂反而持续变大,气泡受强喷雾冲击后破裂并收缩成液滴,悬挂虹彩气泡与支杆、右侧手和喷罐、暗色背景与灯光构图保持不变,,,
+233,physion_eval::full::T1_04001,T1_04001.mp4,Kling 2.5,motion_force,deformation_state_change,fluid_thermal_optical_phenomena,subtle,0.6,True,第0.0s–4.7s：左杯干放冰块无外力持续平移旋转,无液流或外力时堆叠冰块应基本保持静止,两只纹理玻璃杯与冰块、右杯液体弯月面、杯壁凝霜、暗桌面及俯视机位保持不变,,,
+235,physion_eval::full::T1_09252,T1_09252.mp4,Veo 3.1 Fast,motion_force,other_multistep,rigid_object_dynamics,subtle,0.82,True,第0.8s–1.2s：骨牌无接触触发便自行倒塌并多向扩散,骨牌应等待接触触发，再按相邻碰撞顺序倒塌,THE END骨牌布局字形与配色、木地板、俯视机位及初始直立状态保持不变,,,
+236,physion_eval::full::T1_02622,T1_02622.mp4,Hailuo 2.3,temporal_causal,other_multistep,fluid_thermal_optical_phenomena,subtle,0.72,True,第0.0s–0.5s：右侧砖块胶带无点火源自行燃烧,无点火源时胶带保持未燃状态,木桌上胶带连接的两块砖、暗色背景与固定近景、无人无工具构图保持不变,,,
+237,physion_eval::full::T1_00194,T1_00194.mp4,Veo 3.1 Fast,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,subtle,0.72,True,第5.0s–5.7s：手动水龙头未被操作却自行出水,阀杆未动作时水龙头保持停水,双水槽和碗、手持绿瓶白皂液倾倒、龙头及左槽器皿、台面物品、手持构图与光照保持不变,,,
+259,physion_eval::full::T1_08012,T1_08012.mp4,Wan 2.2,material_state,pour_flow,fluid_thermal_optical_phenomena,subtle,0.82,True,"第0.0s–4.7s：白色液体持续流入但杯中液位不升高
+第0.0s–4.7s：白液流入黑液后颜色始终毫无变化","无溢出或排水时液位应随流入持续升高
+两种液体应从入口扩散混合并逐渐变浅",玻璃杯与把手倒影、暖色渐变光照、固定近景、反光桌面及白色液流保持不变,,,
+262,physion_eval::full::T1_09906,T1_09906.mp4,Sora 2,material_state,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.72,True,第0.0s–7.7s：生鸡蛋持续受热却始终不凝固变白,蛋白由边缘向内逐渐凝固变白,三枚完整蛋黄煎蛋、钢锅、炉灶白台、固定俯视、已有蛋白边、暖色反光保持不变,,,
+264,physion_eval::full::T1_05612,T1_05612.mp4,Wan 2.2,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.62,True,第2.2s–3.5s：真猫尾持续可见时镜中尾巴消失,镜中尾巴始终与真尾同步可见,黑白猫及真尾姿势、镜中其余倒影与房间、左侧豆袋、构图光照与连续镜头保持不变,,,
+265,physion_eval::full::T1_09201,T1_09201.mp4,Sora 2,persistence_identity,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.9,False,第2.3s–2.9s：水柱从龙头封闭处凭空出现后瞬间消失,水流应从起泡器出口连续生成并与出口相连,手持水槽黄瓷砖、龙头起泡器与周边、戴手链洗叉双手、水流飞溅及连续微动镜头保持不变,,,
+271,physion_eval::full::T1_01968,T1_01968.mp4,Hailuo 2.3,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,subtle,0.82,True,第0.0s–5.5s：杯中液体无来源持续增多,杯中液面与液体体积应保持稳定,玻璃杯、冰块、琥珀色饮料及桌面场景保持不变,,,
+273,physion_eval::full::T1_06435,T1_06435.mp4,Wan 2.2,contact_interaction,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.85,False,第2.5s–4.7s：爆炸碎片及落地痕迹全部消失,保留落地碎片、焦痕及车辆损伤,白色半挂车、荒地纹理、远山蓝天、固定连续镜头、爆炸火烟尘时序与颜色保持不变,,,
+274,physion_eval::full::T1_01576,T1_01576.mp4,Sora 2,temporal_causal,articulation_open_close,human_animal_body_motion,subtle,0.8,True,第0.5s左右：龙头未开启却自行出水,水流应在手动开启龙头后出现,无剪切俯视构图、龙头水槽、厨具摆设、洗勺动作及腕饰保持不变,,,
+275,physion_eval::full::T1_05925,T1_05925.mp4,Wan 2.2,temporal_causal,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.88,False,第0.5s左右：空地无征兆突然爆炸,爆炸前应出现可见的点火源或引爆物,荒漠裂土与石块、群山天际线、手持构图、日光色调及爆炸时序保持不变,,,
+279,physion_eval::full::T1_08196,T1_08196.mp4,Veo 3.1 Fast,geometry_structure,articulation_open_close,human_animal_body_motion,subtle,0.85,True,第2.2s–3.0s：水龙头未被操作却自行停流,水流持续至阀杆被明确关闭,双手前臂、玻璃杯、水槽内金属锅、手动龙头、水槽台面保持不变,,,
+281,physion_eval::full::1bb7dbd3-23a8-5b4e-aa06-e168c19a1497,1bb7dbd3-23a8-5b4e-aa06-e168c19a1497.mp4,Hailuo 2.3,contact_interaction,deformation_state_change,human_animal_body_motion,subtle,0.8,True,第4.1s–5.5s：杯口无来源持续涌出大量水,杯中水应来自可见水流并随倒出逐渐减少,俯视厨房构图、水槽厨具、白杯洗涤动作、清洁用品及其余时序保持不变,,,
+286,physion_eval::full::T1_06845,T1_06845.mp4,Veo 3.1 Fast,persistence_identity,body_motion,fluid_thermal_optical_phenomena,subtle,0.72,True,第2.8s–4.0s：燃烧框架无外力自行抬升并直立,框架保持平放并随燃烧自然下塌,火坑与灰烬、火焰烟雾和火光、燃烧框架初始平放及后续坍塌、固定暗背景保持不变,,,
+288,physion_eval::full::T1_03014,T1_03014.mp4,Veo 3.1 Fast,temporal_causal,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.82,True,第6.7s左右：手中一枚鸡蛋凭空消失,两枚鸡蛋应持续可见或被明确放入容器,蓝碗及碗中鸡蛋、自封袋、双手腕带、双槽水池布局保持不变,,,
+289,physion_eval::full::T1_05236,T1_05236.mp4,Wan 2.2,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,subtle,0.8,True,第0.0s–4.7s：云层与光束全程静止,云层应缓慢移动变形并带动光束微变,水面波光与波动、灯塔、小船、落日色调及构图保持不变,,,
+290,physion_eval::full::T1_10057,T1_10057.mp4,Veo 3.1 Fast,material_state,articulation_open_close,deformable_materials,subtle,0.78,True,第4.5s–5.5s：金属件自行爆裂并变成碎渣,卸压后的金属件应保持破裂前材质与形态,液压杆动作、警示底座、车间背景、破裂前金属件及末段压料保持不变,,,
+291,physion_eval::full::T1_05606,T1_05606.mp4,Kling 2.5,material_state,collision_impact,rigid_object_dynamics,subtle,0.72,True,第3.5s左右：液体旋向无外力突然反转,液体应保持原旋向连续旋转,紫色果昔质感、草莓、搅拌杯结构、刀轴、俯视构图及杯壁残液保持不变,,,
+293,physion_eval::full::T1_07569,T1_07569.mp4,Wan 2.2,material_state,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.74,True,第0.0s–4.7s：火柴持续燃烧却没有焦化或消耗,火柴头与木杆随燃烧逐渐焦化消耗,黑色背景与固定镜头、火柴水平位置、引燃烛芯火焰、烟雾与火焰闪动保持不变,,,
+296,physion_eval::full::T1_01527,T1_01527.mp4,Sora 2,material_state,other_multistep,rigid_object_dynamics,obvious,0.86,False,第0.0s–5.0s：整根玉米棒直接膨胀变成大量爆米花,玉米棒保留棒芯并逐渐焦化,微波炉内景与暖光、玉米棒位置纹理及木签、玻璃转盘、固定镜头保持不变,,,
+297,physion_eval::full::T1_05883,T1_05883.mp4,Hailuo 2.3,motion_force,pick_place_transfer,fluid_thermal_optical_phenomena,subtle,0.75,True,"第0.0s–2.3s：铺展水滴反向收缩成完整液滴
+第2.1s–5.5s：无外力时水面凭空产生同心波纹","水滴继续铺展并逐渐静止
+无外力时水面保持平静",花形水洼边界、固定俯拍与均匀光照、中央水面反光保持不变,,,
+298,physion_eval::full::T1_07778,T1_07778.mp4,Wan 2.2,persistence_identity,other_multistep,rigid_object_dynamics,obvious,0.95,False,"第1.5s–1.8s：整根玉米连芯骤变成爆米花
+第4.1s左右：另一根完整玉米凭空出现
+第4.1s左右：微波炉内场景状态突然跳变","玉米粒应逐步爆开并保留玉米芯
+画面应延续原有爆米花与玉米芯
+炉内物体状态应保持连续过渡",微波炉内景、玉米与爆米花、固定构图及暖光保持不变,,,
+303,physion_eval::full::T1_09593,T1_09593.mp4,Sora 2,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.6,True,第1.6s–7.7s：爆炸后车辆未位移且无径向碎片,车辆应受冲击位移并出现径向飞散碎片,荒漠群山天空、手持构图、左侧车辆、目标车爆炸前位置及烟火外观保持不变,,,
+304,physion_eval::full::T1_00862,T1_00862.mp4,Veo 3.1 Fast,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.62,True,第7.3s–7.7s：压扁铁球卸压后自行回缩增厚,扁平铁球卸压后应保持塑性变形,液压杆与警示配色、条纹底座、压碎前铁球、压制过程及灯光构图保持不变,,,
+307,physion_eval::full::T1_04845,T1_04845.mp4,Wan 2.2,contact_interaction,pour_flow,fluid_thermal_optical_phenomena,subtle,0.7,True,第0.2s–4.6s：灭火剂喷流凝固且不扩散,喷流应持续流动雾化并自然扩散,手持喷嘴与手臂软管、托盘火焰火星、深色墙面及白色喷流方向保持不变,,,
+308,physion_eval::full::T1_08876,T1_08876.mp4,Sora 2,temporal_causal,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.92,False,"第1.0s–4.0s：三只纸盒未被车轮接触便依次喷液
+第1.2s–3.0s：纸盒直立未变形时从顶部喷液","纸盒应在车轮接触挤压后才破裂喷液
+液体应从受压破裂的侧壁向外喷出",车辆与车轮轨迹、五只红纸盒、柏油地面构图、真实碾压及液体材质保持不变,,,
+310,physion_eval::full::T1_10028,T1_10028.mp4,Kling 2.5,contact_interaction,pour_flow,fluid_thermal_optical_phenomena,subtle,0.85,True,"第1.2s–4.7s：易拉罐爆裂后罐身仍完全无变形
+第1.5s左右：爆炸前后罐身图案布局突变","罐身在爆裂处出现凹陷或破口
+罐身图案随转动保持连续一致",雪地栅栏碎石与砌块、白罐轨迹、喷液泡沫爆发时序、光照景深保持不变,,,
+311,physion_eval::full::T1_03453,T1_03453.mp4,Kling 2.5,geometry_structure,pour_flow,fluid_thermal_optical_phenomena,subtle,0.72,True,"第2.2s左右：手掌严重穿入篮球内部
+第0.2s–4.5s：篮球多次塌缩成非刚性形状
+第0.2s–2.3s：手部与篮球表面融为一体","手掌应停留在球面并保持接触边界
+篮球受触碰时应保持正常弹性球形
+手与篮球应保持清晰独立轮廓",球员与球衣鞋、篮球配色纹样、球场环境、背景建筑及日光构图保持不变,,,
+312,physion_eval::full::T1_01325,T1_01325.mp4,Kling 2.5,temporal_causal,deformation_state_change,fluid_thermal_optical_phenomena,obvious,0.92,False,第2.8s–4.9s：碎裂木条无外力自动恢复直立形状,压头回升后木条保持碎裂摊倒,液压机升降、木条束真实碎裂、固定构图及墙面碎屑、光照尺度与运动感保持不变,,,
+313,physion_eval::full::T1_01405,T1_01405.mp4,Veo 3.1 Fast,geometry_structure,pour_flow,fluid_thermal_optical_phenomena,subtle,0.64,True,第0.0s–5.5s：水流穿过连续塑料壶壁进入壶内,水流经可见瓶口进入或沿外壁流下,壶肩白瓶颈微距、重构图后的蓝口壶、水流水滴与气泡、水位上升及背景保持不变,,,
+314,physion_eval::full::T1_08457,T1_08457.mp4,Hailuo 2.3,geometry_structure,pick_place_transfer,fluid_thermal_optical_phenomena,subtle,0.72,True,"第0.2s–0.5s：粉色打火机突然变成剪刀
+第1.5s–5.5s：剪刀穿入绿色膜并与其融合
+第1.8s–5.5s：剪切后绿色膜仍保持完整","粉色打火机应保持原有形态
+剪刀应与膜保持实体碰撞边界
+绿色膜受剪后应出现连续切口与分离",绿色发光膜袋、变形后粉柄剪刀、儿童肢体拖鞋及夜间瓷砖场景保持不变,,,
+315,physion_eval::full::6fc886e0-f1da-5c3b-bcdb-86fb46537dfa,6fc886e0-f1da-5c3b-bcdb-86fb46537dfa.mp4,Hailuo 2.3,contact_interaction,pour_flow,fluid_thermal_optical_phenomena,subtle,0.65,True,"第0.0s–0.2s：玻璃杯变形并穿过手指
+第1.1s–5.3s：手指反复穿过玻璃杯壁","玻璃杯被拿起时应保持刚性并受手握持
+手指与杯壁应保持正确遮挡和实体边界",双手洗杯、透明杯、喷水龙头、水槽餐具、花盘及暖光俯视构图保持不变,,,
+318,physion_eval::full::T1_08260,T1_08260.mp4,Hailuo 2.3,material_state,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.85,True,"第0.0s–5.5s：热油煎肉全程没有烟雾或蒸汽
+第2.3s–5.1s：肉饼从顶部向下焦化","肉饼遇热油后应持续产生可见蒸汽
+焦化应先从接触热油的底部与边缘开始",肉饼形态质感、油锅气泡、低机位暗色厨房、下锅位置及时长保持不变,,,
+328,physion_eval::full::493dd109-ffc2-52fd-82ff-4c1bec650075,493dd109-ffc2-52fd-82ff-4c1bec650075.mp4,Hailuo 2.3,persistence_identity,pick_place_transfer,human_animal_body_motion,subtle,0.62,True,第0.3s–0.5s：切板上凭空出现红橙色碎屑,碎屑仅从可见食材或手中落到切板,左上完整洋葱、切板上静置菜刀、双手双臂、切板柜台与木地板保持不变,,,
+331,physion_eval::full::T1_00736,T1_00736.mp4,Hailuo 2.3,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.8,True,"第0.8s–1.0s：两颗弹珠碰合后只剩一颗
+第2.2s–5.5s：弹珠无外力沿漏斗恒定绕圈","两颗弹珠接触后应各自持续存在
+弹珠应沿螺旋向中心滚落并进入下层轨道",黄色漏斗轨道、橙红支架底座、各色弹珠、上层管道及户外桌景保持不变,,,
+334,physion_eval::full::T1_03204,T1_03204.mp4,Wan 2.2,motion_force,pick_place_transfer,rigid_object_dynamics,subtle,0.8,True,第4.0s左右：黄色杯子无外力自行腾空跳起,杯子应保持静止直至受到可见碰撞,俯视桌面场景、静止对照物、正常滚落碰撞及杯球外观数量保持不变,,,
+336,physion_eval::full::T1_02956,T1_02956.mp4,Kling 2.5,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.85,True,"第0.3s–0.7s：枪未开火前眼部凭空出现子弹
+第1.2s–4.8s：子弹水平漂移数秒且完全不下落","子弹在开火后沿可见轨迹击中头模
+子弹离开头模后沿重力轨迹下坠",左侧手枪与构图、支架凝胶头模、鼻梁原有短镖、枪口火光碎裂时序与日光保持不变,,,
+338,physion_eval::full::T1_03234,T1_03234.mp4,Veo 3.1 Fast,motion_force,other_multistep,fluid_thermal_optical_phenomena,subtle,0.7,True,第3.5s–4.2s：小车前方的下段橙色桥面突然出现,下段桥面始终存在并连续承托小车,绿黄玩具车轨迹、原有橙轨与支架、白马沙地木桩、镜头运动与日光保持不变,,,
+341,physion_eval::full::T1_02968,T1_02968.mp4,Wan 2.2,contact_interaction,deformation_state_change,fluid_thermal_optical_phenomena,subtle,0.8,True,第0.0s–4.7s：地面爆炸后草地与爆点毫无受损痕迹,爆点保留焦痕、压倒草丛与散落碎屑,固定镜头与林地背景、草地和车辙布局、白烟升起漂散时序、色彩光照与时长保持不变,,,
+343,physion_eval::full::T1_03755,T1_03755.mp4,Wan 2.2,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,subtle,0.82,True,第0.2s–4.5s：搅拌杆静止时水体自行形成漩涡,漩涡应由可见的搅拌杆旋转驱动,透明水箱红底座、搅拌杆中心位置、水色水位灯光及首尾平静状态保持不变,,,
+344,physion_eval::full::T1_00267,T1_00267.mp4,Kling 2.5,contact_interaction,pour_flow,fluid_thermal_optical_phenomena,subtle,0.8,True,第1.2s–2.7s：杯底无来源出现大量水并持续上涨,水由可见注入或缓慢融冰形成,玻璃杯、单块冰及初始位置、暗背景和固定光照、连续时序、合理冰水终态保持不变,,,
+345,physion_eval::full::T1_00523,T1_00523.mp4,Kling 2.5,geometry_structure,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.8,True,第1.6s–3.1s：金属条穿入不透明黑色圆盘,金属条接触圆盘后应保持在其外部,双手握持、白色背景、黑色圆盘、金属条及光照时长保持不变,,,
+349,physion_eval::full::T1_02969,T1_02969.mp4,Hailuo 2.3,contact_interaction,deformation_state_change,fluid_thermal_optical_phenomena,subtle,0.7,True,第0.0s–5.5s：爆炸周边草木始终静止,近处草木应受冲击波作用而弯折摆动,静态机位与森林背景、干草地和车辙、火球白烟、色彩光照及时长保持不变,,,
+356,physion_eval::full::T1_01378,T1_01378.mp4,Veo 3.1 Fast,temporal_causal,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.92,False,"第0.7s–7.7s：磁力杆球玩具无外力自行升起变形
+第5.5s–6.0s：两根连接杆凭空生长出现","玩具各构件仅在受到可见外力时运动
+连接杆应自始存在且数量保持不变",固定镜头、灰色背景、白桌、磁力杆球玩具及光照时长保持不变,,,
+360,physion_eval::full::T1_00737,T1_00737.mp4,Kling 2.5,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.9,True,第2.0s–2.2s：前方白球突然变成绿色,前方白球应全程保持白色,固定镜头、轨道与玻璃碗、静止绿球、两球轨迹及滚动过程保持不变,,,
+363,physion_eval::full::T1_09189,T1_09189.mp4,Kling 2.5,temporal_causal,articulation_open_close,human_animal_body_motion,subtle,0.8,True,"第0.0s–0.3s：切板上的刀无接触移入手中
+第2.7s–3.0s：同一台面物品无过渡发生更换","刀应经手部抓取后再离开切板
+台面再次入镜时物品应与先前一致",厨房镜头、灶台水槽、固定物品、橱柜、切板与烹饪布置保持不变,,,
+366,physion_eval::full::T1_06722,T1_06722.mp4,Wan 2.2,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.86,True,第2.1s左右：金属球瞬间倒退两个台阶,金属球应沿台阶连续向下滚动,手抓放小球动作、纸板台阶、铁盆、草地灌木背景、手持机位保持不变,,,
+369,physion_eval::full::T1_07748,T1_07748.mp4,Sora 2,contact_interaction,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.6,True,第0.8s–7.7s：爆炸范围内物体毫无反应,近处轻质物体应受冲击并产生位移或损伤,静态机位与荒漠山景、三处残骸布局、爆炸及烟柱、色彩光照及时长保持不变,,,
+373,physion_eval::full::0b7acfcb-487c-55e8-ac8c-9700038e462d,0b7acfcb-487c-55e8-ac8c-9700038e462d.mp4,Hailuo 2.3,temporal_causal,deformation_state_change,human_animal_body_motion,subtle,0.6,True,"第0.2s–5.2s：刀未再次抬起却持续产生完整切片
+第4.9s–5.2s：刀未切过黄瓜却有切片继续出现","每片黄瓜均应由刀具实际切割形成
+未发生切割时不应增加黄瓜切片",俯拍厨房布置、双手、刀与黄瓜、已有切片、光照时长保持不变,,,
+374,physion_eval::full::T1_08517,T1_08517.mp4,Veo 3.1 Fast,temporal_causal,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.92,False,第2.4s–2.5s：扁平气球无充气突然变成圆球,气球应在可见充气后逐渐鼓起,人物双手、灰墙与衣物背景、橙色气球、光照时长保持不变,,,
+375,physion_eval::full::T1_03509,T1_03509.mp4,Wan 2.2,contact_interaction,body_motion,human_animal_body_motion,subtle,0.8,True,第0.0s–4.7s：烈焰未蔓延且落叶毫无燃烧变化,接触火焰的落叶应逐渐点燃炭化并消耗,秋林空地、树干落叶、火焰位置色彩、背景人影及光照保持不变,,,
+376,physion_eval::full::T1_02911,T1_02911.mp4,Sora 2,temporal_causal,pick_place_transfer,deformable_materials,obvious,0.9,False,第2.7s左右：牙刷未接触压头便突然断裂,牙刷应在压头接触并施压后才断裂,液压机与墙面、牙刷外观和姿态、光照及时长、接触后的挤压过程保持不变,,,
+378,physion_eval::full::T1_00756,T1_00756.mp4,Kling 2.5,contact_interaction,body_motion,fluid_thermal_optical_phenomena,subtle,0.7,True,第0.0s–4.7s：火焰未蔓延且燃料无消耗,火焰应逐步引燃并消耗相邻干燥松针,机位树干、松针落叶松果、色彩时长、火焰位置形态、原有焦黑堆保持不变,,,
+380,physion_eval::full::T1_00796,T1_00796.mp4,Kling 2.5,temporal_causal,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.6,True,第1.0s–2.7s：爆米花接触前油面自行隆起成环壁,爆米花撞击前油面应保持平稳,固定锅具镜头、油池、单颗爆米花、光照水滴及结尾状态保持不变,,,
+388,physion_eval::full::T1_06090,T1_06090.mp4,Sora 2,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,subtle,0.72,True,"第0.0s–7.7s：浪峰与破浪带悬空冻结
+第0.0s–7.7s：海水与岸边水线始终不前移","浪峰应连续推进、破碎并回落
+海水应向岸边流动并带动水线变化",海滩机位、海浪岸线、色彩时长、暮色氛围、水面细纹保持不变,,,
+393,physion_eval::full::T1_04274,T1_04274.mp4,Kling 2.5,persistence_identity,pour_flow,fluid_thermal_optical_phenomena,obvious,0.94,False,第0.0s–4.7s：无液体流入时杯中水位持续升高,无外来液体时水量不应持续增加,固定玻璃杯镜头、冰块变化、已有气泡、初始水位及光照保持不变,,,
+395,physion_eval::full::T1_07996,T1_07996.mp4,Hailuo 2.3,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.98,False,第4.1s–4.2s：手中金色磁珠球突然变蓝,手中磁珠球应始终保持金色,俯拍白桌、彩色磁珠球、银色磁珠条、手部动作及球体结构保持不变,,,
+397,physion_eval::full::T1_08883,T1_08883.mp4,Sora 2,material_state,articulation_open_close,deformable_materials,obvious,0.97,False,第1.0s–7.7s：纸张平滑收缩消失且无灰烬碎屑,纸张应不规则炭化卷曲并产生灰烬,固定暗背景、双手、火柴火焰、纸张初态及点燃动作保持不变,,,
+399,physion_eval::full::T1_07361,T1_07361.mp4,Wan 2.2,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.95,False,第3.2s左右：锅中凭空出现第三根香肠,锅中应始终只有原有两根香肠,厨房机位、双手木勺、两根香肠、蒸汽油光与时长、正常搅动保持不变,,,
+401,physion_eval::full::T1_06781,T1_06781.mp4,Wan 2.2,motion_force,throw_projectile,fluid_thermal_optical_phenomena,obvious,0.99,False,"第2.2s–3.5s：黄球无外力偏转并沿弧线运动
+第3.8s–4.0s：黄球无外力停下后反向重启","黄球无受力时应沿原方向直线运动
+黄球应保持原方向连续运动",固定木桌与暗背景、黄球外观、初始直线滚动及其余运动保持不变,,,
+404,physion_eval::full::T1_03972,T1_03972.mp4,Sora 2,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.97,False,"第3.6s–3.8s：低伏旋转的金币突然直立
+第4.5s–5.6s：平躺金币无外力自行滑动","金币应随摆动衰减自然倒平
+金币倒平停止后应保持静止",固定桌面镜头、金币初始旋转与摆动、正常倒下及最终静止保持不变,,,
+405,physion_eval::full::T1_01116,T1_01116.mp4,Veo 3.1 Fast,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.99,False,第0.2s–6.6s：冰棒无外力离盘升空后下落,冰棒应受盘面支撑并仅向下融化,固定盘面镜头、冰棒与融液、正常融化滴落、光照时长保持不变,,,
+407,physion_eval::full::T1_00174,T1_00174.mp4,Veo 3.1 Fast,temporal_causal,deformation_state_change,deformable_materials,obvious,0.98,False,第5.9s–6.0s：控制杆未被操作时水流自行开启,水流应在控制杆被操作后才开启,俯拍水槽、清洁动作、原有泡沫、龙头餐具及其余运动保持不变,,,
+408,physion_eval::full::T1_05157,T1_05157.mp4,Wan 2.2,contact_interaction,articulation_open_close,tool_machine_operation,obvious,0.88,False,第0.5s–4.2s：手指持续接触火焰却无退缩反应,手指接触火焰后应迅速缩回避开,户外火堆镜头、人物姿态衣着、双手引火动作及火焰光照保持不变,,,
+410,physion_eval::full::T1_09642,T1_09642.mp4,Wan 2.2,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,obvious,0.94,False,"第0.0s–2.8s：抽取液体时烧瓶液位未下降
+第2.8s–4.5s：注回液体时烧瓶液位未上升","抽取时烧瓶液位应随针筒进液而下降
+注回时烧瓶液位应随针筒出液而上升",固定临床背景、双手、注射器与烧瓶结构、液体颜色及视角保持不变,,,
+414,physion_eval::full::T1_00349,T1_00349.mp4,Veo 3.1 Fast,geometry_structure,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.85,False,第0.1s–0.4s：部分黑色球体突然变成铜棕色,受影响球体应保持原有黑色,固定桌面镜头、双手动作、两组磁珠、正常重排及最终珠堆保持不变,,,
+418,physion_eval::full::32aea247-1ee1-5f15-baee-da9396981363,32aea247-1ee1-5f15-baee-da9396981363.mp4,Hailuo 2.3,temporal_causal,pick_place_transfer,deformable_materials,subtle,0.78,True,第5.3s–5.4s：上层薄膜中央部分突然消失,拉开盒体时上层薄膜应保持连续完整,俯拍台面、双手动作、灰盒与侧膜、下层膜折叠及周围材料保持不变,,,
+419,physion_eval::full::T1_05894,T1_05894.mp4,Veo 3.1 Fast,persistence_identity,pick_place_transfer,fluid_thermal_optical_phenomena,subtle,0.82,True,第2.6s左右：深红吸管在搅拌遮挡中消失,深红吸管应始终留在中右玻璃杯中,固定桌面镜头、手部放置搅拌动作、各容器水位与其他吸管保持不变,,,
+420,physion_eval::full::T1_03807,T1_03807.mp4,Sora 2,temporal_causal,body_motion,fluid_thermal_optical_phenomena,obvious,0.99,False,第4.0s–7.7s：冷雾凝固不再流动,冷雾持续流动并逐渐消散,车内构图、座椅容器、充电线卡扣、冷雾色调与前段流动、时长光照保持不变,,,
+421,physion_eval::full::T1_01566,T1_01566.mp4,Veo 3.1 Fast,temporal_causal,deformation_state_change,fluid_thermal_optical_phenomena,obvious,0.95,False,"第3.8s左右：手中薯块突然消失
+第5.3s–6.3s：反复切割却凭空产生薯丁","薯块随左手连续移动且不消失
+每次横切仅产生对应薄片并缩小主体",厨房俯拍蓝板、双手刀具、已有薯块、正常切片、光照与周边物件保持不变,,,
+422,physion_eval::full::T1_07297,T1_07297.mp4,Wan 2.2,temporal_causal,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.95,False,"第4.1s–4.8s：飞散油桶突然回到原排位
+第4.2s–4.8s：右侧油桶变成多瓣团块","油桶沿爆炸后的轨迹飞散或落地
+右侧油桶保持刚性圆柱形",低机位荒野、爆炸烟尘碎屑、油桶造型、初始飞散翻滚、时长色调背景保持不变,,,
+426,physion_eval::full::T1_00525,T1_00525.mp4,Wan 2.2,material_state,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.95,False,第0.7s–4.6s：晶体受火焰持续加热却不变形,受热处逐渐软化、开裂或变形,固定近景暗背景、晶体身份姿态、喷枪蓝焰、整体缓慢位移反光、非受热区保持不变,,,
+429,physion_eval::full::T1_09481,T1_09481.mp4,Sora 2,material_state,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.95,False,"第2.0s–3.0s：爆炸烟雾排列成对称圆球层
+第5.0s–7.8s：下层烟球原地缩小不升腾","烟雾呈不规则湍流并持续扰动
+下层烟雾上升扩散并逐渐消散",沙漠车辆远景、车辆位置、爆炸火焰碎屑、上层烟雾上升、时长色调背景保持不变,,,
+431,physion_eval::full::T1_06788,T1_06788.mp4,Wan 2.2,persistence_identity,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.98,False,"第4.6s左右：单个纸箱瞬间分成两个
+第4.6s–4.8s：新增纸箱突然加速前冲","目标纸箱始终保持单一完整
+纸箱随传送带匀速连续移动",工厂固定广角、绿筐与其余纸箱、传送带结构运动、目标纸箱、时长光照保持不变,,,
+433,physion_eval::full::T1_01128,T1_01128.mp4,Wan 2.2,motion_force,pick_place_transfer,fluid_thermal_optical_phenomena,subtle,0.9,True,第2.5s左右：栗子未受接触便原地翻面,栗子仅在铁杆或其他栗子碰撞后翻动,烤盘俯拍、铁杆搅动、多颗栗子正常碰撞、孔洞暖光、时长色调保持不变,,,
+434,physion_eval::full::T1_02515,T1_02515.mp4,Sora 2,contact_interaction,pour_flow,fluid_thermal_optical_phenomena,obvious,0.88,True,"第0.0s–4.0s：水杯持续进水却无溢流
+第2.7s–3.8s：无水流处凭空出现平滑水纹
+第5.6s左右：水柱冲到手上却不飞溅偏转
+第4.0s–7.7s：入槽水柱仅产生光滑扭曲水纹","杯中水位上升并在装满后溢出
+水纹仅从实际落水点向外传播
+水柱遇手后向周围飞溅并偏转
+落水处产生与水量匹配的细碎飞溅",水槽俯拍、双手手表杯勺动作、持续出水、槽体龙头轨迹、其余物件保持不变,,,
+435,physion_eval::full::T1_10104,T1_10104.mp4,Kling 2.5,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.99,False,第1.8s–4.7s：玻璃水流和水滴逆重力向上移动,水滴和水膜沿玻璃向下流动,湿玻璃近景、凝露纹理反光、前段下流状态、时长背景、水量外观保持不变,,,
+440,physion_eval::full::T1_08086,T1_08086.mp4,Wan 2.2,contact_interaction,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.93,False,"第0.9s–1.5s：左手木棍无火源自行燃烧
+第2.7s–3.5s：右手木棍迅速烧失且无灰烬
+第0.0s–4.7s：火中两根木棍始终未被灼烧","左手木棍应接触火源后才点燃
+右手木棍应逐渐炭化并留下灰烬
+火中木棍应随燃烧逐渐焦黑和消耗",户外机位、人物衣着动作、篝火木柴、末段手推木棍、色彩时长保持不变,,,
+445,physion_eval::full::T1_09660,T1_09660.mp4,Kling 2.5,temporal_causal,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.96,False,第1.5s–1.9s：爆炸前已出现成熟黑烟柱,烟雾在爆炸发生后生成并扩散,森林航拍云山、开场飞行黑影、爆炸火焰及后续烟雾、正常喷射物、时长色调保持不变,,,
+446,physion_eval::full::T1_07943,T1_07943.mp4,Veo 3.1 Fast,geometry_structure,pour_flow,fluid_thermal_optical_phenomena,obvious,0.9,False,"第1.8s左右：铅笔尖从笔杆末端消失
+第1.3s–2.0s：铅笔尖穿入玻璃杯底
+第4.6s–7.7s：铅笔在水中匀速平滑漂移","铅笔尖应完整连接在笔杆末端
+铅笔应与完整杯底碰撞并受阻
+铅笔应随浮力和阻力自然摆动减速",杯景机位、铅笔外观与投放、杯体水位、入水飞溅水波、色彩时长保持不变,,,
+450,physion_eval::full::T1_05832,T1_05832.mp4,Hailuo 2.3,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,obvious,0.96,False,第0.0s–5.5s：右下海水与尾流逐帧闪现消失,海浪和尾流连续形变并逐渐衰减,黄昏海景地平线、船只航迹、海面色调时长、其余波浪与构图保持不变,,,
+451,physion_eval::full::T1_07998,T1_07998.mp4,Veo 3.1 Fast,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.99,False,第3.5s左右：手中绿色球突然变成蓝色,被搬运的球始终保持绿色,白桌俯拍光照、彩色磁球布局、手部动作、银色磁条结构、目标球原绿色保持不变,,,
+455,physion_eval::full::T1_09550,T1_09550.mp4,Veo 3.1 Fast,material_state,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.88,False,第0.5s–5.5s：铅笔未插入导孔却持续产生刨屑,铅笔插入导孔旋削后再产生刨屑,固定近景、双手与削笔器紫铅笔、削笔器结构刨屑、削笔动作、最终尖笔头保持不变,,,
+458,physion_eval::full::a5e4c18a-41c7-5ba8-997e-397f5c25d611,a5e4c18a-41c7-5ba8-997e-397f5c25d611.mp4,Wan 2.2,material_state,body_motion,fluid_thermal_optical_phenomena,obvious,0.91,False,第0.3s–4.7s：布料持续燃烧却未炭化耗损,燃烧处逐渐炭化、破损并减少,炉灶俯拍、双手打火机、布料花纹褶皱动作、火焰位置时长、其余场景保持不变,,,
+460,physion_eval::full::T1_03015,T1_03015.mp4,Kling 2.5,temporal_causal,deformation_state_change,human_animal_body_motion,obvious,0.92,False,"第1.5s左右：番茄块变成空壳并碎裂成多块
+第3.7s左右：番茄主体无充分切割便大量增殖
+第3.7s左右：番茄形态数量和布局瞬间重排","番茄应随刀刃接触连续分离成对应切块
+每次有效切割只能产生相应数量的小块
+番茄形态数量和位置应连续变化且守恒",俯视厨房和砧板、双手刀具、其余正常切割、周边番茄块、色彩及时长保持不变,,,
+469,physion_eval::full::T1_07223,T1_07223.mp4,Veo 3.1 Fast,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.9,False,"第4.0s–5.2s：压头离开后金属继续凹陷收缩
+第5.3s–7.7s：金属无外力突然大幅胀缩","卸压后金属仅可有限回弹并趋于稳定
+金属应在有限回弹后保持稳定形态",液压机机位、压头升降、金属初态、受压形变、光照反射与下压台保持不变,,,
+472,physion_eval::full::T1_03711,T1_03711.mp4,Wan 2.2,contact_interaction,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.99,False,第0.0s–4.7s：车轮碾过香蕉却始终不变形,香蕉受压后压扁、破裂并保留形变,低机位路面、车轮轨迹接触顺序、五根香蕉布局、正常轻微位移、车身背景保持不变,,,
+473,physion_eval::full::T1_06073,T1_06073.mp4,Sora 2,temporal_causal,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.95,False,第2.6s–3.3s：两个蓝色物体未受力自行爆裂,两个物体接触压板受压后才碎裂,液压机近景、两个蓝色物体外观位置、压板下移、碎片形态轨迹、时长光照保持不变,,,
+474,physion_eval::full::T1_02709,T1_02709.mp4,Wan 2.2,temporal_causal,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.97,False,第0.1s左右：彩蛋未受外力便破裂并飞出碎片,彩蛋在弹簧摇动中保持外壳完整,彩蛋弹簧近景、弹簧摇动、彩蛋颜色字样光泽、其余完整状态、时长背景保持不变,,,
+477,physion_eval::full::T1_05797,T1_05797.mp4,Kling 2.5,temporal_causal,deformation_state_change,human_animal_body_motion,obvious,0.98,False,第1.2s–2.1s：未完成切割便凭空出现大量薯丁,薯丁数量随实际纵横切割逐步增加,砧板俯拍、双手刀具、正常初始切片、左侧已有薯块、光照纹理时长保持不变,,,
+478,physion_eval::full::T1_06333,T1_06333.mp4,Veo 3.1 Fast,geometry_structure,pour_flow,fluid_thermal_optical_phenomena,obvious,0.92,False,第4.5s–7.7s：长铁杆持续穿过完整杯壁,铁杆应留在杯内或与杯壁碰撞受阻,实验机位、玻璃杯水位、搅拌涡流、手调阀动作、背景道具时长保持不变,,,
+480,physion_eval::full::T1_00755,T1_00755.mp4,Hailuo 2.3,contact_interaction,body_motion,fluid_thermal_optical_phenomena,subtle,0.8,True,第0.0s–5.5s：草地火焰燃烧范围始终不扩散,火焰逐渐引燃邻近草叶并扩大焦痕,林地固定低机位、中央火堆、自然火焰闪动、周边松针落叶、时长色调保持不变,,,
+481,physion_eval::full::T1_08974,T1_08974.mp4,Hailuo 2.3,material_state,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.82,True,第1.8s左右：指间发光小部件突然消失,小部件持续留在指间直至主动放下,桌面俯拍、灯带连接件与遥控器、手部动作和指尖遮挡、正常取遥控器、灯光色彩保持不变,,,
+483,physion_eval::full::T1_03892,T1_03892.mp4,Veo 3.1 Fast,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.93,False,"第4.0s–4.8s：首次抬压时叉子碎裂并产生碎片
+第4.5s–6.0s：完整叉子与脱落碎片同时存在","叉子仅弹性弯曲，不产生碎片
+抬压后叉子保持单一连续状态",侧视压机场景、叉子初态、首轮压机运动、叉子结构、后续压制与时长保持不变,,,
+484,physion_eval::full::T1_03859,T1_03859.mp4,Sora 2,temporal_causal,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.92,False,第3.7s–7.8s：天空卡顿并出现冻结重影,云层连续自然演化，无冻结重影,固定镜头屋顶剪影、日落色调云层构图、前段云动、时长取景保持不变,,,
+485,physion_eval::full::T1_05790,T1_05790.mp4,Veo 3.1 Fast,temporal_causal,deformation_state_change,human_animal_body_motion,obvious,0.95,False,"第2.2s–2.4s：一片黄瓜无切割变成多片
+第4.3s–7.7s：黄瓜切片持续无切割增殖","一次完整下刀只能新增一片黄瓜
+后续每次下刀仅应增加一片黄瓜",俯视机位与砧板、双手刀具、黄瓜外观、正常移位切割、色彩及时长保持不变,,,
+488,physion_eval::full::T1_09027,T1_09027.mp4,Kling 2.5,material_state,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.9,False,第1.9s–2.7s：钻头下凭空长出黄色圆柱,钻削仅移除材料，不生成新圆柱,机床近景、主轴运动、既有金属屑、台面与环境、末段抬轴及片长保持不变,,,
+489,physion_eval::full::T1_07027,T1_07027.mp4,Kling 2.5,persistence_identity,pour_flow,fluid_thermal_optical_phenomena,obvious,0.92,False,第0.0s–4.7s：容器内液体无扰动持续减少,无流出或蒸发时液量和液面应稳定,容器机位、容器金属板、白色液面、静态无扰场景、光照反射时长保持不变,,,
+491,physion_eval::full::T1_06759,T1_06759.mp4,Hailuo 2.3,persistence_identity,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.93,False,"第0.1s左右：左侧小船无过渡消失
+第0.3s左右：消失的小船凭空重现
+第0.1s–0.2s：两艘小船无接触合为一艘
+第0.4s左右：湖面中央凭空出现小船","左侧小船持续可见并保持独立
+两艘小船持续独立运动
+两艘小船保持分离，不发生融合
+中央小船从画外连续驶入",湖景倒影、时长与静止镜头、水波船迹、原有双船、中央船后续航迹保持不变,,,
+497,physion_eval::full::T1_01358,T1_01358.mp4,Wan 2.2,motion_force,articulation_open_close,rigid_object_dynamics,obvious,0.92,False,"第1.7s左右：滚动中的绿球突然消失
+第3.1s–3.5s：红黄两球无外力跃上上层轨道","绿球应保持存在并沿连续轨迹滚动
+红黄两球应沿相连轨道受力运动",纸板轨道机位、三球外观、红黄球正常运动、草堆球堆、光照时长保持不变,,,
+499,physion_eval::full::T1_05660,T1_05660.mp4,Kling 2.5,motion_force,pour_flow,fluid_thermal_optical_phenomena,obvious,0.88,False,第0.0s–4.8s：水面无外力反复产生强烈涟漪,水面扰动逐渐衰减并恢复平静,微距镜头与暖色光、浅水及浮萍、自然反光与波形、周围静态场景保持不变,,,
+500,physion_eval::full::T1_08875,T1_08875.mp4,Sora 2,motion_force,throw_projectile,deformable_materials,obvious,0.9,False,第4.2s–5.3s：小车无外力自行向左滑行,小车应保持静止或由可见外力驱动,机位与轨道道具、前段下坡、平台落轨与右滑、警车外观、色彩时长保持不变,,,
+503,physion_eval::full::T1_00742,T1_00742.mp4,Veo 3.1 Fast,temporal_causal,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.85,False,第6.3s–7.7s：球未触瓶时球瓶自行散开,球瓶仅在保龄球接触后被击倒,后视球道、投球动作、红球滚动、球瓶与球道、片长色调保持不变,,,
+505,physion_eval::full::T1_00284,T1_00284.mp4,Sora 2,temporal_causal,body_motion,human_animal_body_motion,obvious,0.95,False,第3.4s–4.8s：静止货架无外力爆裂解体,货架在连锁倒下后保持稳定完整,正面镜头、透明架和彩块、底部骨牌传递、前段连锁倒下、架体与片长保持不变,,,
+512,physion_eval::full::T1_05985,T1_05985.mp4,Hailuo 2.3,material_state,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.82,True,第0.8s–5.5s：黄色材料凭空长成粗柱和大池,黄蜡应由受热表面守恒熔化并自然滴落聚积,三蜡棒机位、喷枪火焰、红蓝蜡棒、黄蜡棒初态、背景色彩时长保持不变,,,
+513,physion_eval::full::T1_02669,T1_02669.mp4,Hailuo 2.3,temporal_causal,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.7,True,第4.4s–5.5s：木柴无外力自行滚动,木柴应稳定置于炉架原位,壁炉机位、木柴初始姿态与纹理、炉架余烬和碎木、火焰运动保持不变,,,
+521,physion_eval::full::T1_05408,T1_05408.mp4,Wan 2.2,material_state,pour_flow,fluid_thermal_optical_phenomena,obvious,0.9,False,"第0.0s–4.8s：红色液流入杯后不扩散混合
+第0.0s–4.8s：液柱流速与形态始终不变
+第0.0s–4.8s：杯内液体受注后颜色不变","液流入杯后自然扩散并混合
+液柱随流动和入液冲击产生变化
+杯内液体随混合逐渐变色",固定杯体近景、杯体背景光影、顶部注液及来液颜色、片长帧率保持不变,,,
+522,physion_eval::full::T1_01187,T1_01187.mp4,Hailuo 2.3,persistence_identity,throw_projectile,fluid_thermal_optical_phenomena,obvious,0.97,False,第2.2s左右：淡紫圆柱在桌面凭空显现,圆柱仅经手部放置或连续移入出现,俯视玩具场景、木轨白球运动、既有圆柱、后续手部互动、光影片长保持不变,,,
+524,physion_eval::full::T1_09822,T1_09822.mp4,Sora 2,material_state,pour_flow,fluid_thermal_optical_phenomena,obvious,0.85,False,第0.0s–7.7s：倾倒时杯内液量始终不下降,杯内液量应随累计流出量逐步减少,实验室机位、人物衣着与倾倒、液流轨迹、白色柱堆增长、停倒与再倒保持不变,,,
+525,physion_eval::full::T1_00897,T1_00897.mp4,Hailuo 2.3,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.9,False,第0.0s–5.5s：红色圆柱无支撑悬停空中,圆柱应受重力下落或由可见支撑承托,红色烟花外观与朝向、黑背景机位、烟雾和下方火光、右端微光与氛围保持不变,,,
+526,physion_eval::full::029a135b-17fc-5e65-b012-16c8bfe7feed,029a135b-17fc-5e65-b012-16c8bfe7feed.mp4,Wan 2.2,persistence_identity,pick_place_transfer,human_animal_body_motion,obvious,0.88,False,第3.1s左右：手中凭空出现白色搅拌器部件,白色部件从画外连续移入手中,俯视台面光影、饼干碗中轴、左侧灰件、手部动作、透明盖与周边物品保持不变,,,
+527,physion_eval::full::T1_00431,T1_00431.mp4,Sora 2,persistence_identity,collision_impact,human_animal_body_motion,obvious,0.92,False,第3.0s–3.2s：左上方彩色积木变成玻璃球,左上方彩色物体始终保持积木形态,桌面关卡、既有玻璃球运动、白色结构与装饰、镜头及片长、色彩光影保持不变,,,
+528,physion_eval::full::T1_02082,T1_02082.mp4,Wan 2.2,motion_force,pour_flow,fluid_thermal_optical_phenomena,obvious,0.92,False,第0.0s–4.8s：杯子无外力持续移动,杯子静止在桌面原位,固定近景与红色背景、杯中饮料与泡沫水滴、冰块数量材质布局、片长保持不变,,,
+531,physion_eval::full::T1_08377,T1_08377.mp4,Sora 2,motion_force,articulation_open_close,human_animal_body_motion,obvious,0.9,False,第2.0s–4.0s：下层柜门无外力自行打开,柜门保持关闭，直至手部接触后再转动,俯视厨房镜头、烹饪动作、落地包装、厨具布局、后续手动开门保持不变,,,
+534,physion_eval::full::T1_09990,T1_09990.mp4,Veo 3.1 Fast,temporal_causal,other_multistep,rigid_object_dynamics,obvious,0.9,False,"第1.2s–5.1s：白色连接块变为彩色方块
+第1.2s–5.1s：彩色方块未受碰撞向外飞散","连接块全程保持原有白色
+方块仅随相邻碰撞倒下并停稳",俯视木地板、彩色字母、左侧触发链、接触传递、白色末端块、片长帧率保持不变,,,
+539,physion_eval::full::T1_10037,T1_10037.mp4,Kling 2.5,geometry_structure,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.95,False,"第0.6s–0.9s：绿拖拉机未接触轮胎便移动
+第1.1s–1.6s：蓝拖拉机无接触突然移位
+第4.2s–4.8s：三辆拖拉机被碾后仍完好","绿拖拉机在轮胎接触前保持静止
+蓝拖拉机仅在受力后移动
+拖拉机受碾后出现合理变形或位移",低机位路面、红蓝绿玩具外观、巨轮滚动、片长视角、碾压情节保持不变,,,
+541,physion_eval::full::T1_03968,T1_03968.mp4,Veo 3.1 Fast,geometry_structure,pour_flow,fluid_thermal_optical_phenomena,obvious,0.9,False,"第1.8s–2.5s：左侧雾状冰突变为透明方冰
+第2.2s–2.8s：右侧雾状冰突变为透明方冰","左侧雾状冰保持原有形状与材质
+右侧雾状冰保持原有形状与材质",玻璃碗构图、杯子下潜、水花泡沫、冰块位置、后段遮挡保持不变,,,
+542,physion_eval::full::T1_07779,T1_07779.mp4,Hailuo 2.3,material_state,other_multistep,rigid_object_dynamics,obvious,0.96,False,"第1.2s–3.2s：玉米棒整体成片爆开成爆米花
+第3.2s–3.8s：爆开后原位出现完整玉米棒","玉米粒逐颗分散爆开并脱落
+玉米棒保持已爆开的连续状态",粉色炉腔、初始玉米与支架、爆米花落体、转盘炉壁、堆积物与片长保持不变,,,
+544,physion_eval::full::T1_06735,T1_06735.mp4,Veo 3.1 Fast,persistence_identity,articulation_open_close,rigid_object_dynamics,obvious,0.9,False,"第1.3s–1.7s：玩偶无外力自行变换姿势
+第3.1s–4.0s：被爆炸吞没的玩偶完整重现
+第5.0s–6.3s：玩偶坠地破碎后完全消失","玩偶受力前保持静止姿态
+爆炸后玩偶保持被毁状态，不再复原
+坠地后的玩偶碎片持续留在地面",户外构图、玩偶外观、爆炸烟尘、日光植被、坠落方向保持不变,,,
+547,physion_eval::full::796175bd-f393-536f-809b-05489185b57c,796175bd-f393-536f-809b-05489185b57c.mp4,Wan 2.2,temporal_causal,body_motion,human_animal_body_motion,obvious,0.98,False,第2.9s–3.5s：一只鸡腿入锅后变成两只,入锅后仅保留放入的一只鸡腿,俯视厨房、手部取放、空锅与鸡腿盘、光影镜头、其余食材炊具保持不变,,,
+548,physion_eval::full::T1_09738,T1_09738.mp4,Veo 3.1 Fast,material_state,deformation_state_change,deformable_materials,obvious,0.97,False,第3.7s–3.8s：开裂的压头无修复自行复原,开裂压头在无修复时保持破损,正面压机、初始金属与碎屑、首轮压碎轨迹、床面残骸、后续压制与片长保持不变,,,
+552,physion_eval::full::T1_05861,T1_05861.mp4,Hailuo 2.3,persistence_identity,pour_flow,fluid_thermal_optical_phenomena,subtle,0.82,True,第3.2s–3.7s：远左海中一人无过渡变为两人,远左海中始终仅保留原有一人,夕阳海滩、海浪岸线、原有海中人物、岸上人群、人物姿态光影、片长保持不变,,,
+555,physion_eval::full::T1_02367,T1_02367.mp4,Hailuo 2.3,motion_force,pick_place_transfer,fluid_thermal_optical_phenomena,subtle,0.92,False,第0.0s–5.7s：强风暴中草地始终静止,草地随风暴气流连贯摆动,风暴景观、超级单体与漏斗云、云雨演化、草地布局色彩、片长与静止镜头保持不变,,,
+560,physion_eval::full::T1_02448,T1_02448.mp4,Kling 2.5,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.75,True,第0.0s–4.7s：脱落玻璃碎片悬停空中,脱离玻璃板的碎片受重力持续下落,侧面慢镜、弹丸运动、玻璃板布局、相连裂片、左侧落片保持不变,,,
+563,physion_eval::full::T1_00218,T1_00218.mp4,Hailuo 2.3,temporal_causal,articulation_open_close,deformable_materials,obvious,0.88,False,第1.5s–4.0s：火焰未触及时纸张上部变黑,上部纸面在火焰或焦痕蔓延后再变黑,固定特写、手势纸形、火柴点燃、后续正常燃烧保持不变,,,
+564,physion_eval::full::T1_01692,T1_01692.mp4,Veo 3.1 Fast,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,obvious,0.95,False,"第3.8s左右：无人操作时水龙头自行出水
+第3.9s–7.7s：无洗涤剂时大量泡沫持续生成","水龙头仅在操作开关后出水
+清水仅产生短暂少量气泡",洗衣池场景、托盘位置、后续手部动作、正常溅水与溢流、镜头光影片长保持不变,,,
+566,physion_eval::full::T1_07502,T1_07502.mp4,Sora 2,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,obvious,0.97,False,第1.6s–2.8s：子弹尚未接触，鸡蛋已经破裂,鸡蛋应在子弹撞击后才破裂,暖色特写、蛋与支架、子弹轨迹、撞前完整蛋、撞后碎壳蛋液、慢动作时长保持不变,,,
+567,physion_eval::full::T1_03506,T1_03506.mp4,Wan 2.2,temporal_causal,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.78,True,第2.0s左右：左端纸盒未接触轮胎便形变,左端纸盒接触轮胎后再发生形变,车轮近景与左移、其余纸盒受压、纸盒外观、碎石、时长光照保持不变,,,
+568,physion_eval::full::T1_05794,T1_05794.mp4,Kling 2.5,contact_interaction,articulation_open_close,human_animal_body_motion,subtle,0.8,True,"第0.0s–3.0s：刀刃持续切割，包装袋仍未切开
+第3.2s–4.7s：刀刃穿过包装袋却未留下切口","包装袋应随刀刃切割形成切口
+刀刃经过处应形成连续切口和分离边缘",水槽木台俯拍、刀袋双手动作、包装外观形变、两段切割、光线帧率时长构图保持不变,,,
+570,physion_eval::full::T1_03062,T1_03062.mp4,Kling 2.5,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,obvious,0.95,False,第3.0s–3.2s：无人操作时水流自行停止,无人关闭龙头时水流应持续,水槽俯拍光色时长、双手洗紫网架、龙头喷头及背景、停水前水流、残余湿迹保持不变,,,
+574,physion_eval::full::T1_09972,T1_09972.mp4,Veo 3.1 Fast,persistence_identity,pour_flow,fluid_thermal_optical_phenomena,obvious,0.85,False,第4.8s–5.2s：冰块瞬间消失,冰块逐渐融化并持续缩小,湿木桌低角度构图、顶部水流、冰块落点、木纹积水、结尾空桌保持不变,,,
+576,physion_eval::full::T1_09979,T1_09979.mp4,Veo 3.1 Fast,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,subtle,0.78,True,第5.0s–5.3s：顶部透明水团凭空出现后消失,顶部水体应随融化和径流连续变化,暗色固定特写、透明冰块白芯气泡、浇水径流、渐进缩小、末态冰块积水与光影保持不变,,,
+577,physion_eval::full::T1_05831,T1_05831.mp4,Wan 2.2,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,obvious,0.9,False,第0.5s–3.7s：海水变化速度远快于云层,海水变化速度与云层时间尺度一致,海岸构图、云层夕照、海面形态、镜头时长、其余场景保持不变,,,
+578,physion_eval::full::T1_01563,T1_01563.mp4,Veo 3.1 Fast,material_state,pour_flow,fluid_thermal_optical_phenomena,obvious,0.9,False,第2.4s–7.7s：油面平静却持续冒出大量白汽,蒸汽量应与油面沸腾程度相符,俯拍厨房、锅具与黄色油液、食材餐具、悬手动作、光色反射与镜头时长保持不变,,,
+580,physion_eval::full::T1_04786,T1_04786.mp4,Kling 2.5,persistence_identity,pour_flow,fluid_thermal_optical_phenomena,obvious,0.8,True,"第1.5s–2.5s：黄色海绵突然消失
+第2.8s–3.7s：刷子凭空产生大量黄色颗粒","黄色海绵保持连续可见并随接触形变
+黄色物质由海绵逐步转移且质量守恒",第一视角厨房镜头、手持刷子、厨具、原有海绵、扫动轨迹保持不变,,,
+582,physion_eval::full::T1_07362,T1_07362.mp4,Hailuo 2.3,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.93,False,"第1.5s–3.3s：香肠约两秒内由生变为焦熟
+第2.5s–2.7s：第四根香肠在锅内凭空出现
+第3.7s–3.8s：第五根香肠在锅内凭空出现","香肠应随受热逐渐均匀变熟
+锅内应保持原有三根香肠
+锅内应保持原有三根香肠",厨房近景煎锅、双手搅拌、原三根香肠轨迹、油泡、白衣玻璃碗橱柜、镜头时长保持不变,,,
+584,physion_eval::full::T1_03239,T1_03239.mp4,Sora 2,material_state,pour_flow,fluid_thermal_optical_phenomena,obvious,0.85,False,第1.0s–7.7s：融液增多但冰淇淋体积未减,融液增加时冰淇淋同步缩小变形,桌面构图、冰淇淋外观、镜头光照时长、彩粉与背景物保持不变,,,
+585,physion_eval::full::T1_01190,T1_01190.mp4,Hailuo 2.3,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.98,False,第0.2s–3.5s：台灯无人接触却自行弯曲转动,无外力时台灯颈部和灯头应保持静止,夜间桌面、白色台灯造型与照明、书本电脑线缆、镜头时长保持不变,,,
+586,physion_eval::full::T1_07995,T1_07995.mp4,Wan 2.2,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.99,False,第3.7s–4.6s：第三根金属珠棒淡出后凭空复现,五根珠棒应始终连续可见,俯拍白桌、彩色磁珠、五根银色珠棒、手部扫动、珠棒纹理间距与镜头时长保持不变,,,
+590,physion_eval::full::T1_07923,T1_07923.mp4,Kling 2.5,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.9,False,第0.7s–3.5s：爆炸火花密集均匀且持续不灭,火花短促且不规则散射，随后变暗下落,森林构图、三脚架、爆点与时机、烟雾扩散、色调背景保持不变,,,
+591,physion_eval::full::T1_08367,T1_08367.mp4,Sora 2,motion_force,articulation_open_close,human_animal_body_motion,obvious,0.92,False,第7.0s–7.8s：两盒肉盘大幅悬空却不倾落,肉盘应落稳于支撑面或因失衡倾落,厨房移动视角光线、冰箱取盘、两盒肉盘包装、双手搬放、灶台橱柜与时长保持不变,,,
+595,physion_eval::full::T1_04583,T1_04583.mp4,Wan 2.2,contact_interaction,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.94,False,"第0.3s–4.1s：火焰下方持续高速喷气却未扰动火焰
+第0.3s–4.2s：强气流中火焰仍始终直立稳定","高速气流应与火焰产生明显相互作用
+火焰应随气流偏转、抖动或熄灭",居中器皿与桌面、持续白色喷气、火焰点燃色彩与根部、静物光色与镜头时长保持不变,,,
+596,physion_eval::full::T1_08780,T1_08780.mp4,Sora 2,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,obvious,0.86,False,第0.0s–7.7s：油液剧烈起泡，黄油块却几乎不融化,黄油应在持续高温油液中逐渐融化,俯拍煎锅油池、黄油初态、油泡运动、暖黄色调与镜头时长保持不变,,,
+598,physion_eval::full::T1_04831,T1_04831.mp4,Kling 2.5,contact_interaction,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.95,False,"第4.2s左右：两辆车经历爆炸后仍毫无损伤
+第4.2s左右：油桶经历爆炸后仍毫无损伤
+第4.2s左右：白车经历爆炸后车灯仍亮着","两车应出现凹陷、破损或灼痕
+油桶应出现变形、破裂或灼痕
+白车车灯应因爆炸损坏而熄灭",林间空地、两车身份与位移、油桶倾倒、爆炸烟尘碎屑、道路森林与镜头时长保持不变,,,
+600,physion_eval::full::T1_03508,T1_03508.mp4,Kling 2.5,temporal_causal,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.92,False,"第1.4s左右：自左第四个纸盒未受压便开始变形
+第1.5s左右：自左第四个纸盒未接触轮胎仍保持变形
+第2.0s左右：自左第三个纸盒未受压便开始变形
+第2.3s左右：自左第三个纸盒未接触轮胎仍保持变形","第四个纸盒应在轮胎接触前保持原状
+第四个纸盒应在轮胎接触后才受压变形
+第三个纸盒应在轮胎接触前保持原状
+第三个纸盒应在轮胎接触后才受压变形",白车轮与五纸盒、车轮运动、纸盒顺序外观、接触后压扁、路面日光与镜头时长保持不变,,,
+603,physion_eval::full::T1_05780,T1_05780.mp4,Veo 3.1 Fast,persistence_identity,body_motion,fluid_thermal_optical_phenomena,obvious,0.95,False,第4.2s–4.5s：手中毛巾在持续揉擦时凭空消失,毛巾应在双手揉擦过程中持续可见,俯拍双手与洗碗机、毛巾外观擦拭、手表手势、后段取巾传递、背景与时长保持不变,,,
+604,physion_eval::full::T1_08682,T1_08682.mp4,Sora 2,temporal_causal,pick_place_transfer,human_animal_body_motion,obvious,0.9,False,第0.9s左右：厨房画面突然切换,镜头连续转动，厨房场景与物件状态连贯,第一视角厨具、转镜、放鸡肉动作、光照时长、其余合理运动保持不变,,,
+605,physion_eval::full::T1_00145,T1_00145.mp4,Veo 3.1 Fast,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,subtle,0.7,False,"第2.3s–3.5s：左手水果刀变成白色塑料环
+第3.0s–4.2s：右手水果刀变成螺钉状工具","左手水果刀全程保持原有形状与身份
+右手水果刀全程保持原有形状与身份",水槽俯视、双手动作、餐具刀叉、海绵清洁剂、原刀具外观保持不变,,,
+606,physion_eval::full::T1_04509,T1_04509.mp4,Wan 2.2,temporal_causal,collision_impact,human_animal_body_motion,obvious,0.95,False,"第0.3s–0.5s：彩色轨道原地突变为黑白轨道
+第0.3s–0.5s：散乱彩珠无外力瞬间排成整列","轨道颜色和结构应在镜头移动中保持连续
+彩珠应沿各自轨迹连续滚动",左移镜头、玩具轨道场景、彩珠外观及滚动、原轨道色彩、高亮构图与时长保持不变,,,
+608,physion_eval::full::T1_08254,T1_08254.mp4,Kling 2.5,material_state,pour_flow,fluid_thermal_optical_phenomena,obvious,0.88,False,第0.0s–4.7s：大量融水出现但冰块几乎未缩小,冰块随融水增加按相应体积缩小,固定特写与时长、冰块形状、光照反射、渐变熔化过程保持不变,,,
+611,physion_eval::full::T1_05869,T1_05869.mp4,Hailuo 2.3,persistence_identity,pour_flow,fluid_thermal_optical_phenomena,obvious,0.99,False,第0.3s–5.5s：飞鸟反复凭空消失并跳到不同位置,同一只鸟应沿连续轨迹自然飞行,落日海景与光色、静态镜头时长、鸟剪影与自然振翅、天空水面背景保持不变,,,
+613,physion_eval::full::T1_01584,T1_01584.mp4,Sora 2,material_state,pour_flow,fluid_thermal_optical_phenomena,obvious,0.95,False,第0.0s–7.7s：水持续流入锅中，水量却始终不增加,持续进水时锅内水位应逐渐升高,俯拍水槽、双手清洗和餐具、锅具位置、水流方向流量、光色与镜头时长保持不变,,,
+615,physion_eval::full::T1_06719,T1_06719.mp4,Wan 2.2,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.98,False,"第2.3s左右：炉具背景突然消失并变为黑色
+第3.8s–4.0s：炉具从黑色背景中凭空恢复","炉具和蓝色火焰环应持续可见
+炉具不应发生无来源的消失与恢复",俯拍圆形炉具、炉盘蓝焰、右手持仙女棒、火花烟雾燃尽、深蓝光色与时长保持不变,,,
+616,physion_eval::full::T1_06455,T1_06455.mp4,Sora 2,persistence_identity,pour_flow,fluid_thermal_optical_phenomena,obvious,0.94,False,第1.2s左右：整条水流在一帧内凭空延伸至画外,水流应从木尖向下连续延伸,黑底木尖特写、前段水滴下落、相连液流高光、后段持续水流、光色尺度时长保持不变,,,
+618,physion_eval::full::T1_00983,T1_00983.mp4,Sora 2,contact_interaction,pour_flow,fluid_thermal_optical_phenomena,obvious,0.9,False,第0.5s–0.6s：无人操作时水龙头自行出水,水龙头应在受到操作后才开始出水,深色水槽俯拍、双手清洗及餐具海绵、龙头台面光色、物体运动、帧率时长保持不变,,,
+620,physion_eval::full::T1_08779,T1_08779.mp4,Sora 2,motion_force,pour_flow,fluid_thermal_optical_phenomena,obvious,0.95,False,第3.5s–7.7s：火杖脱手后持续旋转上升,火杖脱手后沿重力抛物线运动并下落,落日海滩远景、双头火杖火焰、表演者造型动作、火杖旋向、时长与固定镜头保持不变,,,
+622,physion_eval::full::T1_04367,T1_04367.mp4,Hailuo 2.3,temporal_causal,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.92,False,第1.5s左右：白球未接触障碍便爆炸,白球保持完整，接触障碍后方可爆裂,侧面围栏构图、中央方块、左侧球体入场、镜头时长、爆后粒子衰减保持不变,,,
+623,physion_eval::full::T1_04441,T1_04441.mp4,Veo 3.1 Fast,temporal_causal,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.92,False,第2.0s–7.7s：香烟无外力自发燃起明火,香烟仅保持阴燃，不出现明火,近景构图与镜头、香烟位置与阴燃、持续烟雾、灯光色调与景深保持不变,,,
+627,physion_eval::full::T1_04766,T1_04766.mp4,Kling 2.5,contact_interaction,articulation_open_close,human_animal_body_motion,obvious,0.95,False,第3.2s–4.8s：右手腕被锅盖金属边缘穿过,右手始终位于锅盖同侧并绕开金属边缘,俯视厨房、锅盖锅具食物、开盖动作、双手交接、蒸汽反光与透视保持不变,,,
+628,physion_eval::full::T1_04058,T1_04058.mp4,Kling 2.5,geometry_structure,pour_flow,fluid_thermal_optical_phenomena,obvious,0.97,False,第0.8s–1.3s：第二个番茄穿过并重叠第一个番茄,两个番茄接触后碰撞、变形或反弹,俯视碗具、番茄外观与终位、水面水花、首颗入水、灯光镜头与时长保持不变,,,
+632,physion_eval::full::T1_01683,T1_01683.mp4,Veo 3.1 Fast,persistence_identity,articulation_open_close,rigid_object_dynamics,obvious,0.93,False,第0.0s–0.5s：圆形物体在水槽中央凭空出现,圆形物体仅通过连续移动进入水槽,俯视水槽、原有圆片与排水件、手部操作、镀铬组件、反光镜头与时长保持不变,,,
+636,physion_eval::full::T1_05631,T1_05631.mp4,Veo 3.1 Fast,material_state,pour_flow,fluid_thermal_optical_phenomena,obvious,0.95,False,第6.1s–7.7s：右侧水杯在桌面原地凭空出现,右侧水杯应由画外连续移入或由手放置,棋盘桌与固定镜头、原水杯左移、杯体水线折射、桌面背景、前段内容保持不变,,,
+637,physion_eval::full::T1_02931,T1_02931.mp4,Kling 2.5,material_state,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.95,False,第0.4s–4.7s：车内爆炸时挡风玻璃始终完好,挡风玻璃应随车内爆炸破裂并产生碎片,正面白车与户外、爆炸烟火及车体变形、爆前车体、车顶杆、车内构件保持不变,,,
+638,physion_eval::full::T1_06734,T1_06734.mp4,Kling 2.5,persistence_identity,articulation_open_close,rigid_object_dynamics,subtle,0.85,False,第1.0s–4.7s：人形物爆炸后未留下可辨碎片,人形物爆炸后应留下并散落对应碎片,户外场景路牌、人形物爆前外观、爆炸烟土飞屑、爆坑余烟、镜头时长保持不变,,,
+639,physion_eval::full::T1_08106,T1_08106.mp4,Wan 2.2,material_state,pour_flow,fluid_thermal_optical_phenomena,obvious,0.9,False,"第0.0s–4.7s：持续注水时锥形瓶液面没有上升
+第0.0s–4.7s：咖啡表面气泡仅在水流处变化","锥形瓶内液面应随持续注水逐渐上升
+气泡应受流动带动，在表面持续迁移变形",手冲近景、连续水流横移、瓶与漏斗、咖啡色与局部冲击、镜头时长保持不变,,,
+640,physion_eval::full::T1_02632,T1_02632.mp4,Hailuo 2.3,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.98,False,第0.8s左右：南瓜上方大量粉尘凭空出现,粉尘应从可见源头连续喷出并扩散,田野定镜、南瓜外观、支架与桶、桶内粉料、粉尘扩散消散、时长与南瓜终态保持不变,,,
+641,physion_eval::full::T1_00067,T1_00067.mp4,Kling 2.5,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,obvious,0.95,False,"第1.2s左右：叉子与餐刀融合后叉子消失
+第2.3s左右：水槽碗内银色餐具凭空出现","叉子与餐刀应始终独立且数量不变
+银色餐具应由手放入或连续移入碗内",水槽洗碗视角、手套海绵与水流、餐刀擦拭、周边厨具、灯光镜头与时长保持不变,,,
+643,physion_eval::full::T1_02955,T1_02955.mp4,Hailuo 2.3,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.95,False,"第0.0s–1.1s：子弹无受力从假人头部倒退回枪管
+第2.0s–2.2s：子弹未撞击假人头部便先破裂","子弹应静止或受明确外力后运动
+假人头部应在子弹接触后才破裂飞散",枪与假人侧景、场景灯光、后续子弹飞行、接触后碎裂、镜头时长与质感保持不变,,,
+644,physion_eval::full::T1_07037,T1_07037.mp4,Wan 2.2,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.98,False,第1.0s左右：三块水晶瞬间消失,三块水晶应持续存在并保持原有位置,微距构图与时长、渐变色光、水晶初态、顶部晶片与背景、静止镜头保持不变,,,
+647,physion_eval::full::T1_08365,T1_08365.mp4,Sora 2,contact_interaction,deformation_state_change,human_animal_body_motion,subtle,0.8,False,第5.2s–6.5s：剪刀剪过披萨后面饼仍未断开,剪刀闭合处的面饼应形成切口并分离,俯视人物与披萨、双手剪刀动作、披萨配料、餐盘环境灯光、镜头时长保持不变,,,
+648,physion_eval::full::T1_08744,T1_08744.mp4,Kling 2.5,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.95,False,第1.7s–4.7s：篮球无外力穿过篮圈后入篮,篮球应按碰撞反弹，不能从篮圈下方穿过,车道户外定镜、篮球外观与旋转、篮架结构、初始轨迹与最终入篮、镜头时长保持不变,,,
+649,physion_eval::full::T1_01290,T1_01290.mp4,Sora 2,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.78,False,第0.0s–7.7s：手指几乎不转而欧泊大幅自转,欧泊应与夹持手指同步转动并保持夹持,欧泊微距、欧泊色彩切面、指尖纹理夹持、镜头灯光时长、轻柔把玩动作保持不变,,,
+650,physion_eval::full::T1_04814,T1_04814.mp4,Veo 3.1 Fast,motion_force,pour_flow,fluid_thermal_optical_phenomena,obvious,0.85,False,第3.8s–6.0s：冰棒无外力从盘中腾空,冰棒保持盘面支撑，无外力时不腾空,白盘特写、绿色融水与雪人、冰棒外观、前段融化、末段转场保持不变,,,
+652,physion_eval::full::T1_10029,T1_10029.mp4,Veo 3.1 Fast,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,obvious,0.98,False,第1.4s–3.8s：石块后方无源涌出大量水柱,水柱应从可见水源连续涌出,户外石块湿砾、易拉罐外观轨迹、初始水花、石块位置、灯光镜头与时长保持不变,,,
+654,physion_eval::full::T1_08759,T1_08759.mp4,Sora 2,temporal_causal,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.99,False,第2.8s–7.7s：液压头未接触足球便爆裂飞散,足球应保持完整，待液压头接触后再破裂,液压测试场景、完整足球与位置、液压头下降、台面背景物、镜头时长构图保持不变,,,
+657,physion_eval::full::T1_02540,T1_02540.mp4,Kling 2.5,geometry_structure,pour_flow,fluid_thermal_optical_phenomena,subtle,0.7,False,第0.5s–4.8s：两块冰块在白球入水后消失,冰块应在飞溅后仍可见并保持固体形态,杯体高反差近景、白球入水、正常飞溅、杯体水线折射、浅色固体运动、镜头时长保持不变,,,
+658,physion_eval::full::T1_02395,T1_02395.mp4,Hailuo 2.3,material_state,pour_flow,fluid_thermal_optical_phenomena,subtle,0.74,False,第1.7s–3.2s：液体飞溅形成持续镜像对称双角水冠,水冠应自然不对称并随机分叉破碎,液滴微距液池、下降撞击、暖光景深与红橙色、周围液滴液池、镜头时长保持不变,,,
+661,physion_eval::full::T1_07253,T1_07253.mp4,Sora 2,temporal_causal,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.98,False,第0.0s–7.7s：云层与海面纹理完全静止,云层缓慢漂移，海面波纹与反光持续变化,固定日落构图、地平线、云层布局、海面质感、色光与时长保持不变,,,
+665,physion_eval::full::T1_05658,T1_05658.mp4,Kling 2.5,material_state,pick_place_transfer,fluid_thermal_optical_phenomena,obvious,0.97,False,"第0.0s–1.5s：水面凭空出现火焰并爆炸
+第1.6s–3.0s：中央再次凭空爆炸并产生浓烟","水面保持平静，不出现无源火焰或爆炸
+不发生第二次无源爆炸和新增烟雾",高位广角、矩形泳池、蓝色衬布、池边物件、日光与时长保持不变,,,
+666,physion_eval::full::T1_02715,T1_02715.mp4,Kling 2.5,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.96,False,第1.0s左右：移动中的金色圆柱突然消失,金色圆柱保持可见并延续接触运动,俯拍构图、金属桌面、金条阵列、圆柱外观与后续手部动作保持不变,,,
+669,physion_eval::full::T1_07694,T1_07694.mp4,Kling 2.5,temporal_causal,pick_place_transfer,deformable_materials,obvious,0.95,False,第2.1s–3.0s：扁平面团无塑形过程变成五角星,面团保持扁圆，直至工具连续压出星形,俯拍厨房、案板擀面杖、双手动作、面团色厚与时长保持不变,,,
+670,physion_eval::full::T1_07387,T1_07387.mp4,Sora 2,material_state,pour_flow,fluid_thermal_optical_phenomena,obvious,0.9,False,第4.1s–7.7s：泳池水位下降速度异常过快,水位以合理速率下降并保留涡旋水纹,泳池墙角构图、瓷砖灯具、排水涡旋水纹、冷光时长、初始满池保持不变,,,
+672,physion_eval::full::T1_02934,T1_02934.mp4,Wan 2.2,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,subtle,0.89,False,第2.4s左右：光学镜片左侧白边突然出现文字,镜片左侧白边始终洁净无文字,镜片构图、手套握姿、镜内彩虹折射、光照与时长保持不变,,,
+673,physion_eval::full::T1_00443,T1_00443.mp4,Sora 2,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.99,False,第3.4s–6.6s：碗中冰块断续消失且未留下水,冰块连续缓慢融化并在碗中留下水,固定镜头、花纹碗、冰块外观、台面光影与时长保持不变,,,
+674,physion_eval::full::T1_09991,T1_09991.mp4,Wan 2.2,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.99,False,第2.2s–4.6s：右下烛焰脱离烛芯悬浮后返回,右下烛焰始终附着烛芯并自然闪动,四支红烛、其余火焰、烛台蜡痕、暗调光影与镜头运动保持不变,,,
+675,physion_eval::full::T1_08874,T1_08874.mp4,Sora 2,contact_interaction,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.92,False,"第0.0s–7.7s：枝草堆持续接触火焰却未被点燃
+第0.0s–7.7s：燃料堆未带动火焰逐渐增大","接触火焰的枝草逐渐燃烧、焦黑并塌落
+火焰随更多燃料点燃而逐渐增大",砖砌火坑、乡野背景、枝草初始布局、初始火焰与镜头路径保持不变,,,
+676,physion_eval::full::T1_05114,T1_05114.mp4,Kling 2.5,motion_force,articulation_open_close,human_animal_body_motion,obvious,0.94,False,"第0.0s–4.7s：火焰呈蘑菇帽与细柱突变连接
+第1.2s–4.7s：火星杂物乱溅并悬停在火焰周围
+第2.1s左右：火焰底部凭空出现火星和亮斑","火焰从燃料处连续上升并自然扩散
+火星沿连贯抛射或浮升轨迹运动
+底部火星仅由燃烧物连续喷出",室内固定构图、左侧人物及持杆姿势、中央燃烧物与暖色光调保持不变,,,
+678,physion_eval::full::T1_01003,T1_01003.mp4,Veo 3.1 Fast,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.93,False,第3.4s–4.2s：黄油块无外力快速横移至锅右侧,黄油块原位受热软化并逐渐融化,固定锅面构图、黄油外观、沸腾泡沫、融化油层与点赞图标保持不变,,,
+679,physion_eval::full::e8f69199-0694-5317-ba70-c733e73b461d,e8f69199-0694-5317-ba70-c733e73b461d.mp4,Hailuo 2.3,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,subtle,0.8,False,第1.2s左右：无人操作时微波炉数字突然闪变,无人操作时微波炉数字保持稳定,俯拍厨房、双手与汤勺搅拌、黄色液体量、容器厨具和光照保持不变,,,
+683,physion_eval::full::T1_05601,T1_05601.mp4,Wan 2.2,temporal_causal,pick_place_transfer,rigid_object_dynamics,obvious,0.95,False,第3.0s–4.7s：被碾碎的葵花籽重新聚成完整籽堆,葵花籽保持破碎分散并留在轮胎后方,低角度车轮构图、车辆前行、初始籽堆、车身地面与光照保持不变,,,
+685,physion_eval::full::21844431-551d-5c35-bdcf-0cd1a9d6ddca,21844431-551d-5c35-bdcf-0cd1a9d6ddca.mp4,Hailuo 2.3,temporal_causal,body_motion,human_animal_body_motion,obvious,0.97,False,"第0.0s–0.5s：碗中整鸡突然变成单个鸡腿
+第0.7s–1.2s：下方碗内一块鸡肉突然消失
+第2.3s–3.7s：夹起的两块鸡肉变形合成一块","整鸡形态与部位数量保持连续
+鸡肉保持可见直至被手取走
+两块鸡肉被夹起时始终彼此分离",俯拍水槽、粉碗黑锅、双手取肉动作、锅内鸡肉与光照保持不变,,,
+690,physion_eval::full::T1_06574,T1_06574.mp4,Veo 3.1 Fast,material_state,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.98,False,第2.8s左右：碎裂面条突然变成灰白小石块,碾压后只留下棕黄面条碎段和碎屑,低位户外构图、木支架、车轮滚动、初始面条桥与背景保持不变,,,
+692,physion_eval::full::T1_06914,T1_06914.mp4,Kling 2.5,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.91,False,"第0.8s–2.5s：首次开火出现多余第二枚弹体
+第3.0s–4.7s：二次开火无出膛弹却出现两枚弹体","首次开火仅有一枚弹体从枪口射出
+二次开火仅有一枚弹体从枪口射出",枪管特写、两次开火、枪管准星、慢镜时长、其余弹丸运动与烟雾保持不变,,,
+696,physion_eval::full::T1_06058,T1_06058.mp4,Sora 2,material_state,pour_flow,fluid_thermal_optical_phenomena,obvious,0.92,False,第0.0s–7.7s：绿色固体熔化但周围液体量未增加,液体体积与铺展范围随固体熔化增加,固定近景、双块绿色固体、桌面背景、光照反射与熔化节奏保持不变,,,
+698,physion_eval::full::090745ef-4211-5995-a401-176d4a86132c,090745ef-4211-5995-a401-176d4a86132c.mp4,Wan 2.2,persistence_identity,pick_place_transfer,deformable_materials,subtle,0.72,False,第3.1s–4.7s：海绵脱离手掌悬浮在手臂旁,海绵始终被手握住或受重力落下,橱柜场景、双手动作、柜内物品、海绵取出过程与关门动作保持不变,,,
+700,physion_eval::full::T1_01665,T1_01665.mp4,Wan 2.2,motion_force,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.95,False,第0.0s–0.7s：白块从浅液体中自行弹出碟外,白块受可见外力后再沿连续轨迹飞出,俯拍白瓷碟、驯鹿图案、浅液体、红布、光色与后续空碟保持不变,,,
+704,physion_eval::full::T1_05902,T1_05902.mp4,Veo 3.1 Fast,motion_force,pour_flow,fluid_thermal_optical_phenomena,obvious,0.98,False,第3.4s–6.7s：冰棒无外力自行抬起并翻面,冰棒融化时持续受盘面支撑且不翻面,固定近景、冰棒与木棍外观、融化液池、光照背景及无接触状态保持不变,,,
+705,physion_eval::full::T1_06317,T1_06317.mp4,Hailuo 2.3,temporal_causal,pour_flow,fluid_thermal_optical_phenomena,subtle,0.72,False,第1.8s左右：脚掌接触前西瓜已自行开裂,西瓜保持完整直至脚掌接触后再破裂,低角度花园构图、毛脚轨迹、西瓜外观、碎块果肉与碾碎后果保持不变,,,
+709,physion_eval::full::T1_07640,T1_07640.mp4,Hailuo 2.3,temporal_causal,body_motion,fluid_thermal_optical_phenomena,obvious,0.88,False,第0.5s–3.3s：人物嘴部变成手指状结构,嘴唇形态稳定，始终保持正常口部轮廓,黑底侧脸构图、其余面部、肥皂膜外观运动、吹气姿态、后段分离保持不变,,,
+710,physion_eval::full::T1_05968,T1_05968.mp4,Veo 3.1 Fast,persistence_identity,articulation_open_close,fluid_thermal_optical_phenomena,obvious,0.93,False,第5.4s–5.9s：红色玩偶变成黄色与绿色玩偶,左侧红色玩偶受压后保持原有身份与材质,车轮碾压构图、受压运动、中右玩偶、左侧红玩偶外观、背景光照保持不变,,,
+715,physion_eval::full::T1_07933,T1_07933.mp4,Kling 2.5,material_state,pour_flow,fluid_thermal_optical_phenomena,obvious,0.95,False,第0.0s–2.3s：湿润冰块持续变大而非缩小,冰块逐渐缩小并形成相应积水,固定近景、木板背景、冰块材质位置、积水波纹、光色与时长保持不变,,,
