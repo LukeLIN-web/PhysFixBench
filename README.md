@@ -64,6 +64,6 @@ review_hf.html                    HF 在线版（视频走 HF resolve URL）
 
 ## 仓库说明（GitHub）
 
-视频文件（`videos/`，约 0.8 GB）托管在 Hugging Face dataset：**HuggingFriends/PhysFixBench**。
+视频文件（`videos/`，约 0.8 GB）托管在 Hugging Face dataset：[https://huggingface.co/datasets/HuggingFriends/PhysFixBench](https://huggingface.co/datasets/HuggingFriends/PhysFixBench)（私有，需在 HF 仓库 Settings → Collaborators 中邀请合作者）。
 - 在线审核（视频走 HF URL）：直接打开本仓库的 [`index.html`](./index.html)（需有 HF 访问权限并已登录），或启用 GitHub Pages 后访问。
 - 离线审核：clone HF 数据集，把仓库文件放到数据目录，用其中的 `index.html`（相对路径版）。
