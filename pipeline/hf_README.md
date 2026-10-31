@@ -8,13 +8,15 @@ pretty_name: PhysFixBench · PhyGround + VideoPhy2
 configs:
 - config_name: phyground
   data_files: data/physfixbench_phyground.jsonl
+- config_name: phyground_b2
+  data_files: data/physfixbench_phyground_b2.jsonl
 - config_name: videophy2
   data_files: data/physfixbench_videophy2.jsonl
 ---
 
-# PhysFixBench · PhyGround-91 + VideoPhy2-100（draft v1，待人工审核）
+# PhysFixBench · PhyGround-91 + VideoPhy2-100 + PhyGround 第二批-100（draft v1，待人工审核）
 
-191 条带物理缺陷的生成视频及结构化中文修复标注（fixing prompts），用于物理视频修复（physics video correction）的基准构建。格式与 [PhysFixBench · Physion-300](https://huggingface.co/datasets/HuggingFriends/PhysFixBench) 相同：同样的 jsonl / csv 字段、同样的修复指令写法、同样的人工审核页。本包为 draft 版本，所有标注等待人工审核（pass / edit / reject）。
+291 条带物理缺陷的生成视频及结构化中文修复标注（fixing prompts），用于物理视频修复（physics video correction）的基准构建。格式与 [PhysFixBench · Physion-300](https://huggingface.co/datasets/HuggingFriends/PhysFixBench) 相同：同样的 jsonl / csv 字段、同样的修复指令写法、同样的人工审核页。本包为 draft 版本，所有标注等待人工审核（pass / edit / reject）。
 
 ## 数据来源与质控
 
@@ -22,18 +24,24 @@ configs:
 - **VideoPhy2（100 条）**：VideoPhy2 test 集中 SA ≥ 4、物理常识 PC ≤ 3、标注者至少写了一条违反的物理规则的视频；去掉分辨率低的 VideoCrafter。同一 prompt 只留排名最高的一条；与 PhyGround 名单 prompt 重复的，排在同票数的其他视频之后。
 - **GPT-5.5 逐帧核实**：每条候选按 4 fps 抽帧并标时间戳，连同生成 prompt 和人工标签交给 GPT-5.5。人工标签（PhyGround 的低分定律；VideoPhy2 的违反规则原句）逐条当作待核实的说法，判 supported / not_supported（VideoPhy2 另有 not_in_video，用来识别讲的东西视频里根本没有的标注噪声），并写出缺陷时间段、描述、修复指令和需保持的内容；或者给出拒收理由：无物理错误、只有语义问题、原标注误报、整体崩坏、画质差、不可修。
 - **三遍投票**：单次调用不稳定，每条跑三遍，按保留票数排序，同票数再按平均严重度、平均置信度排序。三遍都保留的记为 confident，否则记为 borderline。至少一票保留才进名单。票数不代表判对，所以每一条都需要人工审。
+- **PhyGround 第二批（100 条）**：第一批不足 100 条，于是放宽阈值补选：SA ≥ 3.0、至少一条定律均分 ≤ 3.0、并非所有定律都低，去掉第一批已核实过的 149 条候选，剩 302 条。核实流程、提示词、抽帧和投票规则与第一批相同，但核实模型换成了 **gpt-6-astra（通过 Codex CLI 调用，reasoning effort medium）**，因为 GPT-5.5 接口不可用。302 条中至少一票保留的有 111 条，按票数取前 100（三遍都保留 79 · 边界 21）；与第一批 prompt 重复的（同一 prompt 的其他生成模型视频）排在同票数视频之后，最终有 37 条。
+- **两个核实模型的差异**：在第一批 149 条候选上让 gpt-6-astra 单跑一遍对照。它明显更严：单遍保留率 29%，GPT-5.5 约 46%；GPT-5.5 三遍都保留的 51 条里，它只保留 24 条。单遍结论一致率 93/149，GPT-5.5 自身两遍之间是 126/149。gpt-6-astra 更紧扣人工标出的定律，人工没标、但画面上很明显的错误（如物体凭空出现）它可能放过。所以两批的票数、严重度不能直接跨批比较，`phyground_b2` 里 `gpt_*` 字段都是 gpt-6-astra 的结论。
 - **中文修复标注**：「问题 / 正确表现 / 保持不变」三段和四个分类标签（`error_family` / `interaction_primitive` / `scenario_domain` / `review_error_category`）由 Claude 根据 GPT-5.5 的英文错误描述、修复指令、保持内容和生成 prompt 改写、归类，**Claude 没有看视频**，准确度以 GPT-5.5 的英文为上限。每条问题的时间段直接沿用 GPT-5.5 给的（4 fps 精度，所以有 0.25s 级的值）。英文原文保存在 `error_description_en` / `correction_instruction_en` / `protected_content_en` 中。
 
 ## 文件
 
 ```
-videos/<video_file>                       191 个原始生成视频（H.264，共约 255 MB）
+videos/<video_file>                       291 个原始生成视频（H.264，共约 370 MB）
 data/physfixbench_phyground.jsonl         PhyGround 每条一行完整标注（机器可读）
 data/physfixbench_phyground.csv           同内容 CSV（Excel 可开，含待填审核列）
 data/physfixbench_videophy2.jsonl         VideoPhy2，同上
 data/physfixbench_videophy2.csv
+data/physfixbench_phyground_b2.jsonl      PhyGround 第二批，同上
+data/physfixbench_phyground_b2.csv
 review_phyground_videophy2.html           人工审核页（本地打开即用；与 videos/ 同级）
 review_phyground_videophy2_hf.html        HF 在线版（视频走 HF resolve URL）
+review_phyground_b2.html                  PhyGround 第二批审核页（本地版）
+review_phyground_b2_hf.html               PhyGround 第二批审核页（HF 在线版）
 ```
 
 ## 标注字段（jsonl）
@@ -90,6 +98,8 @@ review_phyground_videophy2_hf.html        HF 在线版（视频走 HF resolve UR
 3. 每条选择 **通过 / 需修改 / 驳回**，可填备注；结果自动暂存在浏览器。可按数据源、问题类别、视频内容、生成模型、难度筛选。
 4. 点右上角「导出审核结果 JSON」，回收 `physfixbench_phyground_videophy2_review_export.json`。
 
+PhyGround 第二批用 `review_phyground_b2_hf.html`（或本地版 `review_phyground_b2.html`），用法相同，导出文件为 `physfixbench_phyground_b2_review_export.json`。
+
 ## 分布概览
 
 **PhyGround（91 条）**
@@ -104,7 +114,11 @@ review_phyground_videophy2_hf.html        HF 在线版（视频走 HF resolve UR
 - 难度：明显 56 · 细微 44；三遍都保留 89 · 边界 11
 - 生成模型：Wan 31 · Cosmos 29 · Ray2 15 · CogVideoX 12 · HunyuanVideo 11 · Sora 2
 
-PhyGround 名单不足 100 条（至少一票保留的只有 91 条），补足方式待定。
+**PhyGround 第二批（100 条）**
+- 问题类别：力与运动 39 · 材质/状态 26 · 物体永存/同一 23 · 几何/碰撞 6 · 时序/因果 2 · 接触/交互 2 · 其他 2
+- 视频内容：碰撞冲击 39 · 抛射 18 · 倾倒/流动 15 · 形变/状态变化 10 · 多步操作 8 · 肢体运动 5 · 拿取转移 5
+- 难度：明显 43 · 细微 57；三遍都保留 79 · 边界 21
+- 生成模型：Veo 3.1 26 · Wan 2.2 I2V-A14B 19 · Cosmos-Predict2.5 14B 17 · OmniWeaving 14 · LTX-2.3 22B 8 · Cosmos-Predict2.5 2B 7 · Wan 2.2 TI2V-5B 5 · LTX-2 19B 4
 
 ## License / 使用限制
 

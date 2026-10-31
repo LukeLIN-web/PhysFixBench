@@ -9,6 +9,12 @@ subdirectory per model.
 
     python3 pipeline/select_phyground.py --db <human_eval_filtered.db> --videos <videos dir> \
         --sa-min 3.5 --law-max 2.5 --out pipeline/out/phyground_candidates_sa3.5.json
+
+The second batch loosens both thresholds and leaves out the videos the first batch already verified:
+
+    python3 pipeline/select_phyground.py --db <human_eval_filtered.db> --videos <videos dir> \
+        --sa-min 3.0 --law-max 3.0 --exclude pipeline/out/phyground_candidates_sa3.5.json \
+        --out pipeline/out/phyground_candidates_sa3.0_law3.0_new.json
 """
 
 import argparse
@@ -24,7 +30,7 @@ def video_path(videos, dataset, filename):
     """The file the rating app served: <videos>/<model>/<file>. The two LTX models' entries there are now broken
     symlinks into <model>-humaneval/, so fall back to that directory."""
     for d in (dataset, f"{dataset}-humaneval"):
-        p = os.path.join(videos, d, filename)
+        p = os.path.abspath(os.path.join(videos, d, filename))
         if os.path.exists(p):
             return p
     return None
@@ -58,12 +64,16 @@ def main():
     ap.add_argument("--sa-min", type=float, default=4.0, help="keep videos whose mean SA is at least this")
     ap.add_argument("--law-max", type=float, default=2.5, help="a law counts as low when its mean is at most this")
     ap.add_argument("--keep-collapse", action="store_true", help="keep videos whose every law is low")
+    ap.add_argument("--exclude", nargs="*", default=[], help="candidate files whose videos to leave out")
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
 
     videos, scores, notes = load(args.db)
+    excluded = {r["video_id"] for f in args.exclude for r in json.load(open(f))}
     out = []
     for vid, sc in scores.items():
+        if vid in excluded:
+            continue
         mean = {k: round(sum(v) / len(v), 3) for k, v in sc.items()}
         laws = {k: m for k, m in mean.items() if k not in GENERAL}
         if not laws or mean.get("SA", 0) < args.sa_min:

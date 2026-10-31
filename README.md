@@ -84,15 +84,17 @@ pipeline/                                    筛选 → GPT-5.5 逐帧核实 →
 
 视频（约 255 MB）在 Hugging Face：[juyil/PhysFixBench-PhyGround-VideoPhy2](https://huggingface.co/datasets/juyil/PhysFixBench-PhyGround-VideoPhy2)（公开）。
 
+**PhyGround 第二批（100 条）**：放宽到 SA ≥ 3.0、定律 ≤ 3.0，去掉第一批已核实的候选后用 gpt-6-astra（Codex CLI）同样跑三遍投票选出，文件为 `data/physfixbench_phyground_b2.jsonl / .csv` 和 `review_phyground_b2(_hf).html`，视频（约 114 MB）在同一个 HF 数据集里。两个核实模型的差异见数据集卡。
+
 ## pipeline/
 
 每个脚本开头写了用法，数据位置都用参数传入：
 
 | 脚本 | 作用 |
 |---|---|
-| `select_phyground.py` | 从 PhyGround 人工评测库选候选：SA 高、至少一条定律低、并非所有定律都低 |
+| `select_phyground.py` | 从 PhyGround 人工评测库选候选：SA 高、至少一条定律低、并非所有定律都低；`--exclude` 去掉已核实过的候选 |
 | `select_videophy2.py` | 从 VideoPhy2 test csv 选候选：SA 高、PC 低、至少一条违反规则，去掉 VideoCrafter |
-| `gpt_verify.py` | 4 fps 抽帧，交给 GPT-5.5（任一 OpenAI 兼容接口）逐条核实人工标签并写出修复标注；PhyGround 的定律定义在 `phyground_laws.json` |
+| `gpt_verify.py` | 4 fps 抽帧，交给 GPT-5.5（任一 OpenAI 兼容接口；`--backend codex` 改用 Codex CLI，默认 gpt-6-astra）逐条核实人工标签并写出修复标注；PhyGround 的定律定义在 `phyground_laws.json` |
 | `vote.py` | 合并三遍核实结果，按保留票数排名，输出 `out/<source>_top100.json/.csv` |
 | `export_physfixbench.py` | 名单 + 中文三段（`zh/<source>.json`）→ `data/` 下的 jsonl / csv、`videos/`、两个审核页 |
 | `hf_README.md` | HF 数据集卡 |

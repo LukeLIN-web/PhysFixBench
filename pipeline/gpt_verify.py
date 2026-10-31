@@ -6,10 +6,14 @@ definitions annotators were shown; for VideoPhy2 (select_videophy2.py) each viol
 SA/PC scores.
 
 GPT-5.5 is reached through any OpenAI-compatible /v1/chat/completions endpoint (--relay, bearer token read from
---token-file). The PhyGround law names and the questions annotators were shown are in phyground_laws.json.
+--token-file). --backend codex runs the same prompt through the Codex CLI instead (`codex exec`, logged in with
+ChatGPT; default model gpt-6-astra): the frames go in as attached images in time order, and the prompt lists each
+image's timestamp. The PhyGround law names and the questions annotators were shown are in phyground_laws.json.
 
     python3 pipeline/gpt_verify.py --cands pipeline/out/phyground_candidates_sa3.5.json --out-dir pipeline/out/gpt55_sa3.5
     python3 pipeline/gpt_verify.py --cands pipeline/out/videophy2_candidates_pc2.json --out-dir pipeline/out/gpt55_vp2
+    python3 pipeline/gpt_verify.py --backend codex --cands pipeline/out/phyground_candidates_sa3.0_law3.0_new.json \
+        --out-dir pipeline/out/codex_sa3.0_law3.0
 """
 
 import argparse
@@ -30,6 +34,7 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 RELAY = "http://127.0.0.1:18990/v1/chat/completions"
 TOKEN_FILE = os.path.expanduser("~/tmp/master-relay/token")
+DEFAULT_MODEL = {"relay": "gpt-5.5", "codex": "gpt-6-astra"}
 CRIT = json.load(open(os.path.join(HERE, "phyground_laws.json")))
 CATEGORIES = ["impenetrability", "object_permanence", "material_or_state_change", "force_and_motion",
               "collision_response", "fluid", "soft_body_deformation", "contact_and_support", "optics", "other"]
@@ -156,8 +161,12 @@ def videophy2_lines(cand):
     return lines
 
 
+def human_lines(cand):
+    return {"phyground": phyground_lines, "videophy2": videophy2_lines}[source(cand)](cand)
+
+
 def user_content(cand, frames, fps):
-    lines = {"phyground": phyground_lines, "videophy2": videophy2_lines}[source(cand)](cand)
+    lines = human_lines(cand)
     lines.append(f"The video has {len(frames)} frames at {fps} fps:")
     content = [{"type": "text", "text": "\n".join(lines)}]
     for i, f in enumerate(frames):
@@ -189,6 +198,66 @@ def call(body, token, relay, retries=6):
         time.sleep(wait)
 
 
+def codex_prompt(cand, frames, fps):
+    """The relay prompt as one message: the system prompt, the human labels, and each attached image's timestamp
+    (Codex takes images only as attachments, so the timestamps cannot sit between the frames)."""
+    stamps = ", ".join(f"image {i + 1} = t={i / fps:.2f}s" for i in range(len(frames)))
+    return "\n\n".join([
+        system_prompt(source(cand)),
+        "Do not run any commands or read any files; judge from the attached images only.",
+        "\n".join(human_lines(cand)),
+        f"The video has {len(frames)} frames at {fps} fps, attached in time order: {stamps}."])
+
+
+def parse_json(text):
+    """The JSON object in a reply, also when it is wrapped in a code fence or a sentence."""
+    try:
+        return json.loads(text)
+    except (json.JSONDecodeError, TypeError):
+        pass
+    i, j = (text or "").find("{"), (text or "").rfind("}")
+    try:
+        return json.loads(text[i:j + 1]) if 0 <= i < j else None
+    except json.JSONDecodeError:
+        return None
+
+
+def call_codex(prompt, frames, model, effort, retries=4):
+    """One `codex exec` in an empty scratch directory, read-only and not saved as a session. Returns the last
+    message and the token usage; retries on a failed run or a reply that is not JSON."""
+    msg = ""
+    for attempt in range(retries):
+        with tempfile.TemporaryDirectory(prefix="codex_verify.") as tmp:
+            last = os.path.join(tmp, "last.txt")
+            cmd = ["codex", "exec", "-m", model, "-c", f"model_reasoning_effort={effort}", "-s", "read-only",
+                   "--skip-git-repo-check", "--ephemeral", "--json", "-C", tmp, "-o", last, "-i", *frames]
+            try:
+                p = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=1200)
+            except subprocess.TimeoutExpired:
+                p, msg = None, "timeout"
+            if p is not None:
+                usage = {}
+                for line in p.stdout.splitlines():
+                    try:
+                        ev = json.loads(line)
+                    except json.JSONDecodeError:
+                        continue
+                    if ev.get("type") == "turn.completed":
+                        u = ev.get("usage") or {}
+                        usage = {"prompt_tokens": u.get("input_tokens", 0),
+                                 "cached_tokens": u.get("cached_input_tokens", 0),
+                                 "completion_tokens": u.get("output_tokens", 0)}
+                text = open(last).read() if os.path.exists(last) else ""
+                if p.returncode == 0 and parse_json(text) is not None:
+                    return text, usage
+                msg = f"exit {p.returncode}: {(text or p.stderr)[-300:]!r}"
+        if attempt == retries - 1:
+            raise RuntimeError(f"codex failed {retries} times, last: {msg}")
+        wait = 30 * 2 ** attempt
+        print(f"  retry in {wait}s ({msg})", flush=True)
+        time.sleep(wait)
+
+
 def run_one(cand, args, token):
     key = f"{cand['model']}__{os.path.splitext(cand['filename'])[0]}"
     out_path = os.path.join(args.out_dir, "records", key + ".json")
@@ -196,19 +265,23 @@ def run_one(cand, args, token):
         return key, json.load(open(out_path)), True
     frames = extract_frames(cand["path"], os.path.join(args.frames_dir, f"{key}_fps{args.fps:g}_w{args.width}"),
                             args.fps, args.width)
-    body = {"model": args.model, "reasoning_effort": args.effort, "max_completion_tokens": 20000,
-            "response_format": {"type": "json_object"},
-            "messages": [{"role": "system", "content": system_prompt(source(cand))},
-                         {"role": "user", "content": user_content(cand, frames, args.fps)}]}
     t0 = time.time()
-    resp = call(body, token, args.relay)
-    text = resp["choices"][0]["message"]["content"]
-    try:
-        parsed = json.loads(text)
-    except json.JSONDecodeError:
-        parsed = None
-    rec = {"candidate": cand, "n_frames": len(frames), "fps": args.fps, "width": args.width, "model": resp.get("model"),
-           "effort": args.effort, "latency_s": round(time.time() - t0, 1), "usage": resp.get("usage"),
+    if args.backend == "codex":
+        text, usage = call_codex(codex_prompt(cand, frames, args.fps), frames, args.model, args.effort)
+        model, parsed = f"codex:{args.model}", parse_json(text)
+    else:
+        body = {"model": args.model, "reasoning_effort": args.effort, "max_completion_tokens": 20000,
+                "response_format": {"type": "json_object"},
+                "messages": [{"role": "system", "content": system_prompt(source(cand))},
+                             {"role": "user", "content": user_content(cand, frames, args.fps)}]}
+        resp = call(body, token, args.relay)
+        text, usage, model = resp["choices"][0]["message"]["content"], resp.get("usage"), resp.get("model")
+        try:
+            parsed = json.loads(text)
+        except json.JSONDecodeError:
+            parsed = None
+    rec = {"candidate": cand, "n_frames": len(frames), "fps": args.fps, "width": args.width, "model": model,
+           "effort": args.effort, "latency_s": round(time.time() - t0, 1), "usage": usage,
            "gpt": parsed, "raw": None if parsed else text}
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, "w") as f:
@@ -292,7 +365,9 @@ def main():
     ap.add_argument("--limit", type=int, help="run only the first this many candidates")
     ap.add_argument("--fps", type=float, default=4)
     ap.add_argument("--width", type=int, default=640)
-    ap.add_argument("--model", default="gpt-5.5")
+    ap.add_argument("--backend", choices=["relay", "codex"], default="relay",
+                    help="relay: OpenAI-compatible endpoint; codex: the Codex CLI (codex exec)")
+    ap.add_argument("--model", help="default gpt-5.5 for relay, gpt-6-astra for codex")
     ap.add_argument("--effort", default="medium")
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--relay", default=RELAY, help="OpenAI-compatible chat completions URL")
@@ -307,7 +382,8 @@ def main():
         cands = cands[:args.limit]
     if args.pilot:
         cands = pilot(cands, args.pilot)
-    token = open(args.token_file).read().strip()
+    args.model = args.model or DEFAULT_MODEL[args.backend]
+    token = open(args.token_file).read().strip() if args.backend == "relay" else None
     usage = collections.Counter()
     with concurrent.futures.ThreadPoolExecutor(args.workers) as ex:
         futs = {ex.submit(run_one, c, args, token): c for c in cands}
@@ -325,8 +401,11 @@ def main():
             g = rec["gpt"] or {}
             print(f"{'cached ' if cached else ''}{key}: keep={g.get('keep')} reject={g.get('reject_reason')} "
                   f"in={u.get('prompt_tokens')} out={u.get('completion_tokens')} {rec['latency_s']}s", flush=True)
-    cost = usage["in"] * 5e-6 + usage["out"] * 30e-6
-    print(f"new calls: {usage['in']} in / {usage['out']} out tokens = ${cost:.2f} at $5/$30 per M")
+    if args.backend == "codex":
+        print(f"new calls: {usage['in']} in / {usage['out']} out tokens (Codex, ChatGPT plan)")
+    else:
+        cost = usage["in"] * 5e-6 + usage["out"] * 30e-6
+        print(f"new calls: {usage['in']} in / {usage['out']} out tokens = ${cost:.2f} at $5/$30 per M")
     rows = write_summary(args.out_dir)
     print(f"{len(rows)} records, keep {sum(r['keep'] is True for r in rows)}; reject:",
           dict(collections.Counter(str(r["reject_reason"]) for r in rows if r["keep"] is not True)))

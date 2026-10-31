@@ -9,6 +9,13 @@ prefixed here rather than in the Chinese text. Every source record keeps the Phy
 then its own provenance fields (prompt, GPT votes, English evidence, human labels).
 
     python3 pipeline/export_physfixbench.py --hf-repo juyil/PhysFixBench-PhyGround-VideoPhy2
+
+A list is out/<name>_top100.json with its Chinese fields in zh/<name>.json, written to data/physfixbench_<name>.jsonl;
+its source (PhyGround or VideoPhy2) is read from the records. The second PhyGround batch, verified with gpt-6-astra
+through Codex, goes out as its own list and review page:
+
+    python3 pipeline/export_physfixbench.py --lists phyground_b2 --page review_phyground_b2 \
+        --verifier "gpt-6-astra (Codex)" --title "PhyGround 第二批-100" --hf-repo <HF dataset>
 """
 
 import argparse
@@ -215,7 +222,7 @@ def card(r, video_url):
       </div>
       <div class="reviewrow"><input class="comment" data-uid="{uid}" placeholder="备注（可选：驳回原因 / 修改说明）"></div>
       <details><summary>{SOURCE_ZH[r['source']]} 人工标注原文</summary><div class="ann">{E(ann)}</div></details>
-      <details><summary>英文核实证据（GPT-5.5 对每条人工标注的裁决 + 错误描述 + 三遍投票）</summary>
+      <details><summary>英文核实证据（{E(VERIFIER)} 对每条人工标注的裁决 + 错误描述 + 三遍投票）</summary>
         {claims}{errs}<div class="et notebox">{E(votes)}</div></details>
     </div>
   </div>
@@ -271,7 +278,7 @@ STYLE = """
 
 SCRIPT = r"""
 const $=id=>document.getElementById(id);
-const LS="physfixbench_phyground_videophy2_review_v1";
+const LS="__LS__";
 let store={};try{store=JSON.parse(localStorage.getItem(LS)||'{}');}catch(e){}
 const uids=[...document.querySelectorAll('.card')].map(c=>c.dataset.uid);
 function save(){try{localStorage.setItem(LS,JSON.stringify(store));}catch(e){}}
@@ -331,7 +338,7 @@ $('export').addEventListener('click',()=>{
   });
   const blob=new Blob([JSON.stringify(rows,null,2)],{type:'application/json'});
   const a=document.createElement('a');a.href=URL.createObjectURL(blob);
-  a.download="physfixbench_phyground_videophy2_review_export.json";a.click();
+  a.download="__EXPORT__";a.click();
 });
 apply();updateProg();
 """
@@ -341,11 +348,17 @@ def options(field, used):
     return "".join(f'<option value="{k}">{LABEL_ZH[field][k]}</option>' for k in LABEL_ZH[field] if k in used)
 
 
-def page(rows, video_url):
+VERIFIER = "GPT-5.5"
+
+
+def page(rows, video_url, name, title=None):
     gens = sorted({r["generator"] for r in rows})
     used = lambda f: {r[f] for r in rows}
     n = collections.Counter(r["source"] for r in rows)
-    title = " + ".join(f"{SOURCE_ZH[s]}-{n[s]}" for s in SOURCES)
+    title = title or " + ".join(f"{SOURCE_ZH[s]}-{n[s]}" for s in SOURCES if n[s])
+    ls = "physfixbench_phyground_videophy2_review_v1" if name == "review_phyground_videophy2" else f"physfixbench_{name}_v1"
+    script = SCRIPT.replace("__LS__", ls).replace("__EXPORT__", name.replace("review_", "physfixbench_", 1)
+                                                                    + "_review_export.json")
     return f"""<!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -353,9 +366,9 @@ def page(rows, video_url):
 <style>{STYLE}</style></head>
 <body>
 <header>
- <h1>PhysFixBench · {title} · 人工审核页（GPT-5.5 三遍核实保留的物理缺陷视频；每条都需人工确认）</h1>
+ <h1>PhysFixBench · {title} · 人工审核页（{E(VERIFIER)} 三遍核实保留的物理缺陷视频；每条都需人工确认）</h1>
  <div class="filters">
-  <label>数据源 <select id="f-source"><option value="">全部</option>{''.join(f'<option value="{s}">{SOURCE_ZH[s]}</option>' for s in SOURCES)}</select></label>
+  <label>数据源 <select id="f-source"><option value="">全部</option>{''.join(f'<option value="{s}">{SOURCE_ZH[s]}</option>' for s in SOURCES if n[s])}</select></label>
   <label>问题类别 <select id="f-family"><option value="">全部</option>{options('error_family', used('error_family'))}</select></label>
   <label>视频内容 <select id="f-interaction"><option value="">全部</option>{options('interaction_primitive', used('interaction_primitive'))}</select></label>
   <label>生成模型 <select id="f-generator"><option value="">全部</option>{''.join(f'<option value="{E(g)}">{E(g)}</option>' for g in gens)}</select></label>
@@ -369,7 +382,7 @@ def page(rows, video_url):
 <main>
 {''.join(card(r, video_url(r)) for r in rows)}
 </main>
-<script>{SCRIPT}</script>
+<script>{script}</script>
 </body></html>
 """
 
@@ -379,16 +392,23 @@ def main():
     ap.add_argument("--out-dir", default=REPO, help="package root: data/, videos/ and the review pages go here")
     ap.add_argument("--hf-repo", required=True, help="HF dataset the videos are uploaded to, for the online page")
     ap.add_argument("--no-videos", action="store_true", help="skip linking the videos into <out-dir>/videos")
+    ap.add_argument("--lists", nargs="+", default=SOURCES, help="out/<name>_top100.json lists to export")
+    ap.add_argument("--page", default="review_phyground_videophy2", help="review page name, without .html")
+    ap.add_argument("--verifier", default="GPT-5.5", help="the model that verified the lists, as the page names it")
+    ap.add_argument("--title", help="page title; default names each source and its count")
     args = ap.parse_args()
+    global VERIFIER
+    VERIFIER = args.verifier
 
     os.makedirs(os.path.join(args.out_dir, "data"), exist_ok=True)
     os.makedirs(os.path.join(args.out_dir, "videos"), exist_ok=True)
     rows = []
-    for src in SOURCES:
-        voted = json.load(open(os.path.join(HERE, "out", f"{src}_top100.json")))
-        zh = json.load(open(os.path.join(HERE, "zh", f"{src}.json")))
+    for name in args.lists:
+        voted = json.load(open(os.path.join(HERE, "out", f"{name}_top100.json")))
+        zh = json.load(open(os.path.join(HERE, "zh", f"{name}.json")))
+        src = "phyground" if "phyground_video_id" in voted[0]["flawed_video"] else "videophy2"
         missing = [x["key"] for x in voted if x["key"] not in zh]
-        assert not missing, f"{src}: no Chinese annotation for {missing[:3]}"
+        assert not missing, f"{name}: no Chinese annotation for {missing[:3]}"
         recs = []
         for x in voted:
             r, path = build(src, x, zh[x["key"]])
@@ -396,13 +416,13 @@ def main():
             if not args.no_videos:
                 link_video(path, os.path.join(args.out_dir, "videos", r["video_file"]))
         assert len({r["video_file"] for r in recs}) == len(recs)
-        base = os.path.join(args.out_dir, "data", f"physfixbench_{src}")
+        base = os.path.join(args.out_dir, "data", f"physfixbench_{name}")
         with open(base + ".jsonl", "w") as f:
             for r in recs:
                 f.write(json.dumps(r, ensure_ascii=False) + "\n")
         write_csv(base + ".csv", recs)
         rows += recs
-        print(f"{src}: {len(recs)} records -> {base}.jsonl/.csv")
+        print(f"{name} ({src}): {len(recs)} records -> {base}.jsonl/.csv")
         for field in ["error_family", "interaction_primitive", "scenario_domain", "obviousness"]:
             c = collections.Counter(r[field] for r in recs)
             print(f"  {field}: " + " · ".join(f"{LABEL_ZH[field][k]} {v}" for k, v in c.most_common()))
@@ -412,11 +432,11 @@ def main():
               f"problems per record: {dict(sorted(collections.Counter(len(r['fix_problems']) for r in recs).items()))}")
 
     hf = f"https://huggingface.co/datasets/{args.hf_repo}/resolve/main/videos/"
-    for name, url in [("review_phyground_videophy2.html", lambda r: "videos/" + r["video_file"]),
-                      ("review_phyground_videophy2_hf.html", lambda r: hf + r["video_file"])]:
-        with open(os.path.join(args.out_dir, name), "w") as f:
-            f.write(page(rows, url))
-        print(f"wrote {name}")
+    for fname, url in [(args.page + ".html", lambda r: "videos/" + r["video_file"]),
+                       (args.page + "_hf.html", lambda r: hf + r["video_file"])]:
+        with open(os.path.join(args.out_dir, fname), "w") as f:
+            f.write(page(rows, url, args.page, args.title))
+        print(f"wrote {fname}")
 
 
 if __name__ == "__main__":
